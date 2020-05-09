@@ -1,0 +1,166 @@
+﻿@model IEnumerable<PlottedAssist.Models.PlantSet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantCommonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSciName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantPhotoPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSpring)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSummer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantAutumn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantWinter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantFlowersPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantFlowerColors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSunNeedPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantWaterFrq)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantPruningFrq)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantFertilizerFrq)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantMistFrq)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSoilSand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSoilClay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSoilLoom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantHabitat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantDroughtTol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantCompanion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantCommonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSciName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantPhotoPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSpring)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSummer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantAutumn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantWinter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantFlowersPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantFlowerColors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSunNeedPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantWaterFrq)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantPruningFrq)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantMistFrq)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSoilSand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSoilClay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSoilLoom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantHabitat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantAnimal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantDroughtTol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantCompanion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

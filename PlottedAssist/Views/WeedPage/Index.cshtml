@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PlottedAssist.Models.WeedSet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlantSet.PlantCommonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeedCommonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeedSciName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeedPhotoPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WeedDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeedCommonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeedSciName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeedPhotoPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WeedDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

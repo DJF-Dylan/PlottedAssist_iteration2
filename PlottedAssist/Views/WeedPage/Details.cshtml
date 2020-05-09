@@ -1,0 +1,59 @@
+﻿@model PlottedAssist.Models.WeedSet
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>WeedSet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantSet.PlantCommonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantSet.PlantCommonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeedCommonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeedCommonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeedSciName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeedSciName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeedPhotoPath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeedPhotoPath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeedDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeedDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

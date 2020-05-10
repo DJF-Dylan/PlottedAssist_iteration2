@@ -35,6 +35,41 @@ namespace PlottedAssist.Controllers
             return View(plantSet);
         }
 
+        //Ajax page to filter the plant list
+        public PartialViewResult GetPlantData(string selected = "All Plant")
+        {
+            IEnumerable<PlantSet> data = db.PlantSet.ToList();
+            if (selected == "All Plant")
+            {
+                data = db.PlantSet.ToList();
+            }
+            else if (selected == "Spring")
+            {
+                data = db.PlantSet.Where(p => p.PlantSpring == "1").ToList();
+            }
+            else if(selected == "Summer")  
+            {
+                data = db.PlantSet.Where(p => p.PlantSummer == "1").ToList();
+            }
+            else if (selected == "Autumn")
+            {
+                data = db.PlantSet.Where(p => p.PlantAutumn == "1").ToList();
+            }
+            else if (selected == "Winter")
+            {
+                data = db.PlantSet.Where(p => p.PlantWinter == "1").ToList();
+            }
+            else if (selected == "All Year")
+            {
+                data = db.PlantSet.Where(p => p.PlantSpring == "1" & p.PlantSummer == "1" & p.PlantAutumn == "1" & p.PlantWinter == "1").ToList();
+            }
+            else if (selected == "Trees" || selected == "Small Plants" || selected == "Shrubs" || selected == "Creepers")
+            {
+                data = db.PlantSet.Where(p => p.PlantType == selected).ToList();
+            }
+            return PartialView(data);
+        }
+
         // GET: PlantSets/Create
         public ActionResult Create()
         {

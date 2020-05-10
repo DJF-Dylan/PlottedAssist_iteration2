@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 using PlottedAssist.Models;
 
 namespace PlottedAssist.Controllers
@@ -15,10 +16,16 @@ namespace PlottedAssist.Controllers
         private ProjectModel db = new ProjectModel();
 
         // GET: Dashboard
+        [Authorize]
         public ActionResult Index()
         {
-            var userPlantSet = db.UserPlantSet.Include(u => u.PlantSet);
+            var userId = User.Identity.GetUserId();
+            var userPlantSet = db.UserPlantSet.Where(s => s.UserId ==
+            userId).Include(d => d.PlantSet);
             return View(userPlantSet.ToList());
+
+            //var userPlantSet = db.UserPlantSet.Include(u => u.PlantSet);
+            //return View(userPlantSet.ToList());
         }
 
         // GET: Dashboard/Details/5
@@ -47,9 +54,13 @@ namespace PlottedAssist.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,PlantId,UserId,plantNickName,PlantWaterFrq,PlantPruningFrq,PlantFertilizerFrq,PlantMistFrq,StartDate,EndDate,Active")] UserPlantSet userPlantSet)
         {
+            userPlantSet.UserId = User.Identity.GetUserId();
+            ModelState.Clear();
+            TryValidateModel(userPlantSet);
             if (ModelState.IsValid)
             {
                 db.UserPlantSet.Add(userPlantSet);

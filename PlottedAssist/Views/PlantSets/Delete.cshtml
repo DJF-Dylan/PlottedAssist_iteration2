@@ -1,12 +1,13 @@
 ﻿@model PlottedAssist.Models.PlantSet
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Delete</h2>
 
+<h3>Are you sure you want to delete this?</h3>
 <div>
     <h4>PlantSet</h4>
     <hr />
@@ -172,14 +173,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PlantAnimal)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PlantAnimal)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.PlantDroughtTol)
         </dt>
 
@@ -195,9 +188,54 @@
             @Html.DisplayFor(model => model.PlantCompanion)
         </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantBird)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantBird)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantButterfly)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantButterfly)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantBees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantBees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantInsects)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantInsects)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlantLarve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlantLarve)
+        </dd>
+
     </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

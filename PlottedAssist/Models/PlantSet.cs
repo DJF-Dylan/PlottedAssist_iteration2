@@ -12,7 +12,6 @@ namespace PlottedAssist.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PlantSet()
         {
-            HabitatSet = new HashSet<HabitatSet>();
             UserPlantSet = new HashSet<UserPlantSet>();
             WeedSet = new HashSet<WeedSet>();
         }
@@ -80,16 +79,25 @@ namespace PlottedAssist.Models
         public string PlantHabitat { get; set; }
 
         [Required]
-        public string PlantAnimal { get; set; }
-
-        [Required]
         public string PlantDroughtTol { get; set; }
 
         [Required]
         public string PlantCompanion { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HabitatSet> HabitatSet { get; set; }
+        [Required]
+        public string PlantBird { get; set; }
+
+        [Required]
+        public string PlantButterfly { get; set; }
+
+        [Required]
+        public string PlantBees { get; set; }
+
+        [Required]
+        public string PlantInsects { get; set; }
+
+        [Required]
+        public string PlantLarve { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<UserPlantSet> UserPlantSet { get; set; }

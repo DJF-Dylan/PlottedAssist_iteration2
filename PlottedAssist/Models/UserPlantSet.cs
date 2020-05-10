@@ -17,6 +17,9 @@ namespace PlottedAssist.Models
         public string UserId { get; set; }
 
         [Required]
+        public string plantNickName { get; set; }
+
+        [Required]
         public string PlantWaterFrq { get; set; }
 
         [Required]

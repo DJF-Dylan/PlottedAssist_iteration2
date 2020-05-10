@@ -173,14 +173,12 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PlantPageController.cs" />
-    <Compile Include="Controllers\WeedPageController.cs" />
+    <Compile Include="Controllers\PlantSetsController.cs" />
+    <Compile Include="Controllers\WeedSetsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AnimalHabitatSet.cs" />
-    <Compile Include="Models\HabitatSet.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PlantSet.cs" />
@@ -250,21 +248,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\PlantPage\Create.cshtml" />
-    <Content Include="Views\PlantPage\Delete.cshtml" />
-    <Content Include="Views\PlantPage\Details.cshtml" />
-    <Content Include="Views\PlantPage\Edit.cshtml" />
-    <Content Include="Views\PlantPage\Index.cshtml" />
+    <Content Include="Views\WeedSets\Create.cshtml" />
+    <Content Include="Views\WeedSets\Delete.cshtml" />
+    <Content Include="Views\WeedSets\Details.cshtml" />
+    <Content Include="Views\WeedSets\Edit.cshtml" />
+    <Content Include="Views\WeedSets\Index.cshtml" />
     <Content Include="Views\Dashboard\Create.cshtml" />
     <Content Include="Views\Dashboard\Delete.cshtml" />
     <Content Include="Views\Dashboard\Details.cshtml" />
     <Content Include="Views\Dashboard\Edit.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\WeedPage\Create.cshtml" />
-    <Content Include="Views\WeedPage\Delete.cshtml" />
-    <Content Include="Views\WeedPage\Details.cshtml" />
-    <Content Include="Views\WeedPage\Edit.cshtml" />
-    <Content Include="Views\WeedPage\Index.cshtml" />
+    <Content Include="Views\PlantSets\Create.cshtml" />
+    <Content Include="Views\PlantSets\Delete.cshtml" />
+    <Content Include="Views\PlantSets\Details.cshtml" />
+    <Content Include="Views\PlantSets\Edit.cshtml" />
+    <Content Include="Views\PlantSets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

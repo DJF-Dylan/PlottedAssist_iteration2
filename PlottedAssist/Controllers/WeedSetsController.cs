@@ -10,107 +10,112 @@ using PlottedAssist.Models;
 
 namespace PlottedAssist.Controllers
 {
-    public class PlantPageController : Controller
+    public class WeedSetsController : Controller
     {
         private ProjectModel db = new ProjectModel();
 
-        // GET: PlantPage
+        // GET: WeedSets
         public ActionResult Index()
         {
-            return View(db.PlantSet.ToList());
+            var weedSet = db.WeedSet.Include(w => w.PlantSet);
+            return View(weedSet.ToList());
         }
 
-        // GET: PlantPage/Details/5
+        // GET: WeedSets/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlantSet plantSet = db.PlantSet.Find(id);
-            if (plantSet == null)
+            WeedSet weedSet = db.WeedSet.Find(id);
+            if (weedSet == null)
             {
                 return HttpNotFound();
             }
-            return View(plantSet);
+            return View(weedSet);
         }
 
-        // GET: PlantPage/Create
+        // GET: WeedSets/Create
         public ActionResult Create()
         {
+            ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName");
             return View();
         }
 
-        // POST: PlantPage/Create
+        // POST: WeedSets/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,PlantCommonName,PlantSciName,PlantPhotoPath,PlantType,PlantSpring,PlantSummer,PlantAutumn,PlantWinter,PlantDesc,PlantFlowersPath,PlantFlowerColors,PlantSunNeedPath,PlantWaterFrq,PlantPruningFrq,PlantFertilizerFrq,PlantMistFrq,PlantSoilSand,PlantSoilClay,PlantSoilLoom,PlantHabitat,PlantAnimal,PlantDroughtTol,PlantCompanion")] PlantSet plantSet)
+        public ActionResult Create([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc")] WeedSet weedSet)
         {
             if (ModelState.IsValid)
             {
-                db.PlantSet.Add(plantSet);
+                db.WeedSet.Add(weedSet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(plantSet);
+            ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName", weedSet.PlantId);
+            return View(weedSet);
         }
 
-        // GET: PlantPage/Edit/5
+        // GET: WeedSets/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlantSet plantSet = db.PlantSet.Find(id);
-            if (plantSet == null)
+            WeedSet weedSet = db.WeedSet.Find(id);
+            if (weedSet == null)
             {
                 return HttpNotFound();
             }
-            return View(plantSet);
+            ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName", weedSet.PlantId);
+            return View(weedSet);
         }
 
-        // POST: PlantPage/Edit/5
+        // POST: WeedSets/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,PlantCommonName,PlantSciName,PlantPhotoPath,PlantType,PlantSpring,PlantSummer,PlantAutumn,PlantWinter,PlantDesc,PlantFlowersPath,PlantFlowerColors,PlantSunNeedPath,PlantWaterFrq,PlantPruningFrq,PlantFertilizerFrq,PlantMistFrq,PlantSoilSand,PlantSoilClay,PlantSoilLoom,PlantHabitat,PlantAnimal,PlantDroughtTol,PlantCompanion")] PlantSet plantSet)
+        public ActionResult Edit([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc")] WeedSet weedSet)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(plantSet).State = EntityState.Modified;
+                db.Entry(weedSet).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(plantSet);
+            ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName", weedSet.PlantId);
+            return View(weedSet);
         }
 
-        // GET: PlantPage/Delete/5
+        // GET: WeedSets/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PlantSet plantSet = db.PlantSet.Find(id);
-            if (plantSet == null)
+            WeedSet weedSet = db.WeedSet.Find(id);
+            if (weedSet == null)
             {
                 return HttpNotFound();
             }
-            return View(plantSet);
+            return View(weedSet);
         }
 
-        // POST: PlantPage/Delete/5
+        // POST: WeedSets/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PlantSet plantSet = db.PlantSet.Find(id);
-            db.PlantSet.Remove(plantSet);
+            WeedSet weedSet = db.WeedSet.Find(id);
+            db.WeedSet.Remove(weedSet);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

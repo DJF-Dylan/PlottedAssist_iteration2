@@ -11,7 +11,7 @@
 
 <!--Header-->
 
-<div style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
     <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
         <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
     </div>
@@ -20,113 +20,22 @@
     </div>
 </div>
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-@using (Ajax.BeginForm("GetPlantData", ajaxOpts))
-{
-    <div>
-        <h4>Plant type</h4>
-        @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
+<div class="col-md-12" style="background-color:#011f35">
+    <div class="col-0 col-md-2" >
         <br>
-        <h4>Plant season</h4>
-        @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
-             new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
-             new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-        @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
     </div>
-}
-
-<!--Plant display-->
-<div class="col-sm-2">
-    <div style="">
-        <img src="">
+    <div class="col-12 col-md-8" style="">
+        <br>
+        <br>
+        <br>
+        <p>
+            @Html.ActionLink("See all Plant", "PlantList")
+        </p>
+        <br>
+        <br>
+        <br>
     </div>
-    <div style="padding-top:12px;font-size:12px;color:black;text-align:center;">plant name</div>
+    <div class="col-0 col-md-2">
+        <br>
+    </div>
 </div>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantCommonName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantSciName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantPhotoPath)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantSpring)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantSummer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantAutumn)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantWinter)
-        </th>
-        <th></th>
-    </tr>
-
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantCommonName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantSciName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantPhotoPath)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantSpring)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantSummer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantAutumn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PlantWinter)
-            </td>
-
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
-
-</table>

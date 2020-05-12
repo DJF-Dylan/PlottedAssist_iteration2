@@ -263,8 +263,9 @@
     <Content Include="Views\PlantSets\Delete.cshtml" />
     <Content Include="Views\PlantSets\Details.cshtml" />
     <Content Include="Views\PlantSets\Edit.cshtml" />
-    <Content Include="Views\PlantSets\GetPlantData.cshtml" />
+    <Content Include="Views\PlantSets\PlantList.cshtml" />
     <Content Include="Views\PlantSets\Index.cshtml" />
+    <Content Include="Views\PlantSets\GetPlantData.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

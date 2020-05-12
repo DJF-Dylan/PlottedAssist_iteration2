@@ -20,6 +20,12 @@ namespace PlottedAssist.Controllers
             return View(db.PlantSet.ToList());
         }
 
+        public ActionResult PlantList()
+        {
+            return View(db.PlantSet.ToList());
+        }
+
+
         // GET: PlantSets/Details/5
         public ActionResult Details(int? id)
         {

@@ -56,7 +56,7 @@
         <!--Plant display-->
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card" style="padding:15px;width:280px;margin-top:20px;">
-                <a href="@Url.Content("PlantSets/Details/"+ item.Id)" class="thumbnail">
+                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail">
                     <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail">
                     <div class="caption">
                         <p>@Html.DisplayFor(modelItem => item.PlantCommonName)</p>

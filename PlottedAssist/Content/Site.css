@@ -1,11 +1,6 @@
-﻿html {
-    height: 100%;
-}
-
-body{
+﻿body{
     padding-top: 50px;
     padding-bottom: 0px;
-    height: 100vh;
 }
 
 /* Remove the padding of the default bootstrap setting*/

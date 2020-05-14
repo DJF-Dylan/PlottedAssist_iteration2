@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlottedAssist", "PlottedAssist\PlottedAssist.csproj", "{DD1E5EEF-084F-4CD5-A7D2-986D32D15CF7}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E3860972-A937-4005-B3E4-AE65844EBA0C}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\App_Data\aspnet-PlottedAssist-20200508030106.mdf = ..\..\..\..\Desktop\App_Data\aspnet-PlottedAssist-20200508030106.mdf
-		..\..\..\..\Desktop\App_Data\aspnet-PlottedAssist-20200508030106_log.ldf = ..\..\..\..\Desktop\App_Data\aspnet-PlottedAssist-20200508030106_log.ldf
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

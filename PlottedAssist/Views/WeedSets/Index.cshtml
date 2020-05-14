@@ -5,19 +5,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Have you ever see these plant</h2>
-
-<div class="row">
-@foreach (var item in Model)
-{
-    <!--Weed display-->
-
-    <div class="col-xs-6 col-sm-3 col-md-2">
-        <div class="card" style="padding:15px;width:200px;margin-top:20px;">
-            <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail">
-                <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail">
-            </a>
+<!--Header-->>
+    <div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+            <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Remove Weeds</p>
+        </div>
+        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+            <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">From my garden</p>
         </div>
     </div>
-}
+
+
+<div class="row" style="padding:50px;background-color:#344239;">
+    <h1 class="white-word" style="text-align:center;font-family:'Arial';padding-top:10px;">Have you ever see these plant</h1>
+    @foreach (var item in Model)
+    {
+        <!--Weed display-->
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4" style="padding-left:60px">
+            <div class="card" style="padding:15px;width:200px;margin-top:20px;border-radius:15px;">
+                <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;padding:0px;">
+                    <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
+                </a>
+            </div>
+        </div>
+    }
 </div>

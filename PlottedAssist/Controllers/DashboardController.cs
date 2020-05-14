@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Ajax.Utilities;
 using Microsoft.AspNet.Identity;
 using PlottedAssist.Models;
 
@@ -44,11 +45,21 @@ namespace PlottedAssist.Controllers
         }
 
         // GET: Dashboard/Create
-        public ActionResult Create()
+        [Authorize]
+        public ActionResult Create(PlantSet plant)
         {
-            ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName");
+            try {
+                ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName",plant.Id);
+                ViewBag.PlantWaterFrq = plant.PlantWaterFrq;
+                ViewBag.PlantPruningFrq = plant.PlantPruningFrq;
+                ViewBag.PlantFertilizerFrq = plant.PlantFertilizerFrq;
+                ViewBag.PlantMistFrq = plant.PlantMistFrq;
+            }
+            catch { ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName"); }
+            
             return View();
         }
+
 
         // POST: Dashboard/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -59,6 +70,8 @@ namespace PlottedAssist.Controllers
         public ActionResult Create([Bind(Include = "Id,PlantId,UserId,plantNickName,PlantWaterFrq,PlantPruningFrq,PlantFertilizerFrq,PlantMistFrq,StartDate,EndDate,Active")] UserPlantSet userPlantSet)
         {
             userPlantSet.UserId = User.Identity.GetUserId();
+            userPlantSet.StartDate = DateTime.Now;
+            userPlantSet.Active = "1";
             ModelState.Clear();
             TryValidateModel(userPlantSet);
             if (ModelState.IsValid)

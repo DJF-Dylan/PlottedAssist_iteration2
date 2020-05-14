@@ -5,84 +5,80 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+    <div class="col-md-8 col-md-offset-2">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantSet.PlantCommonName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.UserId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.plantNickName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantWaterFrq)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantPruningFrq)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantFertilizerFrq)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PlantMistFrq)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Active)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UserId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.plantNickName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlantWaterFrq)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlantPruningFrq)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PlantMistFrq)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Active)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        s
+        <h2>My Garden</h2>
 
-</table>
+        <p>
+            @Html.ActionLink("Look through the plant list to find a plant", "../PlantSets/PlantList")
+        </p>
+        <div class="col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Today</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname<br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname
+                </div>
+            </div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tomorrow</h3>
+                </div>
+                <div class="panel-body">
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-xs-12" style="padding:20px;border:thin">
+
+                    @Html.DisplayFor(modelItem => item.plantNickName)
+                    <br>
+                    @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
+                    <br>
+                    @Html.DisplayFor(modelItem => item.PlantSet.PlantSciName)
+                    <br>
+
+
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    @Html.DisplayFor(modelItem => item.PlantWaterFrq)
+                    <br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    @Html.DisplayFor(modelItem => item.PlantPruningFrq)
+                    <br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
+                    <br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    @Html.DisplayFor(modelItem => item.PlantMistFrq)
+
+
+                    <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg">Info</a>
+                    <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg"> Setting</a>
+                    <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg"> Remove</a>
+                </div>
+
+            }
+        </div>
+    </div>

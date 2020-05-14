@@ -16,7 +16,7 @@ namespace PlottedAssist.Models
         [Required]
         public string UserId { get; set; }
 
-        [Required]
+        [Required,StringLength(20)]
         public string plantNickName { get; set; }
 
         [Required]

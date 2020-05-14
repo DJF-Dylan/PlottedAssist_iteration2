@@ -46,14 +46,19 @@ namespace PlottedAssist.Controllers
 
         // GET: Dashboard/Create
         [Authorize]
-        public ActionResult Create(PlantSet plant)
+        public ActionResult Create(int id)
         {
             try {
-                ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName",plant.Id);
-                ViewBag.PlantWaterFrq = plant.PlantWaterFrq;
-                ViewBag.PlantPruningFrq = plant.PlantPruningFrq;
-                ViewBag.PlantFertilizerFrq = plant.PlantFertilizerFrq;
-                ViewBag.PlantMistFrq = plant.PlantMistFrq;
+                ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName",id);
+                foreach (var plant in db.PlantSet) {
+                    if (plant.Id == id) {
+                        ViewBag.SelectId = plant.Id;
+                        ViewBag.PlantWaterFrq = plant.PlantWaterFrq;
+                        ViewBag.PlantPruningFrq = plant.PlantPruningFrq;
+                        ViewBag.PlantFertilizerFrq = plant.PlantFertilizerFrq;
+                        ViewBag.PlantMistFrq = plant.PlantMistFrq;
+                    }
+                }    
             }
             catch { ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName"); }
             

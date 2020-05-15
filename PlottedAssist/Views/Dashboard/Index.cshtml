@@ -4,81 +4,76 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <div class="row" style="background-color:#344239;">
+        <!--Header-->
 
-    <div class="col-md-8 col-md-offset-2">
+        <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;margin:0;position:relative">
 
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        s
-        <h2>My Garden</h2>
-
-        <p>
-            @Html.ActionLink("Look through the plant list to find a plant", "../PlantSets/PlantList")
-        </p>
-        <div class="col-md-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Today</h3>
-                </div>
-                <div class="panel-body">
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    Nickname<br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    Nickname
-                </div>
-            </div>
-
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Tomorrow</h3>
-                </div>
-                <div class="panel-body">
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    Nickname
-                </div>
-            </div>
         </div>
-        <div class="col-md-9">
-            @foreach (var item in Model)
-            {
+        <!--Add new one button-->>
+        <div class="white-word" style="position:relative;margin-top:50px;margin-left:80%">
+            <button type="submit" style="background: black; color:white;padding:5px; text-align: center;border-radius:5px;box-shadow:0px 0px 8px 5px #6D917A;border:0px">@Html.ActionLink("Go to add one", "../PlantSets/PlantList")</button>
+        </div>
 
-                <div class="col-xs-12" style="padding:20px;border:thin">
-
-                    @Html.DisplayFor(modelItem => item.plantNickName)
-                    <br>
-                    @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
-                    <br>
-                    @Html.DisplayFor(modelItem => item.PlantSet.PlantSciName)
-                    <br>
-
-
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    @Html.DisplayFor(modelItem => item.PlantWaterFrq)
-                    <br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    @Html.DisplayFor(modelItem => item.PlantPruningFrq)
-                    <br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
-                    <br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
-                    @Html.DisplayFor(modelItem => item.PlantMistFrq)
-
-
-                    <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg">Info</a>
-                    <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg"> Setting</a>
-                    <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg"> Remove</a>
+        <div class="col-md-8 col-md-offset-2">
+            
+            
+            <div class="col-md-4" style="back">
+                <div class="panel panel-primary white-word" >
+                    <div >
+                        <h3 class="panel-title">Activity Today</h3>
+                    </div>
+                    <div >
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        Nickname<br>
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        Nickname
+                    </div>
                 </div>
 
-            }
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Tomorrow</h3>
+                    </div>
+                    <div class="panel-body">
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        Nickname
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                @foreach (var item in Model)
+                {
+
+                    <div class="col-xs-12" style="padding:20px;border:thin">
+
+                        @Html.DisplayFor(modelItem => item.plantNickName)
+                        <br>
+                        @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
+                        <br>
+                        @Html.DisplayFor(modelItem => item.PlantSet.PlantSciName)
+                        <br>
+
+
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        @Html.DisplayFor(modelItem => item.PlantWaterFrq)
+                        <br>
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        @Html.DisplayFor(modelItem => item.PlantPruningFrq)
+                        <br>
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
+                        <br>
+                        <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        @Html.DisplayFor(modelItem => item.PlantMistFrq)
+
+
+                        <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg">Info</a>
+                        <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg"> Setting</a>
+                        <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg"> Remove</a>
+                    </div>
+
+                }
+            </div>
         </div>
     </div>

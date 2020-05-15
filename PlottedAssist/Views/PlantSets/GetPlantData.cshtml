@@ -24,31 +24,47 @@
 
     @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
     {
-        <div>
-            <h4>Plant type</h4>
+    <div style="text-align:center">
+        <div class="btn-group-lg" role="group" aria-label="...">
+            <h4 class="white-word">Plant type</h4>
+
             @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
-                         new AjaxOptions { UpdateTargetId = "tableBody" });
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
             @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
             @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
             @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
             @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            <br>
-            <h4>Plant season</h4>
-            @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
         </div>
+        <br>
+        <div class="btn-group-lg" role="group" aria-label="...">
+            <h4 class="white-word">Plant season</h4>
+
+            @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+            @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+            @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+            @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+            @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+        </div>
+    </div>
     }
 
     @foreach (var item in Model)

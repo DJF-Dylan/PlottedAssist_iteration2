@@ -21,8 +21,10 @@
 
 
     <div class="row" style="padding:50px;background-color:#344239;">
-        <h1 class="white-word" style="text-align:center;font-family:'Arial';padding-top:10px;">Have you ever see these plant</h1>
 
+
+
+        <h1 class="white-word" style="text-align:center;font-family:'Arial';padding-top:10px;">Have you ever see these plant</h1>
 
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
@@ -52,10 +54,8 @@
                         new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
                     
                 </div>
-
             </div>
         }
-
         @foreach (var item in Model)
         {
             <!--Weed display-->

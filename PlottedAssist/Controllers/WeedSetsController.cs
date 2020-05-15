@@ -21,6 +21,21 @@ namespace PlottedAssist.Controllers
             return View(weedSet.ToList());
         }
 
+        public PartialViewResult WeedFilter(string selected = "All")
+        {
+            IEnumerable<WeedSet> data = db.WeedSet.ToList();
+            if (selected == "All")
+            {
+                data = db.WeedSet.ToList();
+            }
+            else if (selected == "White" || selected == "Yellow" || selected == "Purple" || selected == "Blue" || selected == "Pink" || selected == "No")
+            {
+                data = db.WeedSet.Where(p => p.WeedFlowerColor == selected).ToList();
+            }
+           
+            return PartialView(data);
+        }
+
         // GET: WeedSets/Details/5
         public ActionResult Details(int? id)
         {
@@ -48,7 +63,7 @@ namespace PlottedAssist.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc")] WeedSet weedSet)
+        public ActionResult Create([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc,WeedFlowerColor,WeedControl")] WeedSet weedSet)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +97,7 @@ namespace PlottedAssist.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc")] WeedSet weedSet)
+        public ActionResult Edit([Bind(Include = "Id,PlantId,WeedCommonName,WeedSciName,WeedPhotoPath,WeedDesc,WeedFlowerColor,WeedControl")] WeedSet weedSet)
         {
             if (ModelState.IsValid)
             {

@@ -25,52 +25,44 @@
     @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
     {
     <div style="text-align:center">
-        <div class="btn-group" role="group" aria-label="...">
+        <div class="btn-group-lg" role="group" aria-label="...">
             <h4 class="white-word">Plant type</h4>
-            <button type="button" class="btn btn-default">
+            
                 @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+            
                 @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+            
                 @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+            
                 @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+           
                 @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+   
         </div>
         <br>
-        <div class="btn-group" role="group" aria-label="...">
+        <div class="btn-group-lg" role="group" aria-label="...">
             <h4 class="white-word">Plant season</h4>
-            <button type="button" class="btn btn-default">
+
                 @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
                 @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+      
                 @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
                 @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
-            <button type="button" class="btn btn-default">
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
                 @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
-                new AjaxOptions { UpdateTargetId = "tableBody" });
-            </button>
+                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
         </div>
     </div>
     }

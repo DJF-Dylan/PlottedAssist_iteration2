@@ -330,6 +330,7 @@
     <Content Include="Views\PlantSets\PlantList.cshtml" />
     <Content Include="Views\PlantSets\Index.cshtml" />
     <Content Include="Views\PlantSets\GetPlantData.cshtml" />
+    <Content Include="Views\WeedSets\WeedFilter.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

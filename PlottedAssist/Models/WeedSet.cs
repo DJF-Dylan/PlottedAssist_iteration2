@@ -25,6 +25,12 @@ namespace PlottedAssist.Models
         [Required]
         public string WeedDesc { get; set; }
 
+        [Required]
+        public string WeedFlowerColor { get; set; }
+
+        [Required]
+        public string WeedControl { get; set; }
+
         public virtual PlantSet PlantSet { get; set; }
     }
 }

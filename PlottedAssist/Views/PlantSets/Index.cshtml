@@ -9,123 +9,116 @@
     };
 }
 
-<!--Header-->
 
-<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
-    <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
-        <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
-    </div>
-    <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
-        <p style="font-family:'Arial';color:black;background:white;font-size:25px;text-align:center">in Yarra City</p>
-    </div>
-</div>
 
-<div class="col-md-12" style="background-color:#011f35">
-    <div class="col-12 col-md-8" style="background:white;text-align:center">
+
+<div class="row" style="background-color:#344239">
+    <!--Header-->
+
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;margin:0;position:relative">
+        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+            <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
+        </div>
+        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+            <p style="font-family:'Arial';color:black;background:white;font-size:25px;text-align:center">in Yarra City</p>
+        </div>
+    </div>
+    <!--Top part-->>
+    <div class="col-sm-6 col-sm-offset-3 white-word" style="background:#1E2621;text-align:center;margin-top:100px;position:relative">
         <H3>Let us help you decide which to plant!</H3>
         <p>
             @Html.ActionLink("No thanks.Give me the list of all plants", "PlantList")
         </p>
-        <br>
-        <br>
-        <br>
     </div>
-    <div class="col-0 col-md-6" style="background:white">
+
+    <!--Question part-->>
+    <form role="form" class="col-sm-6 col-sm-offset-3 white-word" style="font-family:'Arial';background:#1E2621;margin-top:20px;position:relative">
         <br>
-        <p style="font-size:16px;">1. What type plants do you want to pant?</p>
-        <div class="form-check form-check-inline" style="padding-top:5px;padding-bottom:10PX;">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="defaultCheck1">
-                Tree
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="defaultCheck2">
-                Shrub
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-            <label class="form-check-label" for="defaultCheck3">
-                Creeper
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-            <label class="form-check-label" for="defaultCheck4">
-                Grass
-            </label>
-        </div>
-        <div>
-            <p style="font-size:16px;">2. How many times would you like to water your plants?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampeRadios1">Every two days</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios2" value="option2" checked>
-                <label class="form-check-label" for="exampeRadios2">Once a week</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios3" value="option3" checked>
-                <label class="form-check-label" for="exampeRadios3">Once a month</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios4" value="option4" checked>
-                <label class="form-check-label" for="exampeRadios4">All good for me</label>
+        <br>
+        <div class="col-sm-12 white-word form-group">
+            <p style="font-size:16px;">1. What type plants do you want to pant?</p>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">Tree
+                </label>
+                <label>
+                    <input type="checkbox">Shrub
+                </label>
+                <label>
+                    <input type="checkbox">Crepper
+                </label>
+                <label>
+                    <input type="checkbox">Grass
+                </label>
             </div>
         </div>
-        <div>
+
+        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+            <p style="font-size:16px;">2. How often would you like to water your plants?</p>
+            <div class="radio">
+                <label>
+                    <input type="radio">Often
+                </label><br>
+                <label>
+                    <input type="radio">Medium
+                </label><br>
+                <label>
+                    <input type="radio">I don't have time
+                </label><br>
+                <label>
+                    <input type="radio">All good for me
+                </label>
+            </div>
+        </div>
+
+        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
             <p style="font-size:16px;">3. When do you plan to plants?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampeRadios1">Spring</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios2" value="option2" checked>
-                <label class="form-check-label" for="exampeRadios2">Summer</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios3" value="option3" checked>
-                <label class="form-check-label" for="exampeRadios3">Autumn</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios4" value="option4" checked>
-                <label class="form-check-label" for="exampeRadios4">Winter</label>
+            <div class="radio">
+                <label>
+                    <input type="radio">Spring
+                </label><br>
+                <label>
+                    <input type="radio">Summer
+                </label><br>
+                <label>
+                    <input type="radio">Autumn
+                </label><br>
+                <label>
+                    <input type="radio">Winter
+                </label>
             </div>
         </div>
-        <div>
+
+        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
             <p style="font-size:16px;">4. Enough sunshine in your garden?</p>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampeRadios1">Yes</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRaios" id="exampleRadios2" value="option2" checked>
-                <label class="form-check-label" for="exampeRadios2">No</label>
+            <div class="radio">
+                <label>
+                    <input type="radio">Yes
+                </label><br>
+                <label>
+                    <input type="radio">No
+                </label>
             </div>
         </div>
-        <p style="font-size:16px">5. Which color do you prefer?</p>
-        <div class="form-check form-check-inline" style="padding-top:5px;padding-bottom:10PX;">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="defaultCheck1">
-                White
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="defaultCheck2">
-                Green
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-            <label class="form-check-label" for="defaultCheck3">
-                Yellow
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-            <label class="form-check-label" for="defaultCheck4">
-                Purple
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-            <label class="form-check-label" for="defaultCheck5">
-                Pink
-            </label>
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
-            <label class="form-check-label" for="defaultCheck6">
-                Blue
-            </label>
+
+        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+            <p style="font-size:16px">5. Do you prefer drought tolerant plants?</p>
+            <div class="radio">
+                <label>
+                    <input type="radio">Yes
+                </label><br>
+                <label>
+                    <input type="radio">No
+                </label><br>
+                <label>
+                    <input type="radio">I don't care
+                </label>
+            </div>
         </div>
-    </div>
+
+        <div class="col-sm-12 white-word" style="position:relative;margin-top:20px;margin-bottom:40px;text-align:center">
+            <button type="submit" style="color:white; text-align: center;box-shadow:0px 0px 8px 5px #1E2621;background-color:transparent;">Submit</button>
+        </div>
+    </form>
 </div>
+

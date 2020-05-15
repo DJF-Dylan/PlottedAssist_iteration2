@@ -9,51 +9,52 @@
     };
 }
 
-<!--Header-->
+<div class="row" style="background-color:#344239">
 
-<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
-    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
-        <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
+    <!--Header-->
+
+    <div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;padding:0">
+        <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+            <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
+        </div>
+        <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+            <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">in Yarra City</p>
+        </div>
     </div>
-    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
-        <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">in Yarra City</p>
-    </div>
-</div>
 
-<div class="row" style="padding:50px;background-color:#344239">
-
+    <!--Filter-->>
     @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
     {
-    <div style="text-align:center">
-        <div class="btn-group-lg" role="group" aria-label="...">
-            <h4 class="white-word">Plant type</h4>
-            
+        <div style="text-align:center;margin-top:20px;position:relative">
+            <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
+                <h4 class="white-word">Plant type</h4>
+
                 @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-            
+
                 @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-            
+
                 @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-            
+
                 @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-           
+
                 @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-   
-        </div>
-        <br>
-        <div class="btn-group-lg" role="group" aria-label="...">
-            <h4 class="white-word">Plant season</h4>
+
+            </div>
+            <br>
+            <div class="btn-group-lg" role="group" aria-label="...">
+                <h4 class="white-word">Plant season</h4>
 
                 @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
 
                 @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-      
+
                 @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
 
@@ -63,24 +64,24 @@
                 @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
                 new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
 
+            </div>
         </div>
-    </div>
     }
 
     @foreach (var item in Model)
     {
         <!--Plant display-->
         <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="card" style="padding:15px;width:280px;margin-top:20px;border-radius:15px;">
-                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;">
-                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
-                    <div class="caption" style="position:absolute; width:400px; height:40px;border-radius:15px;padding-top:55%; padding-left:10%; font-family:'Arial';font-size:16px; left:0px; top:0px;">
-                        <p class="white-word">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
-                        <p class="white-word">@Html.DisplayFor(modelItem => item.PlantSciName)</p>
-                    </div>
+            <div class="card" style="padding:25px;width:280px;margin-top:20px;border-radius:15px;">
+                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
+                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
+                   <div style="position:relative;margin-top:-40%"> 
+                        <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantCommonName)</h1>
+                        <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantSciName)</h1>
+                   </div>
                 </a>
             </div>
-            
+
         </div>
     }
 </div>        

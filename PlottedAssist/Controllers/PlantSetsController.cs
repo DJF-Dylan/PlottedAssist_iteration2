@@ -41,6 +41,54 @@ namespace PlottedAssist.Controllers
             return View(plantSet);
         }
 
+        public ActionResult TestResult(string Tree= "1", string Shrub= "1", string Crepper= "1", string Grass="1", string plantWaterFrq= "All", string plantSeason="Spring", string plantSunNeedPath="All", string plantDroughtTol= "All")
+        {
+
+            IEnumerable<PlantSet> data = db.PlantSet.ToList();
+            data = db.PlantSet.Where(p => p.PlantType == Tree || p.PlantType == Shrub || p.PlantType == Crepper || p.PlantType == Grass).ToList();
+
+            if (plantWaterFrq != "All" && plantWaterFrq != "4") {
+                data = data.Where(p => p.PlantWaterFrq == "3" || p.PlantWaterFrq == "4").ToList();
+            }
+            else
+            { 
+                data = data.Where(p => p.PlantWaterFrq == plantWaterFrq).ToList();
+            }
+
+            if (plantSunNeedPath != "All")
+            {
+                data = data.Where(p => p.PlantSunNeedPath == plantSunNeedPath).ToList();
+            }
+           
+            if (plantDroughtTol != "All")
+            {
+                data = data.Where(p => p.PlantDroughtTol == plantDroughtTol).ToList();
+            }
+
+            IEnumerable<PlantSet> Spring = db.PlantSet.Where(p => p.PlantType == "1").ToList();
+            IEnumerable<PlantSet> Summer = db.PlantSet.Where(p => p.PlantType == "1").ToList();
+            IEnumerable<PlantSet> Autumn = db.PlantSet.Where(p => p.PlantType == "1").ToList();
+            IEnumerable<PlantSet> Winter = db.PlantSet.Where(p => p.PlantType == "1").ToList();
+            if (plantSeason == "Spring") {
+                Spring = data.Where(p => p.PlantSpring == "1").ToList();
+            }
+            if (plantSeason == "Summer")
+            {
+                Summer = data.Where(p => p.PlantSummer == "1").ToList();
+            }
+            if (plantSeason == "Autumn")
+            {
+                Autumn = data.Where(p => p.PlantAutumn == "1").ToList();
+            }
+            if (plantSeason == "Winter")
+            {
+                Winter = data.Where(p => p.PlantWinter == "1").ToList();
+            }
+            IEnumerable<PlantSet> result = Spring.Union(Summer).Union(Autumn).Union(Winter);
+            ViewBag.result = Tree + Shrub + Crepper + Grass + plantWaterFrq + plantSeason + plantSunNeedPath + plantDroughtTol;
+            return View(data);
+        }
+        
         //Ajax page to filter the plant list
         public PartialViewResult GetPlantData(string selected = "All Plant")
         {

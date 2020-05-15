@@ -28,7 +28,7 @@ namespace PlottedAssist.Controllers
             {
                 data = db.WeedSet.ToList();
             }
-            else if (selected == "White" || selected == "Yellow" || selected == "Purple" || selected == "Blue" || selected == "Pink" || selected == "No")
+            else if (selected == "White" || selected == "Yellow" || selected == "Purple" || selected == "No")
             {
                 data = db.WeedSet.Where(p => p.WeedFlowerColor == selected).ToList();
             }

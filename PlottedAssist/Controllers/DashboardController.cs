@@ -23,6 +23,11 @@ namespace PlottedAssist.Controllers
             var userId = User.Identity.GetUserId();
             var userPlantSet = db.UserPlantSet.Where(s => s.UserId ==
             userId).Include(d => d.PlantSet);
+            var myPlant = userPlantSet.ToList();
+            foreach (var i in myPlant) { 
+                
+            }
+
             return View(userPlantSet.ToList());
 
             //var userPlantSet = db.UserPlantSet.Include(u => u.PlantSet);
@@ -46,7 +51,7 @@ namespace PlottedAssist.Controllers
 
         // GET: Dashboard/Create
         [Authorize]
-        public ActionResult Create(int id)
+        public ActionResult Create(int? id)
         {
             try {
                 ViewBag.PlantId = new SelectList(db.PlantSet, "Id", "PlantCommonName",id);

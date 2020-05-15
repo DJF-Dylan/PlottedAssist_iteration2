@@ -90,7 +90,14 @@
             </dt>
 
             <dd>
-                <P>@Html.DisplayFor(model => model.PlantSunNeedPath)</P>
+                <P>
+                    @if (Model.PlantSoilSand == "1")
+                    {<text>Full sun</text>}
+                    @if (Model.PlantSoilClay == "2")
+                    {<text>Full shade</text>}
+                    @if (Model.PlantSoilLoom == "3")
+                    {<text>Half sun</text>}
+                </P>
             </dd>
 
             <dt>

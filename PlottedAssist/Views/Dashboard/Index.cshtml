@@ -16,64 +16,70 @@
         </div>
 
         <div class="col-md-8 col-md-offset-2">
-            
-            
-            <div class="col-md-4" style="back">
-                <div class="panel panel-primary white-word" >
-                    <div >
-                        <h3 class="panel-title">Activity Today</h3>
-                    </div>
-                    <div >
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        Nickname<br>
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        Nickname
-                    </div>
+
+
+            <div class="col-md-4" style="border:0px;">
+                <div class="panel panel-primary white-word" style="background:black;text-align:center;border:0px;border-radius:10px">
+                    <br>
+                    <h3 class="panel-title">Activity Today</h3>
+                    <hr>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname<br><br><br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname<br><br>
                 </div>
 
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Tomorrow</h3>
-                    </div>
-                    <div class="panel-body">
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        Nickname
-                    </div>
+                <div class="panel panel-primary white-word" style="background:black;text-align:center;border:0px;border-radius:10px">
+                    <br>
+                    <h3 class="panel-title">Activity Tomorrow</h3>
+                    <hr>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname<br><br><br>
+                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    Nickname<br><br>
                 </div>
             </div>
-            <div class="col-md-9">
-                @foreach (var item in Model)
-                {
 
-                    <div class="col-xs-12" style="padding:20px;border:thin">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-7" style="border-radius:5px;">
+                    <div class="col-xs-12" style="padding:20px;border:thin;background:#1E2621;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;margin-bottom:40px">
+                        <div class="col-sm-3" style="background:black;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;">
+                            <img>
+                        </div>
+                        <div class="col-sm-3 white-word">
+                            @Html.DisplayFor(modelItem => item.plantNickName)
+                            <br><br>
+                            @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
+                            <br><br>
+                            @Html.DisplayFor(modelItem => item.PlantSet.PlantSciName)
+                            <br>
+                        </div>
 
-                        @Html.DisplayFor(modelItem => item.plantNickName)
-                        <br>
-                        @Html.DisplayFor(modelItem => item.PlantSet.PlantCommonName)
-                        <br>
-                        @Html.DisplayFor(modelItem => item.PlantSet.PlantSciName)
-                        <br>
+                        
 
+                        <div class="col-sm-3 white-word">
+                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            @Html.DisplayFor(modelItem => item.PlantWaterFrq)
+                            <br><br>
+                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            @Html.DisplayFor(modelItem => item.PlantPruningFrq)
+                            <br><br>
+                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
+                            <br><br>
+                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            @Html.DisplayFor(modelItem => item.PlantMistFrq)
+                        </div>
 
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        @Html.DisplayFor(modelItem => item.PlantWaterFrq)
-                        <br>
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        @Html.DisplayFor(modelItem => item.PlantPruningFrq)
-                        <br>
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
-                        <br>
-                        <img src="~/Picture/SunNeed/1.jpg" height="30">
-                        @Html.DisplayFor(modelItem => item.PlantMistFrq)
-
-
-                        <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg">Info</a>
-                        <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg"> Setting</a>
-                        <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg"> Remove</a>
+                        <div class="col-sm-3 white-word" style="text-align:center">
+                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;font-size:16px;width:100px">Information</a><br>
+                            <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;width:100px"> Setting</a><br>
+                            <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;width:100px"> Remove</a>
+                        </div>
                     </div>
-
-                }
-            </div>
+             </div>
+             }
+                    
         </div>
     </div>

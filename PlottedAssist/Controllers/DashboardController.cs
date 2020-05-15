@@ -24,11 +24,31 @@ namespace PlottedAssist.Controllers
             var userPlantSet = db.UserPlantSet.Where(s => s.UserId ==
             userId).Include(d => d.PlantSet);
             var myPlant = userPlantSet.ToList();
-            foreach (var i in myPlant) { 
-                
+            
+            foreach (var i in myPlant) {
+                TimeSpan ts1 = new TimeSpan(i.StartDate.Ticks);
+                TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
+                TimeSpan ts = ts2.Subtract(ts1).Duration();
+                var dateDiff = ts.Days.ToString();
+                var pastday = int.Parse(dateDiff);
+                var plantWaterFrq = int.Parse(i.PlantWaterFrq); 
+                var plantPruningFrq = int.Parse(i.PlantPruningFrq);
+                var plantFertilizerFrq = int.Parse(i.PlantFertilizerFrq);
+                var plantMistFrq = int.Parse(i.PlantMistFrq);
+                if (plantWaterFrq == 0)
+                {
+                    i.PlantWaterFrq = "-";
+                }
+                else if (plantWaterFrq > pastday)
+                {
+                    //Do do anything
+                }
+                else {
+                    i.PlantWaterFrq = (pastday % plantWaterFrq).ToString();
+                }
             }
 
-            return View(userPlantSet.ToList());
+            return View(myPlant);
 
             //var userPlantSet = db.UserPlantSet.Include(u => u.PlantSet);
             //return View(userPlantSet.ToList());

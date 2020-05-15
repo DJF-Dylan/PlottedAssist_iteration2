@@ -5,48 +5,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--Header-->
 
-<div class="row">
+<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+        <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
+    </div>
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+        <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">in Yarra City</p>
+    </div>
+</div>
+
+<div class="row" style="padding:50px;background-color:#344239;">
+    <p style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%">< @Html.ActionLink("Back to List", "Index")</p>
     <div class="col-sm-6 col-sm-offset-3">
-        <h2 class="col-xs-12" style="text-align:center;">Weed detail information</h2>
-        <img class="col-xs-12 col-lg-6 col-lg-offset-3" src="@Url.Content("~/Picture/Weed/"+Model.WeedPhotoPath)">
+        <img class="col-xs-12 col-lg-6 col-lg-offset-3" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;" src="@Url.Content("~/Picture/Weed/"+Model.WeedPhotoPath)">
         <hr />
-        <dl class="col-xs-12 col-lg-6 col-lg-offset-3 dl-horizontal">
+        <dl class="col-xs-12 col-lg-12 col-lg-offset-3 dl-horizontal white-word">
             <dt>
-                @Html.DisplayNameFor(model => model.WeedCommonName)
+                <p>@Html.DisplayNameFor(model => model.WeedCommonName)</p>
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.WeedCommonName)
+                <p>@Html.DisplayFor(model => model.WeedCommonName)</p>
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.WeedSciName)
+                <p>@Html.DisplayNameFor(model => model.WeedSciName)</p>
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.WeedSciName)
+                <p>@Html.DisplayFor(model => model.WeedSciName)</p>
             </dd>
 
             <dt>
-                @Html.DisplayNameFor(model => model.WeedDesc)
+                <p>@Html.DisplayNameFor(model => model.WeedDesc)</p>
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.WeedDesc)
+                <p>@Html.DisplayFor(model => model.WeedDesc)</p>
             </dd>
 
             <dt>
-                Replace indigene
+                <p>Replace indigene</p>
             </dt>
 
             <dd>
-                <a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a>
+                <p><a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a></p>
             </dd>
 
         </dl>
-        <p class="col-xs-12">
-            @Html.ActionLink("Back to List", "Index")
-        </p>
     </div>
 </div>

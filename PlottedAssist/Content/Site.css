@@ -29,3 +29,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Set a white word color*/
+.white-word{
+    color:white;
+}

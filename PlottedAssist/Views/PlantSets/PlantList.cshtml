@@ -11,59 +11,84 @@
 
 <!--Header-->
 
-<div style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
-    <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
         <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
     </div>
-    <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
-        <p style="font-family:'Arial';color:black;background:white;font-size:25px;text-align:center">in Yarra City</p>
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+        <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">in Yarra City</p>
     </div>
 </div>
 
-<div class="row" style="padding:50px;background-color:#011f35">
+<div class="row" style="padding:50px;background-color:#344239">
 
     @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
     {
-        <div>
-            <h4>Plant type</h4>
-            @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
-                         new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            <br>
-            <h4>Plant season</h4>
-            @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
-                 new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
-            @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
-                     new AjaxOptions { UpdateTargetId = "tableBody" });
+    <div style="text-align:center">
+        <div class="btn-group" role="group" aria-label="...">
+            <h4 class="white-word">Plant type</h4>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
         </div>
+        <br>
+        <div class="btn-group" role="group" aria-label="...">
+            <h4 class="white-word">Plant season</h4>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+            <button type="button" class="btn btn-default">
+                @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
+                new AjaxOptions { UpdateTargetId = "tableBody" });
+            </button>
+        </div>
+    </div>
     }
 
     @foreach (var item in Model)
     {
         <!--Plant display-->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card" style="padding:15px;width:280px;margin-top:20px;">
-                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail">
-                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail">
-                    <div class="caption">
-                        <p>@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
-                        <p>@Html.DisplayFor(modelItem => item.PlantSciName)</p>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="card" style="padding:15px;width:280px;margin-top:20px;border-radius:15px;">
+                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;">
+                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
+                    <div class="caption" style="position:absolute; width:400px; height:40px;border-radius:15px;padding-top:55%; padding-left:10%; font-family:'Arial';font-size:16px; left:0px; top:0px;">
+                        <p class="white-word">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
+                        <p class="white-word">@Html.DisplayFor(modelItem => item.PlantSciName)</p>
                     </div>
                 </a>
             </div>
+            
         </div>
     }
 </div>        

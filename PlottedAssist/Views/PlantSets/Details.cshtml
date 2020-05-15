@@ -5,164 +5,181 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<!--Header-->
 
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <h2 class="col-xs-12" style="text-align:center;">Weed detail information</h2>
-            <img class="col-xs-12 col-lg-8 col-lg-offset-2" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
-            <hr />
-            <dl class="col-xs-12 col-lg-8 col-lg-offset-2 dl-horizontal">
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantCommonName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantCommonName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantSciName)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantSciName)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantType)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantType)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantDesc)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantDesc)
-                </dd>
-
-                <dt>
-                    plant season
-                </dt>
-
-                <dd>
-                    @if (Model.PlantSpring == "1")
-                    {<text>Spring</text>}
-                    @if (Model.PlantSummer == "1")
-                    {<text>Summer</text>}
-                    @if (Model.PlantAutumn == "1")
-                    {<text>Autumn</text>}
-                    @if (Model.PlantWinter == "1")
-                    {<text>Winter</text>}
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantFlowerColors)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantFlowerColors)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantSunNeedPath)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantSunNeedPath)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantWaterFrq)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantWaterFrq)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantPruningFrq)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantPruningFrq)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantFertilizerFrq)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantFertilizerFrq)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantMistFrq)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantMistFrq)
-                </dd>
-
-                <dt>
-                   Soil type
-                </dt>
-
-                <dd>
-                    @if (Model.PlantSoilSand == "1")
-                    {<text>Sand</text>}
-                    @if (Model.PlantSoilClay == "1")
-                    {<text>Clay</text>}
-                    @if (Model.PlantSoilLoom == "1")
-                    {<text>Loom</text>}                   
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantHabitat)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantHabitat)
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantDroughtTol)
-                </dt>
-
-                <dd>
-                    @if (Model.PlantDroughtTol == "1")
-                    {<text>Yes</text>}
-                    else
-                    {<text>No</text>}
-                </dd>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.PlantCompanion)
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantCompanion)
-                </dd>
-
-                <dt>
-                    Attract animal
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.PlantBird)
-                    @Html.DisplayFor(model => model.PlantButterfly)
-                    @Html.DisplayFor(model => model.PlantBees)
-                    @Html.DisplayFor(model => model.PlantInsects)
-                    @Html.DisplayFor(model => model.PlantLarve)
-                </dd>
-            </dl>
-        </div>
-            <p class="col-xs-12 col-lg-8 col-lg-offset-4">
-                @Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) |
-                @Html.ActionLink("Back to List", "Index")
-            </p>
+<div class="col-12 col-md-8" style="background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
+        <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
     </div>
-    
+    <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
+        <p style="font-family:'Arial';color:black;background:#F5F5F5;font-size:25px;text-align:center">in Yarra City</p>
+    </div>
+</div>
+
+<div class="row" style="padding:50px;background-color:#344239">
+    <p style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%">< @Html.ActionLink("Back to List", "Index")</p>
+        <div class="col-sm-6 col-sm-offset-3">
+    <img class="col-xs-12 col-lg-8 col-lg-offset-2" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
+    <hr />
+    <div style="text-align: center;font-family:'Arial';">
+        <button type="button" style="background: #6D917A; color:black; text-align: center;box-shadow:0px 0px 8px 5px #1E2621;border:0px">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
+    </div>
+    <hr />
+    <dl class="col-xs-12 col-lg-12 col-lg-offset-2 dl-horizontal white-word">
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantCommonName)</P>
+        </dt>
+
+        <dd>
+            <p>@Html.DisplayFor(model => model.PlantCommonName)</p>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantSciName)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantSciName)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantType)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantType)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantDesc)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantDesc)</P>
+        </dd>
+
+        <dt>
+            <P>plant season</P>
+        </dt>
+
+        <dd>
+            <P>
+                @if (Model.PlantSpring == "1")
+                {<text>Spring</text>}
+                @if (Model.PlantSummer == "1")
+                {<text>Summer</text>}
+                @if (Model.PlantAutumn == "1")
+                {<text>Autumn</text>}
+                @if (Model.PlantWinter == "1")
+                {<text>Winter</text>}
+            </P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantFlowerColors)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantFlowerColors)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantSunNeedPath)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantSunNeedPath)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantWaterFrq)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantWaterFrq)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantPruningFrq)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantPruningFrq)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantFertilizerFrq)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantFertilizerFrq)</P>
+        </dd>
+
+        <dt>
+            <P>@Html.DisplayNameFor(model => model.PlantMistFrq)</P>
+        </dt>
+
+        <dd>
+            <P>@Html.DisplayFor(model => model.PlantMistFrq)</P>
+        </dd>
+
+        <dt>
+            <P>Soil type</P>
+        </dt>
+
+        <dd>
+            <P>
+                @if (Model.PlantSoilSand == "1")
+                {<text>Sand</text>}
+            @if (Model.PlantSoilClay == "1")
+            {<text>Clay</text>}
+            @if (Model.PlantSoilLoom == "1")
+            {<text>Loom</text>}
+        </P>
+    </dd>
+
+    <dt>
+        <P>@Html.DisplayNameFor(model => model.PlantHabitat)</P>
+    </dt>
+
+    <dd>
+        <P>@Html.DisplayFor(model => model.PlantHabitat)</P>
+    </dd>
+
+    <dt>
+        <P>@Html.DisplayNameFor(model => model.PlantDroughtTol)</P>
+    </dt>
+
+    <dd>
+        <P>
+            @if (Model.PlantDroughtTol == "1")
+            {<text>Yes</text>}
+        else
+        {<text>No</text>}
+    </P>
+</dd>
+
+<dt>
+    <P>@Html.DisplayNameFor(model => model.PlantCompanion)</P>
+</dt>
+
+<dd>
+    <P>@Html.DisplayFor(model => model.PlantCompanion)</P>
+</dd>
+
+<dt>
+    <P>Attract animal</P>
+</dt>
+
+<dd>
+    <P>
+        @Html.DisplayFor(model => model.PlantBird)
+    @Html.DisplayFor(model => model.PlantButterfly)
+    @Html.DisplayFor(model => model.PlantBees)
+    @Html.DisplayFor(model => model.PlantInsects)
+    @Html.DisplayFor(model => model.PlantLarve)
+</P>
+</dd>
+</dl>
+    </div>
+</div>

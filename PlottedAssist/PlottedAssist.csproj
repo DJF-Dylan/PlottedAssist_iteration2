@@ -201,6 +201,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Picture\Banner\IndTitleMob.png" />
+    <Content Include="Picture\Banner\IndTitleWeb.png" />
+    <Content Include="Picture\Banner\InvTitleMob.png" />
+    <Content Include="Picture\Banner\InvTitleWeb.png" />
+    <Content Include="Picture\Banner\MyGardenTitle.png" />
     <Content Include="Picture\header_picture.jpg" />
     <Content Include="Picture\header_picture2.jpg" />
     <Content Include="Picture\header_picture3.jpg" />
@@ -214,6 +219,7 @@
     <Content Include="Picture\Icon\MyGarden.png" />
     <Content Include="Picture\Icon\PlantList.png" />
     <Content Include="Picture\Icon\Prune.png" />
+    <Content Include="Picture\Icon\Tooltip_icon.png" />
     <Content Include="Picture\Icon\Water.png" />
     <Content Include="Picture\logo.png" />
     <Content Include="Picture\PlantSet\Acacia implexa.jpg" />
@@ -249,6 +255,7 @@
     <Content Include="Picture\SunNeed\1.jpg" />
     <Content Include="Picture\SunNeed\2.png" />
     <Content Include="Picture\SunNeed\3.png" />
+    <Content Include="Picture\Tooltip.jpg" />
     <Content Include="Picture\Weed\Allium triquetrum.jpg" />
     <Content Include="Picture\Weed\Anredera cordifolia.jpg" />
     <Content Include="Picture\Weed\Araujia sericifera.jpg" />

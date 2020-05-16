@@ -9,7 +9,7 @@
 
     <!--Header-->
 
-    <div class="col-12 col-md-8" style="background-image:url(../../Picture/header_picture.jpg);width:100%;height:400px;position:relative;">
+    <div class="col-12 col-md-8" style="background-image:url(../../Picture/header_picture3.jpg);width:100%;height:400px;position:relative;">
         <div class="col-12 col-md-12" style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
             <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
         </div>
@@ -18,13 +18,18 @@
         </div>
     </div>
 
-    <!--Plant information and picture-->>
-    <p style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%">< @Html.ActionLink("Back to List", "Index")</p>
-    <div class="col-sm-6 col-sm-offset-3">
+    <!--Plant information and picture-->
+    <br>
+    <br>
+    <div style="color:black;font-family:'Arial';font-size:16PX;padding-left:15%;">
+        <p>< @Html.ActionLink("Back to List", "Index")</p>
+    </div>
+    
+    <div class="col-sm-6 col-sm-offset-3" style="margin-top:100px">
         <img class="col-xs-12 col-lg-8 col-lg-offset-2" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;margin-bottom:20px" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
-        <!--Add plant button-->>
+        <!--Add plant button-->
         <div style="text-align: center; font-family: 'Arial';position:relative;margin:20px;">
-            <button type="button" style="background: #344239; color:white; text-align: center;border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;border:0px">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
+            <button type="button" style="background: #344239; color:white; text-align: center;border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
         </div>
         <hr />
         <dl class="col-xs-12 col-lg-12 col-lg-offset-2 dl-horizontal white-word">

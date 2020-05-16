@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row" style="background-color:#344239">
+<div class="row" style="background-color:#4F6657">
 
     <!--Header-->
 
@@ -24,7 +24,7 @@
         <img class="col-xs-12 col-lg-8 col-lg-offset-2" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;margin-bottom:20px" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
         <!--Add plant button-->>
         <div style="text-align: center; font-family: 'Arial';position:relative;margin:20px;">
-            <button type="button" style="background: black; color:white; text-align: center;border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;border:0px">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
+            <button type="button" style="background: #344239; color:white; text-align: center;border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;border:0px">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
         </div>
         <hr />
         <dl class="col-xs-12 col-lg-12 col-lg-offset-2 dl-horizontal white-word">

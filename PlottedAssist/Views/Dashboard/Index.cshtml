@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="row" style="background-color:#344239;">
+    <div class="row" style="background-color:#4F6657;">
         <!--Header-->
 
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture.jpg);width:100%;height:400px;margin:0;position:relative">
@@ -12,38 +12,40 @@
         </div>
         <!--Add new one button-->>
         <div class="white-word" style="position:relative;margin-top:50px;margin-left:80%">
-            <button type="submit" style="background: black; color:white;padding:5px; text-align: center;border-radius:5px;box-shadow:0px 0px 8px 5px #6D917A;border:0px">@Html.ActionLink("Go to add one", "../PlantSets/PlantList")</button>
+            <button type="submit" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px">@Html.ActionLink("Go to add one", "../PlantSets/PlantList")</button>
         </div>
-
+        
+        <!--Activity part-->>
         <div class="col-md-8 col-md-offset-2">
 
 
             <div class="col-md-4" style="border:0px;">
-                <div class="panel panel-primary white-word" style="background:black;text-align:center;border:0px;border-radius:10px">
+                <div class="panel panel-primary white-word" style="background:#344239;text-align:center;border:0px;border-radius:10px">
                     <br>
                     <h3 class="panel-title">Activity Today</h3>
                     <hr>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    <img src="~/Picture/Icon/Water.png" height="30">
                     Nickname<br><br><br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    <img src="~/Picture/Icon/Fertilize.png" height="30">
                     Nickname<br><br>
                 </div>
 
-                <div class="panel panel-primary white-word" style="background:black;text-align:center;border:0px;border-radius:10px">
+                <div class="panel panel-primary white-word" style="background:#344239;text-align:center;border:0px;border-radius:10px">
                     <br>
                     <h3 class="panel-title">Activity Tomorrow</h3>
                     <hr>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    <img src="~/Picture/Icon/Mist.png" height="30">
                     Nickname<br><br><br>
-                    <img src="~/Picture/SunNeed/1.jpg" height="30">
+                    <img src="~/Picture/Icon/Prune.png" height="30">
                     Nickname<br><br>
                 </div>
             </div>
 
+            <!--My plant-->>
             @foreach (var item in Model)
             {
                 <div class="col-md-7" style="border-radius:5px;">
-                    <div class="col-xs-12" style="padding:20px;border:thin;background:#1E2621;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;margin-bottom:40px">
+                    <div class="col-xs-12" style="padding:20px;border:thin;background:#6D917A;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;margin-bottom:40px">
                         <div class="col-sm-3" style="background:black;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;">
                             <img>
                         </div>
@@ -56,26 +58,28 @@
                             <br>
                         </div>
 
-                        
+                        <div style='width:1px;border:1px solid white;float:left;height:180px;'></div>
 
-                        <div class="col-sm-3 white-word">
-                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                        <div class="col-sm-3 white-word" style="text-align:center">
+                            <img src="~/Picture/Icon/Water.png" height="30">
                             @Html.DisplayFor(modelItem => item.PlantWaterFrq)
                             <br><br>
-                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            <img src="~/Picture/Icon/Prune.png" height="30">
                             @Html.DisplayFor(modelItem => item.PlantPruningFrq)
                             <br><br>
-                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            <img src="~/Picture/Icon/Fertilize.png" height="30">
                             @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
                             <br><br>
-                            <img src="~/Picture/SunNeed/1.jpg" height="30">
+                            <img src="~/Picture/Icon/Mist.png" height="30">
                             @Html.DisplayFor(modelItem => item.PlantMistFrq)
                         </div>
 
-                        <div class="col-sm-3 white-word" style="text-align:center">
-                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;font-size:16px;width:100px">Information</a><br>
-                            <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;width:100px"> Setting</a><br>
-                            <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg" style="background: black; color:white;padding:10px; text-align: center;border-radius:15px;border:0px;width:100px"> Remove</a>
+                        <div style='width:1px;border:1px solid white;float:left;height:180px;'></div>
+
+                        <div class="col-sm-2 white-word" style="text-align:center">
+                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-primary btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:16px;width:100px">Information</a><br>
+                            <br><a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-primary btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:100px"> Setting</a><br>
+                            <br><a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-primary btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:100px"> Remove</a>
                         </div>
                     </div>
              </div>

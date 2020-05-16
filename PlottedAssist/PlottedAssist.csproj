@@ -202,6 +202,13 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Picture\header_picture.jpg" />
+    <Content Include="Picture\Icon\Fertilize.png" />
+    <Content Include="Picture\Icon\InvasivePlants.png" />
+    <Content Include="Picture\Icon\Mist.png" />
+    <Content Include="Picture\Icon\MyGarden.png" />
+    <Content Include="Picture\Icon\PlantList.png" />
+    <Content Include="Picture\Icon\Prune.png" />
+    <Content Include="Picture\Icon\Water.png" />
     <Content Include="Picture\logo.png" />
     <Content Include="Picture\PlantSet\Acacia implexa.jpg" />
     <Content Include="Picture\PlantSet\Acacia pycnantha.jpg" />

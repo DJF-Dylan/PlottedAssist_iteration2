@@ -23,9 +23,9 @@ namespace PlottedAssist.Controllers
             var userId = User.Identity.GetUserId();
             var userPlantSet = db.UserPlantSet.Where(s => s.UserId ==
             userId).Include(d => d.PlantSet);
-            var myPlant = userPlantSet.ToList();
-            
-            foreach (var i in myPlant) {
+            string[] today = {"No Activity"};
+            string[] tomorrow = { "No Activity" };
+            foreach (var i in userPlantSet) {
                 TimeSpan ts1 = new TimeSpan(i.StartDate.Ticks);
                 TimeSpan ts2 = new TimeSpan(DateTime.Now.Ticks);
                 TimeSpan ts = ts2.Subtract(ts1).Duration();
@@ -35,20 +35,76 @@ namespace PlottedAssist.Controllers
                 var plantPruningFrq = int.Parse(i.PlantPruningFrq);
                 var plantFertilizerFrq = int.Parse(i.PlantFertilizerFrq);
                 var plantMistFrq = int.Parse(i.PlantMistFrq);
-                if (plantWaterFrq == 0)
+                if (pastday == 0)
                 {
-                    i.PlantWaterFrq = "-";
+                    Array.Resize(ref today, today.Length + 2);
+                    today[today.Length - 2] = "Water.png";
+                    today[today.Length - 2] = i.plantNickName;
                 }
-                else if (plantWaterFrq > pastday)
+                if (plantWaterFrq != 0 && plantWaterFrq <= pastday)
                 {
-                    //Do do anything
+                    if (pastday % plantWaterFrq == 0)
+                    {
+                        Array.Resize(ref today, today.Length + 2);
+                        today[today.Length - 2] = "Water.png";
+                        today[today.Length - 1] = i.plantNickName;
+                    }
+                    else if (pastday % plantWaterFrq == 1)
+                    {
+                        Array.Resize(ref tomorrow, tomorrow.Length + 2);
+                        tomorrow[tomorrow.Length - 2] = "Water.png";
+                        tomorrow[tomorrow.Length - 1] = i.plantNickName;
+                    }
+                }else if (plantFertilizerFrq != 0 && plantFertilizerFrq <= pastday)
+                {
+                    if (pastday % plantFertilizerFrq == 0)
+                    {
+                        Array.Resize(ref today, today.Length + 2);
+                        today[today.Length - 2] = "Fertilize.png";
+                        today[today.Length - 1] = i.plantNickName;
+                    }
+                    else if (pastday % plantFertilizerFrq == 1)
+                    {
+                        Array.Resize(ref tomorrow, tomorrow.Length + 2);
+                        tomorrow[tomorrow.Length - 2] = "Fertilize.png";
+                        tomorrow[tomorrow.Length - 1] = i.plantNickName;
+                    }
                 }
-                else {
-                    i.PlantWaterFrq = (pastday % plantWaterFrq).ToString();
+                else if (plantMistFrq != 0 && plantMistFrq <= pastday)
+                {
+                    if (pastday % plantMistFrq == 0)
+                    {
+                        Array.Resize(ref today, today.Length + 2);
+                        today[today.Length - 2] = "Mist.png";
+                        today[today.Length - 1] = i.plantNickName;
+                    }
+                    else if (pastday % plantMistFrq == 1)
+                    {
+                        Array.Resize(ref tomorrow, tomorrow.Length + 2);
+                        tomorrow[tomorrow.Length - 2] = "Mist.png";
+                        tomorrow[tomorrow.Length - 1] = i.plantNickName;
+                    }
                 }
+                else if (plantPruningFrq != 0 && plantPruningFrq <= pastday)
+                {
+                    if (pastday % plantPruningFrq == 0)
+                    {
+                        Array.Resize(ref today, today.Length + 2);
+                        today[today.Length - 2] = "Prune.png";
+                        today[today.Length - 1] = i.plantNickName;
+                    }
+                    else if (pastday % plantPruningFrq == 1)
+                    {
+                        Array.Resize(ref tomorrow, tomorrow.Length + 2);
+                        tomorrow[tomorrow.Length - 2] = "Prune.png";
+                        tomorrow[tomorrow.Length - 1] = i.plantNickName;
+                    }
+                }
+                ViewBag.today = today;
+                ViewBag.tomorrow = tomorrow;
             }
 
-            return View(myPlant);
+            return View(userPlantSet);
 
             //var userPlantSet = db.UserPlantSet.Include(u => u.PlantSet);
             //return View(userPlantSet.ToList());

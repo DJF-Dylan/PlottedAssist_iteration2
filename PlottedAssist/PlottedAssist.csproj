@@ -201,6 +201,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Picture\Animal_icon\Bee.png" />
+    <Content Include="Picture\Animal_icon\Bird.png" />
+    <Content Include="Picture\Animal_icon\butterfly.png" />
+    <Content Include="Picture\Animal_icon\Insect.png" />
+    <Content Include="Picture\Animal_icon\Larve.png" />
     <Content Include="Picture\Banner\IndTitleMob.png" />
     <Content Include="Picture\Banner\IndTitleWeb.png" />
     <Content Include="Picture\Banner\InvTitleMob.png" />

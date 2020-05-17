@@ -11,22 +11,22 @@
 
 
 
-
 <div class="row" style="background-color:#4F6657">
     <!--Header-->
 
-    <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture3.jpg);width:100%;height:400px;margin:0;position:relative">
-        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:200px;padding-left:35%;padding-right:35%">
-            <p style="font-family:'Arial';color:white;background:black;font-size:45px;text-align:center">Indigenous Plants</p>
-        </div>
-        <div style="position:absolute;text-align:center;height:auto;width:auto;padding-top:255px;padding-left:50%;padding-right:33%;">
-            <p style="font-family:'Arial';color:black;background:white;font-size:25px;text-align:center">in Yarra City</p>
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%">
+        <div>
+            <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
         </div>
     </div>
 
     <!--Question part-->
-    <form role="form" action="/PlantSets/TestResult" method="post" class="col-sm-6 col-sm-offset-3 white-word" style="font-family:'Arial';background:#344239;margin-top:20px;position:relative;margin-bottom:50px">
-        <div class="white-word" style="background:#344239;text-align:center;margin-top:50px;position:relative">
+    <form role="form" action="/PlantSets/TestResult" method="post" class="col-sm-6 col-sm-offset-3 white-word" style="font-family: 'Arial';
+        background: #344239;
+        margin-top: 5%;
+        
+        margin-bottom: 5%">
+        <div class="white-word" style="background:#344239;text-align:center;margin-top:10%;">
             <H3>Let us help you decide which to plant!</H3>
             <p>
                 @Html.ActionLink("No thanks.Give me the list of all plants", "PlantList")
@@ -35,7 +35,7 @@
         <br>
         <br>
         <div class="col-sm-12 white-word form-group">
-            <h1 style="font-size:16px;">1. What type plants do you want to pant? <a href="~/Picture/Tooltip.jpg"><img src="~/Picture/Icon/tooltip_icon.png" height="15"></a></h1>
+            <h1 style="font-size:16px;">1. What type plants do you want to pant? <a href="@Url.Content("~/PlantSets/Instrction/")"><img src="~/Picture/Icon/Tooltip_icon.png" height="15"></a></h1>
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="Tree" value="Trees" checked="checked">Tree
@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+        <div class="col-sm-12 white-word form-group" style="margin-top:20px">
             <p style="font-size:16px;">2. How often would you like to water your plants?</p>
             <div class="radio">
                 <label>
@@ -70,7 +70,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+        <div class="col-sm-12 white-word form-group" style="margin-top:20px">
             <p style="font-size:16px;">3. When do you plan to plants?</p>
             <div class="radio">
                 <label>
@@ -88,7 +88,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+        <div class="col-sm-12 white-word form-group" style="margin-top:20px">
             <p style="font-size:16px;">4. Enough sunshine in your garden?</p>
             <div class="radio">
                 <label>
@@ -103,12 +103,12 @@
             </div>
         </div>
 
-        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px">
+        <div class="col-sm-12 white-word form-group" style="margin-top:20px">
             <p style="font-size:16px">5. Do you prefer drought tolerant plants?</p>
             <div class="radio">
                 <label>
                     <input type="radio" name="PlantDroughtTol" value="1">Yes
-                </label><br>          
+                </label><br>
                 <label>
                     <input type="radio" name="PlantDroughtTol" value="0">No
                 </label><br>
@@ -118,7 +118,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 white-word form-group" style="position:relative;margin-top:20px;margin-bottom:40px;text-align:center">
+        <div class="col-sm-12 white-word form-group" style="margin-top:5%;margin-bottom:5%;text-align:center">
             <button type="submit" style="color:white; text-align: center;box-shadow:2px 2px 6px 2px #1E2621;background-color:transparent;">Submit</button>
         </div>
     </form>

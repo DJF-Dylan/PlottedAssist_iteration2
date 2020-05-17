@@ -31,6 +31,7 @@ namespace PlottedAssist.Controllers
                 TimeSpan ts = ts2.Subtract(ts1).Duration();
                 var dateDiff = ts.Days.ToString();
                 var pastday = int.Parse(dateDiff);
+                ViewBag.days = pastday;
                 var plantWaterFrq = int.Parse(i.PlantWaterFrq); 
                 var plantPruningFrq = int.Parse(i.PlantPruningFrq);
                 var plantFertilizerFrq = int.Parse(i.PlantFertilizerFrq);
@@ -39,61 +40,64 @@ namespace PlottedAssist.Controllers
                 {
                     Array.Resize(ref today, today.Length + 2);
                     today[today.Length - 2] = "Water.png";
-                    today[today.Length - 2] = i.plantNickName;
+                    today[today.Length - 1] = i.plantNickName;
                 }
                 if (plantWaterFrq != 0 && plantWaterFrq <= pastday)
                 {
-                    if (pastday % plantWaterFrq == 0)
+                    if (pastday % plantWaterFrq == 0 || plantWaterFrq == 1)
                     {
                         Array.Resize(ref today, today.Length + 2);
                         today[today.Length - 2] = "Water.png";
                         today[today.Length - 1] = i.plantNickName;
                     }
-                    else if (pastday % plantWaterFrq == 1)
+                    if (pastday % plantWaterFrq == 1 || plantWaterFrq == 1)
                     {
                         Array.Resize(ref tomorrow, tomorrow.Length + 2);
                         tomorrow[tomorrow.Length - 2] = "Water.png";
                         tomorrow[tomorrow.Length - 1] = i.plantNickName;
                     }
-                }else if (plantFertilizerFrq != 0 && plantFertilizerFrq <= pastday)
+                }
+                if (plantFertilizerFrq != 0 && plantFertilizerFrq <= pastday)
                 {
-                    if (pastday % plantFertilizerFrq == 0)
+                    if (pastday % plantFertilizerFrq == 0 || plantFertilizerFrq == 1)
                     {
                         Array.Resize(ref today, today.Length + 2);
                         today[today.Length - 2] = "Fertilize.png";
                         today[today.Length - 1] = i.plantNickName;
                     }
-                    else if (pastday % plantFertilizerFrq == 1)
+                    if (pastday % plantFertilizerFrq == 1 || plantFertilizerFrq == 1)
                     {
                         Array.Resize(ref tomorrow, tomorrow.Length + 2);
                         tomorrow[tomorrow.Length - 2] = "Fertilize.png";
                         tomorrow[tomorrow.Length - 1] = i.plantNickName;
                     }
                 }
-                else if (plantMistFrq != 0 && plantMistFrq <= pastday)
+                
+                if (plantMistFrq != 0 && plantMistFrq <= pastday)
                 {
-                    if (pastday % plantMistFrq == 0)
+                    if (pastday % plantMistFrq == 0 || plantMistFrq == 1)
                     {
                         Array.Resize(ref today, today.Length + 2);
                         today[today.Length - 2] = "Mist.png";
                         today[today.Length - 1] = i.plantNickName;
                     }
-                    else if (pastday % plantMistFrq == 1)
+                    if (pastday % plantMistFrq == 1 || plantMistFrq == 1)
                     {
                         Array.Resize(ref tomorrow, tomorrow.Length + 2);
                         tomorrow[tomorrow.Length - 2] = "Mist.png";
                         tomorrow[tomorrow.Length - 1] = i.plantNickName;
                     }
                 }
-                else if (plantPruningFrq != 0 && plantPruningFrq <= pastday)
+                
+                if (plantPruningFrq != 0 && plantPruningFrq <= pastday)
                 {
-                    if (pastday % plantPruningFrq == 0)
+                    if (pastday % plantPruningFrq == 0 || plantPruningFrq == 1)
                     {
                         Array.Resize(ref today, today.Length + 2);
                         today[today.Length - 2] = "Prune.png";
                         today[today.Length - 1] = i.plantNickName;
                     }
-                    else if (pastday % plantPruningFrq == 1)
+                    if (pastday % plantPruningFrq == 1 || plantPruningFrq == 1)
                     {
                         Array.Resize(ref tomorrow, tomorrow.Length + 2);
                         tomorrow[tomorrow.Length - 2] = "Prune.png";

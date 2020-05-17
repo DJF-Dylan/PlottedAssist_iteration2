@@ -24,20 +24,31 @@
                     <br>
                     <h3 class="panel-title">Activity Today</h3>
                     <hr>
-                    <img src="~/Picture/Icon/Water.png" height="30">
-                    Nickname<br><br><br>
-                    <img src="~/Picture/Icon/Fertilize.png" height="30">
-                    Nickname<br><br>
+                    @if (ViewBag.today.Length == 1)
+                    {<text>No Activity Today</text>;
+                    }
+                    else
+                    {
+                    for (int i = 0; i < ViewBag.today.Length-1; i = i + 2)
+                    {
+                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.today[i+1])" height="30">
+                        <p>@ViewBag.today[i +2 ] </p>  
+                    }}
                 </div>
 
                 <div class="panel panel-primary white-word" style="background:#344239;text-align:center;border:0px;border-radius:10px">
                     <br>
                     <h3 class="panel-title">Activity Tomorrow</h3>
                     <hr>
-                    <img src="~/Picture/Icon/Mist.png" height="30">
-                    Nickname<br><br><br>
-                    <img src="~/Picture/Icon/Prune.png" height="30">
-                    Nickname<br><br>
+                    @if (ViewBag.tomorrow.Length == 1)
+                    {<text>No Activity Tomorrow</text>}
+                else
+                {
+                    for (int i = 0; i < ViewBag.tomorrow.Length-1; i = i + 2)
+                    {
+                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.tomorrow[i+1])" height="30">
+                        <p>@ViewBag.tomorrow[i + 2] </p>
+                    }}
                 </div>
             </div>
 
@@ -47,7 +58,7 @@
                 <div class="col-md-7" style="border-radius:5px;">
                     <div class="col-xs-12" style="padding:20px;border:thin;background:#1E2621;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;margin-bottom:40px">
                         <div class="col-sm-3" style="background:black;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;">
-                            <img>
+                            <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" height ="100"style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
                         </div>
                         <div class="col-sm-3 white-word">
                             @Html.DisplayFor(modelItem => item.plantNickName)
@@ -62,16 +73,27 @@
 
                         <div class="col-sm-3 white-word" style="text-align:center">
                             <img src="~/Picture/Icon/Water.png" height="30">
-                            @Html.DisplayFor(modelItem => item.PlantWaterFrq)
+                            @if (item.PlantWaterFrq == "0")
+                            {<text>---</text>}
+                            else
+                            { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} Days
                             <br><br>
                             <img src="~/Picture/Icon/Prune.png" height="30">
-                            @Html.DisplayFor(modelItem => item.PlantPruningFrq)
+                            @if (item.PlantPruningFrq == "0")
+                            {<text>---</text>}
+                            else
+                            { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} Days
                             <br><br>
                             <img src="~/Picture/Icon/Fertilize.png" height="30">
-                            @Html.DisplayFor(modelItem => item.PlantFertilizerFrq)
+                            @if (item.PlantPruningFrq == "0")
+                            {<text>---</text>}
+                            else {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} Days                      
                             <br><br>
                             <img src="~/Picture/Icon/Mist.png" height="30">
-                            @Html.DisplayFor(modelItem => item.PlantMistFrq)
+                            @if (item.PlantPruningFrq == "0")
+                            {<text>---</text>}
+                            else {  @Html.DisplayFor(modelItem => item.PlantMistFrq)} Days
+                           
                         </div>
 
                         <div style='width:1px;border:1px solid white;float:left;height:180px;'></div>

@@ -352,6 +352,7 @@
     <Content Include="Views\PlantSets\GetPlantData.cshtml" />
     <Content Include="Views\WeedSets\WeedFilter.cshtml" />
     <Content Include="Views\PlantSets\TestResult.cshtml" />
+    <Content Include="Views\PlantSets\Instrction.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

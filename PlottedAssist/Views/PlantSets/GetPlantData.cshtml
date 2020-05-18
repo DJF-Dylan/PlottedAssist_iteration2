@@ -9,76 +9,76 @@
     };
 }
 
-<div class="row" style="background-color:#4F6657">
+    <div class="row" style="background-color:#4F6657">
 
-    <!--Header-->
+        <!--Header-->
 
-    <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
-        <div>
-            <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
-        </div>
-    </div>
-
-    <!--Filter-->
-    @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
-    {
-        <div class="col-12 col-sm-6 col-md-12 col-lg-12" style="text-align: center; margin-top: 20px; position: relative;">
-            <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
-                <h4 class="white-word">Plant type</h4>
-
-                @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-            </div>
-            <br>
-            <div class="btn-group-lg" role="group" aria-label="...">
-                <h4 class="white-word">Plant season</h4>
-
-                @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
-                @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
-
+        <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+            <div>
+                <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-    }
 
-    @foreach (var item in Model)
-    {
-        <!--Plant display-->
-        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1" style="margin-bottom:5%">
-            <div class="card" style="padding:25px;width:280px;margin-top:20px;border-radius:15px;">
-                <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
-                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
-                    <div style="position:relative;margin-top:-40%">
-                        <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantCommonName)</h1>
-                        <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantSciName)</h1>
-                    </div>
-                </a>
+        <!--Filter-->
+        @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
+        {
+            <div class="col-12 col-sm-6 col-md-12 col-lg-12" style="text-align: center; margin-top: 20px; position: relative;">
+                <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
+                    <h4 class="white-word">Plant type</h4>
+
+                    @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Grass", "GetPlantData", new { selected = "Small Plants" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Shrubs", "GetPlantData", new { selected = "Shrubs" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Creepers", "GetPlantData", new { selected = "Creepers" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("All Plant", "GetPlantData", new { selected = "All Plant" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                </div>
+                <br>
+                <div class="btn-group-lg" role="group" aria-label="...">
+                    <h4 class="white-word">Plant season</h4>
+
+                    @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Summer", "GetPlantData", new { selected = "Summer" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Autumn", "GetPlantData", new { selected = "Autumn" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("Winter", "GetPlantData", new { selected = "Winter" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                    @Ajax.ActionLink("All Year", "GetPlantData", new { selected = "All Year" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
+
+                </div>
             </div>
+        }
 
-        </div>
-    }
-</div>        
+        @foreach (var item in Model)
+        {
+            <!--Plant display-->
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1" style="margin-bottom:5%">
+                <div class="card" style="padding:25px;width:280px;margin-top:20px;border-radius:15px;">
+                    <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
+                        <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
+                        <div style="position:relative;margin-top:-75px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
+                            <p class="white-word" style="font-size:16px;padding-top:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
+                            <p class="white-word" style="font-size:16px;margin-bottom:0px;padding-bottom:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantSciName)</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        }
+    </div>        

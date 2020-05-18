@@ -14,19 +14,16 @@
                 <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-        ===================<br>
-        @ViewBag.result<br>
-        ===================
         @foreach (var item in Model)
         {
             <!--Plant display-->
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-lg-offset-1" style="margin-bottom:5%">
                 <div class="card" style="padding:25px;width:280px;margin-top:20px;border-radius:15px;">
                     <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
                         <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
-                        <div style="position:relative;margin-top:-40%">
-                            <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantCommonName)</h1>
-                            <h1 class="white-word" style="font-size:16px">@Html.DisplayFor(modelItem => item.PlantSciName)</h1>
+                        <div style="position:relative;margin-top:-75px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
+                            <p class="white-word" style="font-size:16px;padding-top:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
+                            <p class="white-word" style="font-size:16px;margin-bottom:0px;padding-bottom:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantSciName)</p>
                         </div>
                     </a>
                 </div>

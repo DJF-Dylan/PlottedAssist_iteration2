@@ -55,7 +55,7 @@ namespace PlottedAssist.Controllers
             if (plantWaterFrq != "All" && plantWaterFrq != "4") {
                 data = data.Where(p => p.PlantWaterFrq == "3" || p.PlantWaterFrq == "4").ToList();
             }
-            else
+            else if(plantWaterFrq != "All")
             { 
                 data = data.Where(p => p.PlantWaterFrq == plantWaterFrq).ToList();
             }
@@ -91,7 +91,7 @@ namespace PlottedAssist.Controllers
             }
             IEnumerable<PlantSet> result = Spring.Union(Summer).Union(Autumn).Union(Winter);
             ViewBag.result = Tree + Shrub + Crepper + Grass + plantWaterFrq + plantSeason + plantSunNeedPath + plantDroughtTol;
-            return View(data);
+            return View(result);
         }
         
         //Ajax page to filter the plant list

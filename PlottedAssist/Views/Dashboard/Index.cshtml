@@ -14,91 +14,95 @@
         </div>
             <!--Add new one button-->
             <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
-                <a href="@Url.Content("~/PlantSets/PlantList")" class="btn btn-default" style="background: #344239; color:white;padding:3%; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-top:10%;">Go to add one</a>
+                <a href="@Url.Content("~/PlantSets/PlantList")" class="btn btn-default" style="background: #344239; color:white;padding:3%; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-top:10%;">Add Plant From List</a>
             </div>
         
         <!--Activity part-->
-        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2" style="margin-top:5%;margin-bottom:10%">
+            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2" style="margin-top:5%;margin-bottom:10%">
 
 
-            <div class="col-md-3" style="border:0px;">
-                <div class="panel panel-primary white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
-                    <br>
-                    <h3 class="panel-title" style="text-align:center">Activity Today</h3>
-                    <hr>
-                    @if (ViewBag.today.Length == 1)
-                    {<text>No Activity Today</text>;
+                <div class="col-md-3" style="border:0px;">
+                    <div class="panel panel-primary white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
+                        <br>
+                        <h3 class="panel-title" style="text-align:center">Activity Today</h3>
+                        <hr>
+
+                        @if (ViewBag.today.Length == 1)
+                        {<text>No Activity Today</text>;
                     }
                     else
                     {
-                    for (int i = 0; i < ViewBag.today.Length-1; i = i + 2)
-                    {
-                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.today[i+1])" height="30" width="30">
-                        @ViewBag.today[i +2 ] <br> <br>
-                    }}
-                </div>
-
-                <div class="panel panel-primary white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
-                    <br>
-                    <h3 class="panel-title" style="text-align:center">Activity Tomorrow</h3>
-                    <hr>
-                    @if (ViewBag.tomorrow.Length == 1)
-                    {<text>No Activity Tomorrow </text><br> }
-                else
-                {
-                    for (int i = 0; i < ViewBag.tomorrow.Length-1; i = i + 2)
-                    {
-                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.tomorrow[i+1])" height="30" width="30">
-                        @ViewBag.tomorrow[i + 2] <br> <br>
-                    }}
-                </div>
-            </div>
-
-            <!--My plant-->
-            @foreach (var item in Model)
-            {
-                <div class="col-md-8 col-md-offset-1 col-xs-12" style="border-radius:5px;">
-                    <div class="col-xs-12 col-md-12 col-lg-10" style="padding: 20px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px;">
-                        <div class="col-xs-12 col-md-5 col-lg-5 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
-                            <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;height:100%;margin-left:-10%">                                              
-                        </div>
-                        <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom:4%;font-size:18px;font-weight:bold">
-
-                            @Html.DisplayFor(modelItem => item.plantNickName)<br>
-                        </div>
-                        <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom: 2%;font-size:18px">
-                            <img src="~/Picture/Icon/Water.png" height="30" width="30">
-                            @if (item.PlantWaterFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} days
-
-                            <img src="~/Picture/Icon/Prune.png" height="30" width="30">
-                            @if (item.PlantPruningFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} days
-                            <br><br>
-                            <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
-                            @if (item.PlantPruningFrq == "0")
-                            {<text> - </text>}
-                        else
-                        {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} days
-
-                            <img src="~/Picture/Icon/Mist.png" height="30" width="30">
-                            @if (item.PlantPruningFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantMistFrq)} days
-                        </div>
-                        <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1">
-                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:10px;width:30%">Information</a>
-                            <a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:30%;font-size:10px"> Setting</a>
-                            <a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:30%;font-size:10px"> Remove</a>
-                        </div>                                               
+                        for (int i = 0; i < ViewBag.today.Length - 1; i = i + 2)
+                        {
+                            <img src="@Url.Content("~/Picture/Icon/" + ViewBag.today[i+1])" height="30" width="30">
+                            @ViewBag.today[i + 2] <br> <br>
+                        }
+                    }
                     </div>
-             </div>
-             }
-                    
-        </div>
-    </div>
+
+                    <div class="panel panel-primary white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
+                        <br>
+                        <h3 class="panel-title" style="text-align:center">Activity Tomorrow</h3>
+                        <hr>
+                        @if (ViewBag.tomorrow.Length == 1)
+                        {<text>No Activity Tomorrow </text><br> }
+                    else
+                    {
+                        for (int i = 0; i < ViewBag.tomorrow.Length - 1; i = i + 2)
+                        {
+                            <img src="@Url.Content("~/Picture/Icon/" + ViewBag.tomorrow[i+1])" height="30" width="30">
+                            @ViewBag.tomorrow[i + 2] <br> <br>
+                        }
+                    }
+                    </div>
+                </div>
+
+                <!--My plant-->
+                
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-8 col-md-offset-1 col-xs-12" style="border-radius:5px;">
+                            <div class="col-xs-12 col-md-12 col-lg-10" style="padding: 20px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px;">
+                                <div class="col-xs-12 col-md-5 col-lg-5 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
+                                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;height:100%;margin-left:-10%">
+                                </div>
+                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom:4%;font-size:18px;font-weight:bold">
+
+                                    @Html.DisplayFor(modelItem => item.plantNickName)<br>
+                                </div>
+                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom: 2%;font-size:18px">
+                                    <img src="~/Picture/Icon/Water.png" height="30" width="30">
+                                    @if (item.PlantWaterFrq == "0")
+                                    {<text> - </text>}
+                                else
+                                { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} days
+
+                                    <img src="~/Picture/Icon/Prune.png" height="30" width="30">
+                                    @if (item.PlantPruningFrq == "0")
+                                    {<text> - </text>}
+                                else
+                                { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} days
+                                    <br><br>
+                                    <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
+                                    @if (item.PlantFertilizerFrq == "0")
+                                    {<text> - </text>}
+                                else
+                                {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} days
+
+                                    <img src="~/Picture/Icon/Mist.png" height="30" width="30">
+                                    @if (item.PlantMistFrq == "0")
+                                    {<text> - </text>}
+                                else
+                                { @Html.DisplayFor(modelItem => item.PlantMistFrq)} days
+                                </div>
+                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1">
+                                    <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:10px;width:30%">Information</a>
+                                    <a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:30%;font-size:10px"> Setting</a>
+                                    <a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:30%;font-size:10px"> Remove</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+        
+            </div>

@@ -38,13 +38,13 @@ namespace PlottedAssist.Controllers
                     var plantPruningFrq = int.Parse(i.PlantPruningFrq);
                     var plantFertilizerFrq = int.Parse(i.PlantFertilizerFrq);
                     var plantMistFrq = int.Parse(i.PlantMistFrq);
-                    if (pastday == 0)
+                    if (pastday == 0 && plantWaterFrq!=1)
                     {
                         Array.Resize(ref today, today.Length + 2);
                         today[today.Length - 2] = "Water.png";
                         today[today.Length - 1] = i.plantNickName;
                     }
-                    if (plantWaterFrq != 0 && plantWaterFrq <= pastday)
+                    if (plantWaterFrq != 0 && plantWaterFrq <= (pastday+1))
                     {
                         if (pastday % plantWaterFrq == 0 || plantWaterFrq == 1)
                         {
@@ -59,7 +59,7 @@ namespace PlottedAssist.Controllers
                             tomorrow[tomorrow.Length - 1] = i.plantNickName;
                         }
                     }
-                    if (plantFertilizerFrq != 0 && plantFertilizerFrq <= pastday)
+                    if (plantFertilizerFrq != 0 && plantFertilizerFrq <= (pastday + 1))
                     {
                         if (pastday % plantFertilizerFrq == 0 || plantFertilizerFrq == 1)
                         {
@@ -75,7 +75,7 @@ namespace PlottedAssist.Controllers
                         }
                     }
 
-                    if (plantMistFrq != 0 && plantMistFrq <= pastday)
+                    if (plantMistFrq != 0 && plantMistFrq <= (pastday + 1))
                     {
                         if (pastday % plantMistFrq == 0 || plantMistFrq == 1)
                         {
@@ -91,7 +91,7 @@ namespace PlottedAssist.Controllers
                         }
                     }
 
-                    if (plantPruningFrq != 0 && plantPruningFrq <= pastday)
+                    if (plantPruningFrq != 0 && plantPruningFrq <= (pastday + 1))
                     {
                         if (pastday % plantPruningFrq == 0 || plantPruningFrq == 1)
                         {

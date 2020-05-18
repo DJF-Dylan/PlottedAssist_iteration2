@@ -9,23 +9,23 @@
 
     <!--Header-->
 
-    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%">
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
         <div>
-            <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+            <img src="~/Picture/Banner/IndTitleWeb.png" style="width: 35%; margin-top: 15%; margin-left: 33%">
         </div>
     </div>
 
     <!--Plant information and picture-->
     <br>
     <br>
-    <div style="color:black;font-family:'Arial';font-size:16PX;padding-left:15%;padding-top:5%">
+    <div style="color:black;font-family:'Arial';font-size:16PX;padding-left:15%;margin-top:3%">
         <p>< @Html.ActionLink("Back to List", "Index")</p>
     </div>
     
-    <div class="col-sm-6 col-sm-offset-3" style="margin-top:5%">
+    <div class="col-sm-6 col-sm-offset-3" style="margin-top:5%;margin-bottom:10%">
         <img class="col-xs-8 col-lg-8 col-lg-offset-2 col-xs-offset-2" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;margin-bottom:20px" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
         <!--Add plant button-->
-        <div style="text-align: center; font-family: 'Arial';position:relative;margin:20px;">
+        <div class="col-xs-8 col-lg-8 col-lg-offset-2 col-xs-offset-2" style="text-align: center; font-family: 'Arial';margin-top:5%;margin-bottom:5%">
             <button type="button" style="background: #344239; color:white; text-align: center;border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;">@Html.ActionLink("Add to my gargen", "../Dashboard/Create", new { id = Model.Id }) </button>
         </div>
         

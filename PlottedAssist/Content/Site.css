@@ -1,6 +1,19 @@
-﻿body{
+﻿html {
+    height: 100vh;
+}
+
+body {
+    position: relative;
     padding-top: 0px;
     padding-bottom: 0px;
+    min-height: 100vh;
+    background-color: #4F6657;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 

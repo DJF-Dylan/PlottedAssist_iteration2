@@ -227,6 +227,7 @@
     <Content Include="Picture\Icon\Tooltip_icon.png" />
     <Content Include="Picture\Icon\Water.png" />
     <Content Include="Picture\logo.png" />
+    <Content Include="Picture\logo_tab.png" />
     <Content Include="Picture\PlantSet\Acacia implexa.jpg" />
     <Content Include="Picture\PlantSet\Acacia pycnantha.jpg" />
     <Content Include="Picture\PlantSet\Acacia verticillata.jpg" />
@@ -305,21 +306,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -331,27 +317,42 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Dashboard\Create.cshtml" />
+    <Content Include="Views\Dashboard\Delete.cshtml" />
+    <Content Include="Views\Dashboard\Edit.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\PlantSets\Details.cshtml" />
+    <Content Include="Views\PlantSets\GetPlantData.cshtml" />
+    <Content Include="Views\PlantSets\Index.cshtml" />
+    <Content Include="Views\PlantSets\Instrction.cshtml" />
+    <Content Include="Views\PlantSets\PlantList.cshtml" />
+    <Content Include="Views\PlantSets\TestResult.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Web.config" />
     <Content Include="Views\WeedSets\Details.cshtml" />
     <Content Include="Views\WeedSets\Index.cshtml" />
-    <Content Include="Views\Dashboard\Create.cshtml" />
-    <Content Include="Views\Dashboard\Delete.cshtml" />
-    <Content Include="Views\Dashboard\Edit.cshtml" />
-    <Content Include="Views\Dashboard\Index.cshtml" />
-    <Content Include="Views\PlantSets\Details.cshtml" />
-    <Content Include="Views\PlantSets\PlantList.cshtml" />
-    <Content Include="Views\PlantSets\Index.cshtml" />
-    <Content Include="Views\PlantSets\GetPlantData.cshtml" />
     <Content Include="Views\WeedSets\WeedFilter.cshtml" />
-    <Content Include="Views\PlantSets\TestResult.cshtml" />
-    <Content Include="Views\PlantSets\Instrction.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

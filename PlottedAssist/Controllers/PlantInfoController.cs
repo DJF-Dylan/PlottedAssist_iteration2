@@ -59,5 +59,11 @@ namespace PlottedAssist.Controllers
         {
             return View();
         }
+
+        // GET: PlantTech
+        public ActionResult PlantInfo()
+        {
+            return View();
+        }
     }
 }

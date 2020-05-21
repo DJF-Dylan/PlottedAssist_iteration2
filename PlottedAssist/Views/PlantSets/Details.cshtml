@@ -16,18 +16,18 @@
     </div>
 
     <!--Plant information and picture-->
-    
+
     <div class="col-sm-3" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
-        <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a> 
+        <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
     </div>
-    
+
     <div class="col-sm-6" style="margin-top:5%; margin-bottom:75px;">
         <img class="col-xs-6 col-lg-6 col-lg-offset-3 col-xs-offset-3" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;margin-bottom:20px" src="@Url.Content("~/Picture/PlantSet/"+Model.PlantPhotoPath)">
         <!--Add plant button-->
         <div class="col-xs-8 col-lg-8 col-lg-offset-2 col-xs-offset-2" style="text-align: center; font-family: 'Arial';margin-top:5%;margin-bottom:5%">
             <a href="@Url.Content("~/Dashboard/Create/" + Model.Id)" class="btn btn-default" style="background: #344239; color:white; text-align: center;border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;">Add to my garden</a>
         </div>
-        
+
         <dl class="col-xs-12 col-lg-12 dl-horizontal white-word">
             <dt>
                 Common Name
@@ -62,7 +62,7 @@
             </dd>
 
             <dt>
-                Plant Season
+                Planting Season
             </dt>
 
             <dd>
@@ -87,17 +87,17 @@
             </dd>
 
             <dt>
-                Sun need
+                Sun requirements
             </dt>
 
             <dd>
                 <P>
                     @if (Model.PlantSunNeedPath == "1")
-                    {<text>Full sun</text>}
+                    {<text>Full Sun</text>}
                     @if (Model.PlantSunNeedPath == "2")
-                    {<text>Full shade</text>}
+                    {<text>Full Shade</text>}
                     @if (Model.PlantSunNeedPath == "3")
-                    {<text>Half sun</text>}
+                    {<text>Partial Sun/Partial Shade</text>}
                 </P>
             </dd>
 
@@ -149,7 +149,7 @@
             </dd>
 
             <dt>
-                Provide Habit
+                Provide Habit to Plants
             </dt>
 
             <dd>
@@ -170,7 +170,7 @@
             </dd>
 
             <dt>
-                Companion Plant
+                Companion Plants
             </dt>
 
             <dd>
@@ -178,22 +178,29 @@
             </dd>
 
             <dt>
-                Attract Animal
+                Attract Animals
             </dt>
 
             <dd>
-                
-                    @if (Model.PlantBees == "1")
-                    {<img src="~/Picture/Animal_icon/Bee.png" height="40">}
-                    @if (Model.PlantButterfly == "1")
-                    {<img src="~/Picture/Animal_icon/butterfly.png" height="40">}
-                    @if (Model.PlantBird == "1")
-                    {<img src="~/Picture/Animal_icon/Bird.png" height="40">}
-                    @if (Model.PlantInsects == "1")
-                    {<img src="~/Picture/Animal_icon/Insect.png" height="30">}
-                    @if (Model.PlantLarve == "1")
-                    {<img src="~/Picture/Animal_icon/Larve.png" height="30">}
 
+                @if (Model.PlantBees == "1")
+                {<img src="~/Picture/Animal_icon/Bee.png" height="40">}
+                @if (Model.PlantButterfly == "1")
+                {<img src="~/Picture/Animal_icon/butterfly.png" height="40">}
+                @if (Model.PlantBird == "1")
+                {<img src="~/Picture/Animal_icon/Bird.png" height="40">}
+                @if (Model.PlantInsects == "1")
+                {<img src="~/Picture/Animal_icon/Insect.png" height="30">}
+                @if (Model.PlantLarve == "1")
+                {<img src="~/Picture/Animal_icon/Larve.png" height="30">}
+
+            </dd>
+            <dt>
+                Where to buy
+            </dt>
+
+            <dd>
+                <P><a href="@Url.Content("~/PlantInfo/Nurseries/")" style="color:#FFFFFF;text-decoration:underline">Nearest nurseries</a></P>
             </dd>
         </dl>
     </div>

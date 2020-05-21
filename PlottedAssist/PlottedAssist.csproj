@@ -365,6 +365,7 @@
     <Content Include="Views\PlantInfo\OtherCare.cshtml" />
     <Content Include="Views\PlantInfo\Sunshine.cshtml" />
     <Content Include="Views\PlantInfo\Benefits.cshtml" />
+    <Content Include="Views\PlantInfo\PlantInfo.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

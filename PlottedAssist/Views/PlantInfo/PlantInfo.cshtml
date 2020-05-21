@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "PlantInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="row" style="background-color:#4F6657;">
+        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+            <div>
+                <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+            </div>
+        </div>
+        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+            <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
+        </div>
+        <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+            <h2 class="white-word">Indigenous Plant Care:</h2>
+            <p class="white-word">The Plotted Plants tries to give information,hints and tips and best growing practices for Australian Indigenous Plants.</p>
+            <ul class="white-word">
+                <li><a href="@Url.Content("~/PlantInfo/WateringGuide/")" style="color:#FFFFFF;text-decoration:underline">Watering Guide to Plants</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/SoilTypes/")" style="color:#FFFFFF;text-decoration:underline">Soil Types and Test your soil type</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/Prune/")" style="color:#FFFFFF;text-decoration:underline">Why should you prune your plants</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/Sunshine/")" style="color:#FFFFFF;text-decoration:underline">Guide to proper sunshine</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide to Compost and DIY methods</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for Mulching</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for fertilizing</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/WildlifeTips/")" style="color:#FFFFFF;text-decoration:underline">Attracting Native Birds to your garden and Making your garden wildlife friendly</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/PlantTech/")" style="color:#FFFFFF;text-decoration:underline">Correct Planting Techniques</a></li>
+                <li><a href="@Url.Content("~/PlantInfo/Nurseries/")" style="color:#FFFFFF;text-decoration:underline">Find the nearest nurseries</a></li>
+            </ul>
+        </div>
+        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
+            <a href="@Url.Content("~/PlantInfo/WateringGuide")" class="btn btn-success">Next: Watering Guide</a>
+        </div>
+        
+    </div>
+

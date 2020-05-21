@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Nurseries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+        <h2 class="white-word">Nurseries</h2>     
+            <div id='map' class='col-md-12 map2'style="height:500px;"></div>        
+    </div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/mapbox")
+}

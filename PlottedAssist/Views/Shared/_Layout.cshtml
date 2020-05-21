@@ -7,6 +7,12 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css' type='text/css' />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" style="opacity:0.8">
@@ -25,12 +31,19 @@
                     <li>@Html.ActionLink("Invasive", "Index", "WeedSets")</li>
                     <li>@Html.ActionLink("Indi Plants", "Index", "PlantSets")</li>
                     <li>@Html.ActionLink("My Garden", "Index", "Dashboard")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plant Info <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Nurseries", "Nurseries", "PlantInfo")</li>
+                            
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container-fluid body-content" style="margin-top:0px;padding-right:0px;padding-left:0px;">
+    <div class="container-fluid body-content" style="margin-top:0px;padding-bottom:70px;padding-right:0px;padding-left:0px;">
         @RenderBody()
         
         

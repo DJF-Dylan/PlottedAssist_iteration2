@@ -208,6 +208,7 @@
     <Content Include="Picture\Animal_icon\butterfly.png" />
     <Content Include="Picture\Animal_icon\Insect.png" />
     <Content Include="Picture\Animal_icon\Larve.png" />
+    <Content Include="Picture\Banner\Homepage_title.png" />
     <Content Include="Picture\Banner\IndTitleMob.png" />
     <Content Include="Picture\Banner\IndTitleWeb.png" />
     <Content Include="Picture\Banner\InvTitleMob.png" />

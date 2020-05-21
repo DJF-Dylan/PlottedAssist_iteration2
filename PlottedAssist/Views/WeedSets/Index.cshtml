@@ -24,39 +24,41 @@
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
-    <div style="text-align:center;">
+            <div style="text-align:center;">
         
-        <div class="btn-group-lg col-12 col-xs-12 col-lg-offset-0 col-sm-12 col-md-12 col-md-offset-0 col-lg-12" role="group" aria-label="Flower color">
-            <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:10px;">Have You Ever Seen These Plant in Your Garden?</h1>
-            <h4 class="white-word">Flower color</h4>
+                <div class="btn-group-lg col-12 col-xs-12 col-lg-offset-0 col-sm-12 col-md-12 col-md-offset-0 col-lg-12" role="group" aria-label="Flower color">
+                    <h4 style="color:#DDDDDD;margin-top:30px">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species,</h4>
+                    <h4 style="color:#DDDDDD">and detract from the natural values of our garden.</h4>
+                    <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:10px;">Have You Ever Seen These Plant in Your Garden?</h1>
+                    <h4 class="white-word">Fastly check whether the one in your garden is invasive plant by using the filter. </h4>
 
-            @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
-            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+                    @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
 
-            @Ajax.ActionLink("Yellow", "WeedFilter", new { selected = "Yellow" },
-            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+                    @Ajax.ActionLink("Yellow", "WeedFilter", new { selected = "Yellow" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
 
-            @Ajax.ActionLink("Purple", "WeedFilter", new { selected = "Purple" },
-            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+                    @Ajax.ActionLink("Purple", "WeedFilter", new { selected = "Purple" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
 
-            @Ajax.ActionLink("No flower", "WeedFilter", new { selected = "No" },
-            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+                    @Ajax.ActionLink("No flower", "WeedFilter", new { selected = "No" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
 
-            @Ajax.ActionLink("All", "WeedFilter", new { selected = "All" },
-            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+                    @Ajax.ActionLink("All", "WeedFilter", new { selected = "All" },
+                    new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
 
-        </div>
+                </div>
 
-    </div>
+            </div>
         }
 
-        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="margin-top:50PX">
             @foreach (var item in Model)
             {
                 <!--Weed display-->
             
                     <div class="col-xs-10 col-xs-offset-2  col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1" style="margin-bottom:75px;">
-                        <div class="card" style="padding:15px;width:200px;margin-top:20px;border-radius:15px;">
+                        <div class="card" style="padding:15px;width:280px;margin-top:20px;border-radius:15px;">
                             <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;padding:0px;">
                                 <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
                             </a>

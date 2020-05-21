@@ -364,6 +364,8 @@
     <Content Include="Views\SoilType\PlantTech.cshtml" />
     <Content Include="Views\SoilType\Prune.cshtml" />
     <Content Include="Views\SoilType\OtherCare.cshtml" />
+    <Content Include="Views\SoilType\Sunshine.cshtml" />
+    <Content Include="Views\SoilType\Benefits.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

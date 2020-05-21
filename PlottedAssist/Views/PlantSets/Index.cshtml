@@ -26,24 +26,24 @@
         margin-top: 5%;
         margin-bottom: 5%">
         <div class="white-word" style="background:#344239;text-align:center;margin-top:10%;">
-            <H3>Let us help you decide which to plant!</H3>
-            <p>
+            <H3>Let us help you decide which plant to plant!</H3>
+            <p style="color:white;">
                 @Html.ActionLink("No thanks.Give me the list of all plants", "PlantList")
             </p>
         </div>
         <br>
         <br>
         <div class="col-sm-12 white-word form-group">
-            <h1 style="font-size:16px;">1. What type of plants do you want to pant? <a href="@Url.Content("~/PlantSets/Instrction/")"><img src="~/Picture/Icon/Tooltip_icon.png" height="15"></a></h1>
+            <h1 style="font-size:16px;">1. What type of plants would you like to plant? <a href="@Url.Content("~/PlantSets/Instrction/")"><img src="~/Picture/Icon/Tooltip_icon.png" height="15"></a></h1>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" name="Tree" value="Trees" checked="checked">Tree
+                    <input type="checkbox" name="Tree" value="Trees" checked="checked">Trees
                 </label>
                 <label>
-                    <input type="checkbox" name="Shrub" value="Shrubs" checked="checked">Shrub
+                    <input type="checkbox" name="Shrub" value="Shrubs" checked="checked">Shrubs
                 </label>
                 <label>
-                    <input type="checkbox" name="Crepper" value="Creepers" checked="checked">Crepper
+                    <input type="checkbox" name="Crepper" value="Creepers" checked="checked">Creepers
                 </label>
                 <label>
                     <input type="checkbox" name="Grass" value="Small Plants" checked="checked">Grass
@@ -55,49 +55,49 @@
             <p style="font-size:16px;">2. How often would you like to water your plants?</p>
             <div class="radio">
                 <label>
-                    <input type="radio" name="PlantWaterFrq" value="2">Often
+                    <input type="radio" name="PlantWaterFrq" value="2">Often (2 -3 days)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantWaterFrq" value="4">Medium
+                    <input type="radio" name="PlantWaterFrq" value="4">Sometimes (3-4 days)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantWaterFrq" value="6">I don't have time
+                    <input type="radio" name="PlantWaterFrq" value="6">I don't have much time (once a week)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantWaterFrq" value="All">All good for me
+                    <input type="radio" name="PlantWaterFrq" value="All">I don’t have a preference
                 </label>
             </div>
         </div>
 
         <div class="col-sm-12 white-word form-group" style="margin-top:20px">
-            <p style="font-size:16px;">3. When do you plan to plants?</p>
+            <p style="font-size:16px;">3. What planting season would you prefer?</p>
             <div class="radio">
                 <label>
-                    <input type="radio" name="PlantSeason" value="Spring">Spring
+                    <input type="radio" name="PlantSeason" value="Spring">Spring (September to November)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantSeason" value="Summer">Summer
+                    <input type="radio" name="PlantSeason" value="Summer">Summer (December to February)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantSeason" value="Autumn">Autumn
+                    <input type="radio" name="PlantSeason" value="Autumn">Autumn (March to May)
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantSeason" value="Winter">Winter
+                    <input type="radio" name="PlantSeason" value="Winter">Winter (June to August)
                 </label>
             </div>
         </div>
 
         <div class="col-sm-12 white-word form-group" style="margin-top:20px">
-            <p style="font-size:16px;">4. Enough sunshine in your garden?</p>
+            <p style="font-size:16px;">4. How much sunshine is available in your garden?</p>
             <div class="radio">
                 <label>
-                    <input type="radio" name="PlantSunNeedPath" value="1">Yes
+                    <input type="radio" name="PlantSunNeedPath" value="1">All-day Sunny
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantSunNeedPath" value="3">Sometimes
+                    <input type="radio" name="PlantSunNeedPath" value="3">Partly Sunny and Partly Shade
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantSunNeedPath" value="2">No
+                    <input type="radio" name="PlantSunNeedPath" value="2">All-day Shade
                 </label>
             </div>
         </div>
@@ -112,7 +112,7 @@
                     <input type="radio" name="PlantDroughtTol" value="0">No
                 </label><br>
                 <label>
-                    <input type="radio" name="PlantDroughtTol" value="All">I don't care
+                    <input type="radio" name="PlantDroughtTol" value="All">I don't have a preference
                 </label>
             </div>
         </div>

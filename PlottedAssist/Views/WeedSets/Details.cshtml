@@ -18,7 +18,7 @@
         <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
         </div>
-        <div class="col-xs-8 col-sm-6" style="margin-top:5%;position:relative;margin-bottom:5%">
+        <div class="col-xs-12 col-xs-offset-0 col-sm-6" style="margin-top:5%;position:relative;margin-bottom:75px">
             
             <img class="col-xs-6 col-lg-6 col-lg-offset-3 col-xs-offset-3" style="box-shadow:0px 0px 8px 5px #1E2621;padding:0px;margin-bottom:40px;position:relative" src="@Url.Content("~/Picture/Weed/"+Model.WeedPhotoPath)">
             <dl class="col-xs-12 col-lg-12  dl-horizontal white-word">
@@ -67,7 +67,7 @@
                 </dt>
 
                 <dd>
-                    <p><a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a></p>
+                    <p><a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)" style="color:white;text-decoration:underline"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a></p>
                 </dd>
 
             </dl>

@@ -358,16 +358,18 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\PlantInfo\Nurseries.cshtml" />
-    <Content Include="Views\SoilType\SoilTypes.cshtml" />
-    <Content Include="Views\SoilType\WateringGuide.cshtml" />
-    <Content Include="Views\SoilType\WildlifeTips.cshtml" />
-    <Content Include="Views\SoilType\PlantTech.cshtml" />
-    <Content Include="Views\SoilType\Prune.cshtml" />
-    <Content Include="Views\SoilType\OtherCare.cshtml" />
-    <Content Include="Views\SoilType\Sunshine.cshtml" />
-    <Content Include="Views\SoilType\Benefits.cshtml" />
+    <Content Include="Views\PlantInfo\SoilTypes.cshtml" />
+    <Content Include="Views\PlantInfo\WateringGuide.cshtml" />
+    <Content Include="Views\PlantInfo\WildlifeTips.cshtml" />
+    <Content Include="Views\PlantInfo\PlantTech.cshtml" />
+    <Content Include="Views\PlantInfo\Prune.cshtml" />
+    <Content Include="Views\PlantInfo\OtherCare.cshtml" />
+    <Content Include="Views\PlantInfo\Sunshine.cshtml" />
+    <Content Include="Views\PlantInfo\Benefits.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\SoilType\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -20,19 +20,19 @@ namespace PlottedAssist.Models
         public string plantNickName { get; set; }
 
         [Required]
-        [Range(0,365)]
+        [Range(0,30)]
         public string PlantWaterFrq { get; set; }
 
         [Required]
-        [Range(0, 365)]
+        [Range(0, 180)]
         public string PlantPruningFrq { get; set; }
 
         [Required]
-        [Range(0, 365)]
+        [Range(0, 180)]
         public string PlantFertilizerFrq { get; set; }
 
         [Required]
-        [Range(0, 365)]
+        [Range(0, 30)]
         public string PlantMistFrq { get; set; }
 
         public DateTime StartDate { get; set; }

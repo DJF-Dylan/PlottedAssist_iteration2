@@ -3,12 +3,34 @@
     ViewBag.Title = "Nurseries";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
-        <h2 class="white-word">Nurseries</h2>     
-            <div id='map' class='col-md-12 map2'style="height:500px;"></div>        
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+        <div>
+            <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+        </div>
+    </div>    
+    <div class="col-md-8 col-md-offset-2 white-word" style="margin-top:50px;padding-bottom:30px;text-align:center">
+        <h1>Where can I get the plant?</h1>
+        <div style="text-align:justify">
+            <br><br>
+            <p>Going to a local nursery to buy plants, instead of a well-known retailer can offer several advantages. We’ve listed a few reasons why you should consider shopping for plants from a garden nursery near you.</p>
+            <ul>
+                <li>They grow healthier plants. A nursery puts in a great amount of effort to ensure that plants get the best kind of care and nutrients, by using better fertilisers.</li>
+                <li>Their staff are knowledgeable and can help you select the right plants to create a vibrant landscape. A nursery’s employees know important details about the plants they house as well as about horticulture in general.</li>
+                <li>They save you time and hassle. Since the nursery employees look after the plants well, all you need to do is just pick them up and place them in your home.</li>
+            </ul>
+            <p>Looking forward to shop from a nursery or a garden centre near you? Here are the location of local garden centres and nurseries.</p>
+            <br>
+        </div>
+        
+                   
     </div>
-
-
-@section Scripts {
-    @Scripts.Render("~/bundles/mapbox")
-}
+    <div class="col-md-8 col-md-offset-2" style="padding-bottom:80px;">
+        <p class="col-md-12 white-word" style="text-align:right">
+            Get lost in the map?
+            <a style="color:#FDB298;" onclick="location.reload();">Click here</a> to back to city of yarra.
+        </p>
+        <div id='map' class='col-md-12' style="height:500px;"></div>
+    </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/mapbox")
+        }

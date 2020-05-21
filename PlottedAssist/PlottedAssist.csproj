@@ -175,7 +175,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlantInfoController.cs" />
     <Compile Include="Controllers\PlantSetsController.cs" />
-    <Compile Include="Controllers\SoilTypeController.cs" />
     <Compile Include="Controllers\WeedSetsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -367,9 +366,7 @@
     <Content Include="Views\PlantInfo\Sunshine.cshtml" />
     <Content Include="Views\PlantInfo\Benefits.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\SoilType\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -34,6 +34,7 @@
                 <div class = "control-label col-sm-2">Plant Nick Name</div> 
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.plantNickName, new { htmlAttributes = new { @class = "form-control" } })
+                    
                     @Html.ValidationMessageFor(model => model.plantNickName, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -42,6 +43,7 @@
                 <div class="control-label col-sm-2">Water Frquency</div> 
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantWaterFrq, new { htmlAttributes = new { @class = "form-control" } })
+                    Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantWaterFrq) Days
                     @Html.ValidationMessageFor(model => model.PlantWaterFrq, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -50,6 +52,7 @@
                 <div class="control-label col-sm-2">Prune Frquency</div>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantPruningFrq, new { htmlAttributes = new { @class = "form-control" } })
+                    Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantPruningFrq) Days
                     @Html.ValidationMessageFor(model => model.PlantPruningFrq, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -58,6 +61,7 @@
                 <div class="control-label col-sm-2">Fertilize Frquency</div>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantFertilizerFrq, new { htmlAttributes = new { @class = "form-control" } })
+                    Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantFertilizerFrq) Days
                     @Html.ValidationMessageFor(model => model.PlantFertilizerFrq, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -66,6 +70,7 @@
                 <div class="control-label col-sm-2">Mist Frquency</div>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantMistFrq, new { htmlAttributes = new { @class = "form-control" } })
+                    Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantMistFrq) Days
                     @Html.ValidationMessageFor(model => model.PlantMistFrq, "", new { @class = "text-danger" })
                 </div>
             </div>

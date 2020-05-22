@@ -31,20 +31,20 @@
 
 
             <div class="form-group">
-                <div class = "control-label col-sm-2">Plant Nick Name</div> 
+                <div class="control-label col-sm-2">Plant Nick Name</div>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.plantNickName, new { htmlAttributes = new { @class = "form-control" } })
-                    
-                    @Html.ValidationMessageFor(model => model.plantNickName, "", new { @class = "text-danger" })
+
+                    @Html.ValidationMessageFor(model => model.plantNickName, "", new { @class = "text-white" })
                 </div>
             </div>
 
             <div class="form-group">
-                <div class="control-label col-sm-2">Water Frquency</div> 
+                <div class="control-label col-sm-2">Water Frquency</div>
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantWaterFrq, new { htmlAttributes = new { @class = "form-control" } })
                     Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantWaterFrq) Days
-                    @Html.ValidationMessageFor(model => model.PlantWaterFrq, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.PlantWaterFrq, "", new { @class = "text-white" })
                 </div>
             </div>
 
@@ -53,7 +53,7 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantPruningFrq, new { htmlAttributes = new { @class = "form-control" } })
                     Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantPruningFrq) Days
-                    @Html.ValidationMessageFor(model => model.PlantPruningFrq, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.PlantPruningFrq, "", new { @class = "text-white" })
                 </div>
             </div>
 
@@ -62,7 +62,7 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantFertilizerFrq, new { htmlAttributes = new { @class = "form-control" } })
                     Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantFertilizerFrq) Days
-                    @Html.ValidationMessageFor(model => model.PlantFertilizerFrq, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.PlantFertilizerFrq, "", new { @class = "text-white" })
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.PlantMistFrq, new { htmlAttributes = new { @class = "form-control" } })
                     Recommended frequency: @Html.DisplayFor(model => model.PlantSet.PlantMistFrq) Days
-                    @Html.ValidationMessageFor(model => model.PlantMistFrq, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.PlantMistFrq, "", new { @class = "text-white" })
                 </div>
             </div>
 
@@ -83,9 +83,8 @@
             </div>
         </div>
     }
-
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+    <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+        <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back to list</a>
     </div>
 
     @section Scripts {

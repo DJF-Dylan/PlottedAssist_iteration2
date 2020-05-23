@@ -48,3 +48,8 @@ textarea {
 .white-word{
     color:white;
 }
+
+/* Set hover for a*/
+a:hover {
+    color: #E86337;
+}

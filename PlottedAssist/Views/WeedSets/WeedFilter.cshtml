@@ -10,8 +10,6 @@
 }
 
 
-<div class="row" style="background-color:#4F6657;">
-
     <!--Header-->>
 
 
@@ -54,19 +52,17 @@
             </div>
         </div>
     }
-<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1" style="margin-top:50px">
-    @foreach (var item in Model)
+    <div class="col-md-10 col-md-offset-1" style="margin-top:50px">
+        @foreach (var item in Model)
     {
-        <!--Weed display-->
-
-        <div class="col-xs-10 col-xs-offset-2  col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-1" style="margin-bottom:75px;">
-            <div class="card" style="padding:15px;width:280px;margin-top:20px;border-radius:15px;">
-                <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;padding:0px;">
-                    <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
-                </a>
+            <!--Weed display-->
+            <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:75px;">
+                <div class="card" style="padding:15px;width:280px;margin:0 auto;border-radius:15px;">
+                    <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;padding:0px;">
+                        <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
+                    </a>
+                </div>
             </div>
-        </div>
 
     }
-</div>
-</div>
+    </div>

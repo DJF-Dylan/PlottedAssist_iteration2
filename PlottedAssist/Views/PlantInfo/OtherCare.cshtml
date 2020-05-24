@@ -4,16 +4,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="row" style="background-color:#4F6657;">
+        <!--Header-->
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-        <div class="col-sm-3" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+        <!--Button-->
+        <div class="col-sm-3" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
         </div>
-        <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+        <!--Text part-->
+        <div class="col-md-8 col-md-offset-2 col-xs-10 col-sm-10 col-sm-offset-1" style="margin-top:70px;padding-bottom:80px;">
             <h2 class="white-word">Other cares</h2>
             <p class="white-word">
                 Once you have established your sustainable garden, the next step is to know how to care for it through regular maintenance. This section will provide some information for you to follow. <br>
@@ -46,7 +48,7 @@
                 <li>keep soil temperature stable</li>
             </ul>
             <div style="text-align:center">
-                <img src="~/Picture/Mulch.png">
+                <img src="~/Picture/Mulch.png" style="width:50%">
             </div>
             <h3 class="white-word">Fertilizers</h3>
             <p class="white-word">
@@ -63,12 +65,13 @@
                 <li>never fertilize a dry plant</li>
                 <li>Always ensure that you have given the pot or garden bed a good deep watering before and after applying fertilizer. This will protect your plants from fertilizer burn.</li>
             </ul>
-            <div style="text-align:center">
-                <img src="~/Picture/Fertilizers.png">
+            <div style="text-align:center;">
+                <img src="~/Picture/Fertilizers.png" style="width:50%">
             </div>
         </div>
-        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
+        <!--Next page button-->
+        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-4 col-md-offset-8 col-lg-offset-10 col-sm-offset-8" style="margin-bottom:75px">
             <a href="@Url.Content("~/PlantInfo/WildlifeTips")" class="btn btn-success">Next: Wildlife Friendly Garden</a>
         </div>
-    </div>
+    
 

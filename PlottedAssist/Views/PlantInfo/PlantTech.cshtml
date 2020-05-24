@@ -4,18 +4,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div class="row" style="background-color:#4F6657;">
+        <!--Header-->
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+        <!--Button-->
+        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
         </div>
-        <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+        <!--Text part-->
+        <div class="col-md-8 col-md-offset-2 col-xs-11 col-sm-10 col-sm-offset-1" style="margin-top:50px;padding-bottom:80px;">
             <h2 class="white-word">Correct planting technique</h2>
-
             <ol class="white-word">
                 <li>Dig a hole at least twice as wide and slightly deeper than the pot size. </li>
                 <li>Loosen the soil at the sides of the planting hole. Fill the hole with water and allow to drain away. </li>
@@ -26,11 +27,11 @@
                 <li>Mulch a zone of at least half a meter and 75 mm thick will help to retain moisture and discourage weed growth. To prevent collar rot, avoid placing mulch against the stem of the plant. </li>
                 <li>Fertilize with composted animal manure, grass clipping or leaf litter to provide adequate nutrients. Don’t put fertilizers/manures at the bottom of the hole as this will burn the plants' roots. Mix the fertilizer with mulch or apply it on the surface. Avoid using commercial fertilizers during dry conditions as they require lots of water and may damage your plants if incorrectly used. Use strictly in accordance with the manufacturer’s specifications. </li>
                 <li>To encourage bushier growth, prune broken branches, or suckers from new plants.</li>
-
             </ol>
         </div>
-        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
+        <!--Next page button-->
+        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-6 col-sm-offset-8 col-md-offset-9 col-lg-offset-10" style="margin-bottom:75px">
             <a href="@Url.Content("~/PlantInfo/Nurseries")" class="btn btn-success">Next: Nearest Nurseries</a>
         </div>
-    </div>
+    
 

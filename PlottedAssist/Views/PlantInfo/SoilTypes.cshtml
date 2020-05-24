@@ -3,16 +3,18 @@
     ViewBag.Title = "SoilTypes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="row" style="background-color:#4F6657;">
+        <!--Header-->
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+        <!--Button-->
+        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
         </div>
-        <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+        <!--Text part-->
+        <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1" style="margin-top:50px;padding-bottom:80px;">
             <h2 class="white-word">Soil Types</h2>
 
 
@@ -81,7 +83,8 @@
                 <br><br>
             </p>
         </div>
-        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
+        <!--Next page button-->
+        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-6 col-md-offset-9 col-sm-offset-8 col-lg-offset-10" style="margin-bottom:75px">
             <a href="@Url.Content("~/PlantInfo/Prune")" class="btn btn-success">Next: Pruning Guide</a>
         </div>
-    </div>
+    

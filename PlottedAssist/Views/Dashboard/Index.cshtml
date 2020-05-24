@@ -19,89 +19,86 @@
             <div class="col-md-2 col-md-offset-9 col-xs-2 col-xs-offset-6"">
                 <a href="@Url.Content("~/PlantInfo/PlantInfo")" class="btn btn-default" style="background: #344239; color:white;padding:3%; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-top:30px;width:150px">Planting Guide</a>
             </div>
-        <div class="col-md-8 col-md-offset-2 col-xs-12 col-xs-offset-0" style="margin-bottom:40px">
-            <div class="col-md-3 col-xs-10 col-xs-offset-1" style="margin-top:40px">
-                <div class="white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%;margin-bottom:40px;">
-                    <br>
+        <div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0" style="margin-bottom:40px">
+            <div class="col-sm-3 col-xs-12" style="margin-top:40px">
+                <div class="white-word" style="text-align:center; background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding:10%;margin-bottom:40px;">         
                     <h3 style="text-align:center">Activity Due Today</h3>
                     <hr>
-
                     @if (ViewBag.today.Length == 1)
-                    {<text>No Activity Today</text>;
-                }
-                else
-                {
-                    for (int i = 0; i < ViewBag.today.Length - 1; i = i + 2)
                     {
-                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.today[i+1])" height="30" width="30">
-                        @ViewBag.today[i + 2] <br> <br>
+                        @ViewBag.today[0];
                     }
-                }
+                    else
+                    {
+                        for (int i = 0; i < ViewBag.today.Length - 1; i = i + 2)
+                        {
+                            <img src="@Url.Content("~/Picture/Icon/" + ViewBag.today[i + 1])" height="30" width="30">
+                            @ViewBag.today[i + 2] <br>
+                        }
+                    }
                 </div>
 
-                <div class="white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
-                    <br>
+                <div class="white-word" style="text-align:center;background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding:10%">
                     <h3 style="text-align:center">Activity Due Tomorrow</h3>
                     <hr>
                     @if (ViewBag.tomorrow.Length == 1)
-                    {<text>No Activity Tomorrow </text><br> }
-                else
-                {
-                    for (int i = 0; i < ViewBag.tomorrow.Length - 1; i = i + 2)
+                    {@ViewBag.tomorrow[0];}
+                    else
                     {
-                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.tomorrow[i+1])" height="30" width="30">
+                        for (int i = 0; i < ViewBag.tomorrow.Length - 1; i = i + 2)
+                        {
+                        <img src="@Url.Content("~/Picture/Icon/" + ViewBag.tomorrow[i + 1])" height="30" width="30">
                         @ViewBag.tomorrow[i + 2] <br> <br>
+                        }
                     }
-                }
                 </div>
             </div>
 
-            <div class="col-md-7 col-md-offset-1 col-xs-12" style="margin-top:40px">
-                @foreach (var item in Model)
-                {
-                    <div class="col-md-12 col-sm-10 col-sm-offset-1 col-xs-12" style="border-radius:5px;padding: 20px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px;">
-                        <div class="col-md-5 col-md-offset-0 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
-                            <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;height:100%;margin:0px">
+            <div class="col-sm-7 col-sm-offset-1 col-xs-12" style="margin-top:40px">      
+                @{int index = 0;
+                    foreach (var item in Model)
+                    {
+                        index = index + 4;
+                    <div class="col-md-12 col-xs-12" style="text-align:center; border-radius:5px;padding: 20px;padding-bottom:10px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px;">
+                        <div class="col-md-5 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
+                            <img src="@Url.Content("~/Picture/PlantSet/" + item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;max-width:250px">
                         </div>
 
-                        <div class="col-md-6 col-md-offset-1 white-word" style="margin-bottom:5%;font-size:18px;font-weight:bold">
+                        <div class="col-md-7 col-md-offset-0 white-word" style="font-size:18px;font-weight:bold">
+                            <div class="col-md-7 white-word" style="margin-top: 20px;margin-bottom: 8%;font-size:18px">
+                                @Html.DisplayFor(modelItem => item.plantNickName)
+                            </div>
 
-                            @Html.DisplayFor(modelItem => item.plantNickName)<br>
-                        </div>
+                            <div class="col-md-6 white-word" style="margin-bottom: 8%;font-size:18px">
+                                <img src="~/Picture/Icon/Water.png" height="30" width="30">
+                                @ViewBag.DaysList[index - 4]
+                            </div>
+                            <div class="col-md-6 white-word" style="margin-bottom: 8%;font-size:18px">
+                                <img src="~/Picture/Icon/Prune.png" height="30" width="30">
+                                @ViewBag.DaysList[index - 1]
+                            </div>
+                            <div class="col-md-6 white-word" style="margin-bottom: 8%;font-size:18px">
 
-                        <div class="col-md-6 col-md-offset-1 white-word" style="margin-bottom: 5%;font-size:18px">
-                            <img src="~/Picture/Icon/Water.png" height="30" width="30">
-                            @if (item.PlantWaterFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} days
-
-                            <img src="~/Picture/Icon/Prune.png" height="30" width="30">
-                            @if (item.PlantPruningFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} days
-                            <br><br>
-                            <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
-                            @if (item.PlantFertilizerFrq == "0")
-                            {<text> - </text>}
-                        else
-                        {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} days
-
-                            <img src="~/Picture/Icon/Mist.png" height="30" width="30">
-                            @if (item.PlantMistFrq == "0")
-                            {<text> - </text>}
-                        else
-                        { @Html.DisplayFor(modelItem => item.PlantMistFrq)} days
-                        </div>
-
-                        <div class="col-md-6 col-md-offset-1">
-                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:13px;width:35%">Information</a>
-                            <a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:13px"> Setting</a>
-                            <a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:13px"> Remove</a>
+                                <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
+                                @ViewBag.DaysList[index - 3]
+                            </div>
+                            <div class="col-md-6 white-word" style="margin-bottom: 8%;font-size:18px">
+                                <img src="~/Picture/Icon/Mist.png" height="30" width="30">
+                                @ViewBag.DaysList[index - 2]
+                            </div>
+                            <div class="col-md-4" style="padding: 0px;margin-bottom: 8%;">
+                                <a href="@Url.Content("../PlantSets/Details/" + item.PlantSet.Id)" class="btn btn-default" style="background: #344239; color:white; text-align: center;border-radius:15px;border:0px;width:80px">Info</a>
+                            </div>
+                            <div class="col-md-4" style="padding: 0px;margin-bottom: 8%;">
+                                <a href="@Url.Content("~/Dashboard/Edit/" + item.Id)" class="btn btn-default " style="background: #344239; color:white; text-align: center;border-radius:15px;border:0px;width:80px"> Setting</a>
+                            </div>
+                            <div class="col-md-4" style="padding: 0px;margin-bottom: 8%;">
+                                <a href="@Url.Content("~/Dashboard/Delete/" + item.Id)" class="btn btn-default " style="background: #344239; color:white; text-align: center;border-radius:15px;border:0px;width:80px"> Remove</a>
+                            </div>
                         </div>
                     </div>
-                }
+                        }
+                    }
             </div>
         </div>
        

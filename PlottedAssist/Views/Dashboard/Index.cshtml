@@ -13,17 +13,17 @@
             </div>
         </div>
             <!--Add new one button-->
-            <div class="white-word col-xs-2 col-md-2 col-lg-2 col-xs-offset-6 col-md-offset-9 col-lg-offset-10">
+            <div class="white-word col-xs-2 col-md-2 col-lg-2 col-xs-offset-6 col-md-offset-9 col-lg-offset-10 col-sm-2 col-sm-offset-8">
                 <a href="@Url.Content("~/PlantSets/PlantList")" class="btn btn-default" style="background: #344239; color:white;padding:3%; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-top:30px;width:150px">Add Plant From List</a>
             </div>
-            <div class="white-word col-xs-2 col-md-2 col-lg-2 col-xs-offset-6 col-md-offset-9 col-lg-offset-10">
+            <div class="white-word col-xs-2 col-md-2 col-lg-2 col-xs-offset-6 col-md-offset-9 col-lg-offset-10 col-sm-2 col-sm-offset-8">
                 <a href="@Url.Content("~/PlantInfo/PlantInfo")" class="btn btn-default" style="background: #344239; color:white;padding:3%; text-align: center;border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-top:30px;width:150px">Planting Guide</a>
             </div>
         <!--Activity part-->
-            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2" style="margin-top:5%;margin-bottom:10%">
+            <div class="col-md-10 col-xs-10 col-xs-offset-1 col-lg-9" style="margin-top:5%;margin-bottom:10%">
 
 
-                <div class="col-md-3" style="border:0px;">
+                <div class="col-md-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 col-lg-3" style="border:0px;">
                     <div class="panel panel-primary white-word" style="background:#344239;border:0px;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;padding-left:10%;padding-right:10%">
                         <br>
                         <h3 class="panel-title" style="text-align:center">Activity Due Today</h3>
@@ -59,52 +59,52 @@
                     </div>
                 </div>
 
-                <!--My plant-->
-                
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-md-8 col-md-offset-1 col-xs-12" style="border-radius:5px;">
-                            <div class="col-xs-12 col-md-12 col-lg-10" style="padding: 20px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px; width:100%;">
-                                <div class="col-xs-12 col-md-5 col-lg-5 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
-                                    <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;height:100%;margin-left:-10%">
-                                </div>
-                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom:4%;font-size:18px;font-weight:bold">
-
-                                    @Html.DisplayFor(modelItem => item.plantNickName)<br>
-                                </div>
-                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1 white-word" style="margin-bottom: 2%;font-size:18px">
-                                    <img src="~/Picture/Icon/Water.png" height="30" width="30">
-                                    @if (item.PlantWaterFrq == "0")
-                                    {<text> - </text>}
-                                else
-                                { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} days
-
-                                    <img src="~/Picture/Icon/Prune.png" height="30" width="30">
-                                    @if (item.PlantPruningFrq == "0")
-                                    {<text> - </text>}
-                                else
-                                { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} days
-                                    <br><br>
-                                    <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
-                                    @if (item.PlantFertilizerFrq == "0")
-                                    {<text> - </text>}
-                                else
-                                {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} days
-
-                                    <img src="~/Picture/Icon/Mist.png" height="30" width="30">
-                                    @if (item.PlantMistFrq == "0")
-                                    {<text> - </text>}
-                                else
-                                { @Html.DisplayFor(modelItem => item.PlantMistFrq)} days
-                                </div>
-                                <div class="col-xs-12 col-md-7 col-lg-6 col-lg-offset-1">
-                                    <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:10px;width:35%">Information</a>
-                                    <a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:10px"> Setting</a>
-                                    <a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:10px"> Remove</a>
-                                </div>
-                            </div>
+                @foreach (var item in Model) { 
+                    <div class="col-lg-6 col-lg-offset-1 col-md-6 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12" style="border-radius:5px;padding: 20px; border: thin; background: #1E2621; border-radius: 5px; box-shadow: 2px 2px 6px 2px #1E2621; margin-bottom: 40px;">
+                        <div class="col-lg-5 col-md-12 col-md-offset-0 white-word" style="border-radius:5px;box-shadow:2px 2px 6px 2px #1E2621;text-align:center">
+                            <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantSet.PlantPhotoPath)" style="border-radius:5px;box-shadow:0px 0px 8px 5px #1E2621;width:100%;height:100%;margin:0px">
                         </div>
-                    }
-                </div>
+
+                        <div class="col-lg-6 col-lg-offset-1 col-md-12 white-word" style="margin-bottom:5%;font-size:18px;font-weight:bold">
+
+                            @Html.DisplayFor(modelItem => item.plantNickName)<br>
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 col-lg-offset-1 white-word" style="margin-bottom: 5%;font-size:18px">
+                            <img src="~/Picture/Icon/Water.png" height="30" width="30">
+                            @if (item.PlantWaterFrq == "0")
+                            {<text> - </text>}
+                        else
+                        { @Html.DisplayFor(modelItem => item.PlantWaterFrq)} days
+
+                            <img src="~/Picture/Icon/Prune.png" height="30" width="30">
+                            @if (item.PlantPruningFrq == "0")
+                            {<text> - </text>}
+                        else
+                        { @Html.DisplayFor(modelItem => item.PlantPruningFrq)} days
+                            <br><br>
+                            <img src="~/Picture/Icon/Fertilize.png" height="30" width="30">
+                            @if (item.PlantFertilizerFrq == "0")
+                            {<text> - </text>}
+                        else
+                        {@Html.DisplayFor(modelItem => item.PlantFertilizerFrq)} days
+
+                            <img src="~/Picture/Icon/Mist.png" height="30" width="30">
+                            @if (item.PlantMistFrq == "0")
+                            {<text> - </text>}
+                        else
+                        { @Html.DisplayFor(modelItem => item.PlantMistFrq)} days
+                        </div>
+
+                        <div class="col-lg-6 col-md-12 col-lg-offset-1">
+                            <br><a href="@Url.Content("../PlantSets/Details/"+ item.PlantSet.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;font-size:13px;width:35%">Information</a>
+                            <a href="@Url.Content("~/Dashboard/Edit/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:13px"> Setting</a>
+                            <a href="@Url.Content("~/Dashboard/Delete/"+ item.Id)" class="btn btn-default btn-lg" style="background: #344239; color:white;padding:5px; text-align: center;border-radius:15px;border:0px;width:28%;font-size:13px"> Remove</a>
+                        </div>
+                    </div>
+                }      
+                
+
+            </div>
         
             

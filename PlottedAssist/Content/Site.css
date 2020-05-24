@@ -49,6 +49,12 @@ textarea {
     color:white;
 }
 
+.card {
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:20px;
+}
+
 /* Set hover for a*/
 a:hover {
     color: #E86337;

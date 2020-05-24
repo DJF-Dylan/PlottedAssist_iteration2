@@ -213,6 +213,7 @@
     <Content Include="Picture\Banner\InvTitleMob.png" />
     <Content Include="Picture\Banner\InvTitleWeb.png" />
     <Content Include="Picture\Banner\MyGardenTitle.png" />
+    <Content Include="Picture\GardeningGuidanceCard.jpg" />
     <Content Include="Picture\header_picture.jpg" />
     <Content Include="Picture\header_picture2.jpg" />
     <Content Include="Picture\header_picture3.jpg" />
@@ -228,8 +229,11 @@
     <Content Include="Picture\Icon\Prune.png" />
     <Content Include="Picture\Icon\Tooltip_icon.png" />
     <Content Include="Picture\Icon\Water.png" />
+    <Content Include="Picture\IndigenousPlantCard.jpg" />
+    <Content Include="Picture\InvasivePlantCard.jpg" />
     <Content Include="Picture\logo.png" />
     <Content Include="Picture\logo_tab.png" />
+    <Content Include="Picture\MyGardenCard.jpg" />
     <Content Include="Picture\PlantSet\Acacia implexa.jpg" />
     <Content Include="Picture\PlantSet\Acacia pycnantha.jpg" />
     <Content Include="Picture\PlantSet\Acacia verticillata.jpg" />

@@ -3,6 +3,16 @@
     ViewBag.Title = "PlantTech";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/PlantTech.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body style="background-color:#4F6657;">
+    <div class="row" style="background-color:#4F6657;">
 
         <!--Header-->
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
@@ -14,24 +24,119 @@
         <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
         </div>
-        <!--Text part-->
-        <div class="col-md-8 col-md-offset-2 col-xs-11 col-sm-10 col-sm-offset-1" style="margin-top:50px;padding-bottom:80px;">
-            <h2 class="white-word">Correct planting technique</h2>
-            <ol class="white-word">
-                <li>Dig a hole at least twice as wide and slightly deeper than the pot size. </li>
-                <li>Loosen the soil at the sides of the planting hole. Fill the hole with water and allow to drain away. </li>
-                <li>Add some soil wetting agents to the hole and mix through half of the backfill soil. This will help to retain moisture in the soil for longer and reduce watering requirements. </li>
-                <li>Gently remove the plant from the pot and place it in the hole with the top of its root ball level with the surrounding ground. Backfill the remaining soil. </li>
-                <li>Press the backfill down with your hands and make a saucer-shaped depression around the plant to hold water. </li>
-                <li>Water the plant thoroughly after planting. </li>
-                <li>Mulch a zone of at least half a meter and 75 mm thick will help to retain moisture and discourage weed growth. To prevent collar rot, avoid placing mulch against the stem of the plant. </li>
-                <li>Fertilize with composted animal manure, grass clipping or leaf litter to provide adequate nutrients. Don’t put fertilizers/manures at the bottom of the hole as this will burn the plants' roots. Mix the fertilizer with mulch or apply it on the surface. Avoid using commercial fertilizers during dry conditions as they require lots of water and may damage your plants if incorrectly used. Use strictly in accordance with the manufacturer’s specifications. </li>
-                <li>To encourage bushier growth, prune broken branches, or suckers from new plants.</li>
-            </ol>
+
+
+    </div>
+   
+    <div class="row" style="background-color:#4F6657;">
+        <div class="container" style="width:70%; margin:auto;">
+            <div class="page-header">
+                <h1 id="timeline" class="white-word">Correct Planting Techniques</h1>
+            </div>
+            <ul class="timeline">
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Dig a hole at least twice as wide and slightly deeper than the pot size.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Loosen the soil at the sides of the planting hole. Fill the hole with water and allow to drain away.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Add some soil wetting agents to the hole and mix through half of the backfill soil. This will help to retain moisture in the soil for longer and reduce watering requirements.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Gently remove the plant from the pot and place it in the hole with the top of its root ball level with the surrounding ground. Backfill the remaining soil.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Press the backfill down with your hands and make a saucer-shaped depression around the plant to hold water.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Water the plant thoroughly after planting.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Mulch a zone of at least half a meter and 75 mm thick will help to retain moisture and discourage weed growth. To prevent collar rot, avoid placing mulch against the stem of the plant.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">Fertilize with composted animal manure, grass clipping or leaf litter to provide adequate nutrients. Don’t put fertilizers/manures at the bottom of the hole as this will burn the plants' roots. Mix the fertilizer with mulch or apply it on the surface. Avoid using commercial fertilizers during dry conditions as they require lots of water and may damage your plants if incorrectly used. Use strictly in accordance with the manufacturer’s specifications.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                    <div class="timeline-panel" style="background-color:#344239;">
+                        <div class="timeline-heading">
+
+                        </div>
+                        <div class="timeline-body">
+                            <p class="white-word">To encourage bushier growth, prune broken branches, or suckers from new plants.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <!--Next page button-->
-        <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-6 col-sm-offset-8 col-md-offset-9 col-lg-offset-10" style="margin-bottom:75px">
-            <a href="@Url.Content("~/PlantInfo/Nurseries")" class="btn btn-success">Next: Nearest Nurseries</a>
         </div>
-    
+        <div class="row" style="background-color:#4F6657;">
+            <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10" style="margin-bottom:10px;">
+                <a href="@Url.Content("~/PlantInfo/Nurseries")" class="btn btn-success">Next: Nearest Nurseries</a>
+            </div>
+        </div>
+</body>
+
+
+
 

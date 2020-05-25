@@ -3,6 +3,11 @@
     ViewBag.Title = "PlantInfo";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <head>
+        <link href="~/Content/flipcard.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+<body>
     <div class="row" style="background-color:#4F6657;">
         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
@@ -15,22 +20,180 @@
         <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
             <h2 class="white-word">Indigenous Plant Care:</h2>
             <p class="white-word">The Plotted Plants tries to give information,hints and tips and best growing practices for Australian Indigenous Plants.</p>
-            <ul class="white-word">
-                <li><a href="@Url.Content("~/PlantInfo/WateringGuide/")" style="color:#FFFFFF;text-decoration:underline">Watering Guide to Plants</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/SoilTypes/")" style="color:#FFFFFF;text-decoration:underline">Soil Types and Test your soil type</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/Prune/")" style="color:#FFFFFF;text-decoration:underline">Why should you prune your plants</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/Sunshine/")" style="color:#FFFFFF;text-decoration:underline">Guide to proper sunshine</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide to Compost and DIY methods</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for Mulching</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for fertilizing</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/WildlifeTips/")" style="color:#FFFFFF;text-decoration:underline">Attracting Native Birds to your garden and Making your garden wildlife friendly</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/PlantTech/")" style="color:#FFFFFF;text-decoration:underline">Correct Planting Techniques</a></li>
-                <li><a href="@Url.Content("~/PlantInfo/Nurseries/")" style="color:#FFFFFF;text-decoration:underline">Find the nearest nurseries</a></li>
-            </ul>
+            <!--    <ul class="white-word">
+            <li><a href="@Url.Content("~/PlantInfo/WateringGuide/")" style="color:#FFFFFF;text-decoration:underline">Watering Guide to Plants</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/SoilTypes/")" style="color:#FFFFFF;text-decoration:underline">Soil Types and Test your soil type</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/Prune/")" style="color:#FFFFFF;text-decoration:underline">Why should you prune your plants</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/Sunshine/")" style="color:#FFFFFF;text-decoration:underline">Guide to proper sunshine</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide to Compost and DIY methods</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for Mulching</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/OtherCare/")" style="color:#FFFFFF;text-decoration:underline">Guide for fertilizing</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/WildlifeTips/")" style="color:#FFFFFF;text-decoration:underline">Attracting Native Birds to your garden and Making your garden wildlife friendly</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/PlantTech/")" style="color:#FFFFFF;text-decoration:underline">Correct Planting Techniques</a></li>
+            <li><a href="@Url.Content("~/PlantInfo/Nurseries/")" style="color:#FFFFFF;text-decoration:underline">Find the nearest nurseries</a></li>
+        </ul>-->
         </div>
+        <!-- <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
+        <a href="@Url.Content("~/PlantInfo/WateringGuide")" class="btn btn-success">Next: Watering Guide</a>
+    </div>-->
+
+
+        <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:3%">
+
+
+            <!--Row 1-->
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Watering Guide</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Know more about watering your plants.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/WateringGuide/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Soil Info</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Get Soil Information and DIY techniques to check your soil type.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/SoilTypes/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Pruning Guide</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Why should you prune your plants?<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/Prune/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:3%">
+
+
+            <!--Row 2-->
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Sunshine Guide</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Learn about importance of sunshine.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/Sunshine/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Guide to Compost, Mulching and Fertilizing</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Guide to Compost, Mulching and Fertilizing.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/OtherCare/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Attracting Wildlife</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Attracting Native Birds to your garden and Making your garden wildlife friendly.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/WildlifeTips/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:3%">
+
+
+            <!--Row 3-->
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold">Correct Planting Techniques</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Learn Correct planting techniques.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/PlantTech/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3 style="font-size:18px;padding-left:10%;padding-right:10%;text-align:center;font-weight:bold"> Nearest nurseries</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3 style="font-size:16px;padding-left:10%;padding-right:10%"><br><br>Nearest Nurseries in Yarra City.<br><br><br><br><br></h3>
+                            <div style="text-align:center">
+                                <a class="btn btn-success" href="@Url.Content("~/PlantInfo/Nurseries/")" style="background: #6D917A; color:white; text-align: center;border-radius:10px;box-shadow:2px 2px 6px 2px #1E2621;border:0px;margin-bottom:12%;margin-top:6%;width:100px;height:30px;">Learn more </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+
         <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10">
             <a href="@Url.Content("~/PlantInfo/WateringGuide")" class="btn btn-success">Next: Watering Guide</a>
         </div>
-        
+        <div></div>
     </div>
+
+</body>
+
+
+
+
 

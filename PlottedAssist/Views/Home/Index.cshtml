@@ -1,6 +1,23 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<head>
+    <style>
+        .item {
+            background: #333;
+            text-align: center;
+            height: 300px !important;
+        }
+
+        h2 {
+            margin: 0;
+            color: #888;
+            padding-top: 100px;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
 
     <div class="row" style="background-color:#4F6657;">
 
@@ -12,14 +29,14 @@
         </div>
 
         <!--body-->
-        <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-12 col-md-offset-1" style="border: 0px; margin-top: 5%;margin-bottom: 10px ">
+        <!--<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-12 col-md-offset-1" style="border: 0px; margin-top: 5%;margin-bottom: 10px ">
             <h2 class="white-word">What is an indigenous plant?</h2>
             <p class="white-word">
                 Native plants are plants that grow in a particular country like Australia. Indigenous plants are native to Australia, most importantly they are natural to your local area.
             </p>
             <h2 class="white-word">Why plant indigenous plants?</h2>
             <p class="white-word">
-                In recent years, our indigenous plants have been removed or outcompeted by exotic plants. Indigenous plants were and continue to be an important food source for our local wildlife. They are great to have because they are perfectly suited to the environment that they belong to. This means that they should survive on local weather and thrive in the local soil.
+                In recent years, our indigenous plants have been removed or outcompeted by exotic plants. Indigenous plants were and continue to be an important food source for our local wildlife.<br> They are great to have because they are perfectly suited to the environment that they belong to. This means that they should survive on local weather and thrive in the local soil.
             </p>
             <h2 class="white-word">Indigenous plants also:</h2>
             <ul class="white-word">
@@ -31,7 +48,89 @@
                 <li>are attractive plants with less maintenance. </li>
                 <li>get less plant disease and more pest resistance.</li>
             </ul>
+        </div>-->
+    </div>
+    <div class="thumbnail" style="width:70%; margin:auto;margin-bottom:5%;margin-top:5%;">
+        <div id="DemoCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#DemoCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#DemoCarousel" data-slide-to="1"></li>
+                <li data-target="#DemoCarousel" data-slide-to="2"></li>
+                <li data-target="#DemoCarousel" data-slide-to="3"></li>
+                <li data-target="#DemoCarousel" data-slide-to="4"></li>
+                <li data-target="#DemoCarousel" data-slide-to="5"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="item active">
+
+                    <div class="carousel-caption">
+                        <h2 class="white-word">What is an indigenous plant?</h2>
+                        <p><br /><br /></p>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="carousel-caption">
+
+                        <p class="white-word">
+                            Native plants are plants that grow in a particular country like Australia. Indigenous plants are native to Australia, most importantly they are natural to your local area.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="carousel-caption">
+                        <h2 class="white-word">Why plant indigenous plants?</h2>
+                        <p><br /><br /></p>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <div class="carousel-caption">
+
+                        <p class="white-word">
+                            In recent years, our indigenous plants have been removed or outcompeted by exotic plants. Indigenous plants were and continue to be an important food source for our local wildlife.<br> They are great to have because they are perfectly suited to the environment that they belong to. This means that they should survive on local weather and thrive in the local soil.
+                        </p>
+                    </div>
+                </div>
+            
+            <div class="item">
+
+                <div class="carousel-caption">
+                    <h2 class="white-word">Indigenous plants also:</h2>
+                    <p><br /><br /></p>
+                </div>
+            </div>
+        
+        <div class="item">
+
+            <div class="carousel-caption">
+
+                <ul class="white-word">
+                    <li>provide habitat, shelter, and food for local wildlife.</li>
+                    <li>require less water and money.</li>
+                    <li>support a healthy environment.</li>
+                    <li>improve biodiversity.</li>
+                    <li>are our heritage – we can help preserve them.</li>
+                    <li>are attractive plants with less maintenance. </li>
+                    <li>get less plant disease and more pest resistance.</li>
+                </ul>
+            </div>
         </div>
+    </div>
+    <!-- Carousel Controls -->
+    <a class="carousel-control left" href="#DemoCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#DemoCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+    </div>
+    </div>
+    <div class="row" style="background-color:#4F6657;">
         <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:5%">
             <!--Our Services-->
             <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border: 0px; margin-top: 0%;margin-bottom: 0px ">
@@ -101,4 +200,5 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+</body>

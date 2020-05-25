@@ -2,31 +2,117 @@
 @{
     ViewBag.Title = "Benefits";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
-    <!--Header-->
-    
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
-            <div>
-                <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
-            </div>
-        </div>
-    <!--Button-->
-        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:30px">
-            <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
-        </div>
-    <!--Content-->
-        <div class="col-md-8 col-md-offset-2 col-sm-8 col-lg-offset-2" style="margin-top:70px;padding-bottom:80px;">
-            <h2 class="white-word">Benefits of drought-tolerant plants:</h2>
-            <ul class="white-word">
-                <li>Lower water bills</li>
-                <li>Reduce water use </li>
-                <li>Attractive plants with less maintenance</li>
-                <li>More wildlife habitat</li>
-                <li>Less plant disease and more pest resistance</li>
-                <li>Deeper roots help to stabilize slopes</li>
-                <li>More groundwater recharge</li>
-                <li>Less polluted runoff flowing to the ocean</li>
-            </ul>
-        </div>
+}<head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/PlantTech.css" rel="stylesheet" type="text/css" />
+</head>
+ <body style="background-color:#4F6657;">
+     <div class="row" style="background-color:#4F6657;">
+         <!--Header-->
 
-    
+         <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+             <div>
+                 <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+             </div>
+         </div>
+         <!--Button-->
+         <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:30px">
+             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
+         </div>
+      </div>
+         <!--Content-->
+     <div class="row" style="background-color:#4F6657;">
+         <div class="container" style="width:70%; margin:auto;">
+             <div class="page-header">
+                 <h1 id="timeline" class="white-word">Benefits of drought-tolerant plants</h1>
+             </div>
+             <ul class="timeline">
+                 <li class="timeline-inverted">
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Lower water bills.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Reduced water use.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li class="timeline-inverted">
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Attractive plants with less maintenance.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">More wildlife habitat.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li class="timeline-inverted">
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Less plant disease and more pest resistance.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Deeper roots help to stabilize slopes.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li class="timeline-inverted">
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">More groundwater recharge.</p>
+                         </div>
+                     </div>
+                 </li>
+                 <li>
+                     <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                     <div class="timeline-panel" style="background-color:#344239;">
+                         <div class="timeline-heading">
+                         </div>
+                         <div class="timeline-body">
+                             <p class="white-word">Less polluted runoff flowing to the ocean.</p>
+                         </div>
+                     </div>
+                 </li>
+             </ul>
+         </div>
+     </div>
+
+ </body>  

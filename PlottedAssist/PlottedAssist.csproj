@@ -208,11 +208,15 @@
     <Content Include="Picture\Animal_icon\Insect.png" />
     <Content Include="Picture\Animal_icon\Larve.png" />
     <Content Include="Picture\Banner\Homepage_title.png" />
+    <Content Include="Picture\Banner\IndigenousPlantBanner.jpg" />
     <Content Include="Picture\Banner\IndTitleMob.png" />
     <Content Include="Picture\Banner\IndTitleWeb.png" />
+    <Content Include="Picture\Banner\InvasivePlantBanner.jpg" />
     <Content Include="Picture\Banner\InvTitleMob.png" />
     <Content Include="Picture\Banner\InvTitleWeb.png" />
+    <Content Include="Picture\Banner\MyGardenBanner.jpg" />
     <Content Include="Picture\Banner\MyGardenTitle.png" />
+    <Content Include="Picture\Banner\PlantingInfoBanner.jpg" />
     <Content Include="Picture\GardeningGuidanceCard.jpg" />
     <Content Include="Picture\header_picture.jpg" />
     <Content Include="Picture\header_picture2.jpg" />

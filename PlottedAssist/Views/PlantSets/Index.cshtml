@@ -11,28 +11,27 @@
 
 
 
-<div class="row" style="background-color:#4F6657">
     <!--Header-->
 
-    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/IndigenousPlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
         <div>
             <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
         </div>
     </div>
 
     <!--Question part-->
-    <form role="form" action="/PlantSets/TestResult" method="post" class="col-sm-6 col-sm-offset-3 white-word" style="        font-family: 'Arial';
+    <form role="form" action="/PlantSets/TestResult" method="post" class="col-sm-6 col-sm-offset-3 white-word" style="font-family: 'Arial';
         background: #344239;
         margin-top: 5%;
         margin-bottom: 5%">
         <div class="white-word" style="background:#344239;text-align:center;margin-top:10%;">
             <H3>Let us help you decide which plant to plant!</H3>           
-            <h1 style="font-size:16px;"><a href="@Url.Content("~/PlantSets/PlantList/")" style="color:#FDB298;text-decoration:underline">No thanks.Give me the list of all plants</a></h1>
+            <h1 style="font-size:16px;"><a href="@Url.Content("~/PlantSets/PlantList/")" style="color:#FDB298;text-decoration:underline">No thanks. Show me the list of all plants</a></h1>
         </div>
         <br>
         <br>
         <div class="col-sm-12 white-word form-group">
-            <h1 style="font-size:16px;">1. What type of plants would you like to plant? <a href="@Url.Content("~/PlantSets/Instrction/")">Learn more...</a></h1>
+            <h1 style="font-size:16px;">1. What type of plants would you like to plant? <a href="@Url.Content("~/PlantSets/Instrction/")" style="color:#FDB298">Learn more...</a></h1>
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="Tree" value="Trees" checked="checked">Trees
@@ -50,7 +49,7 @@
         </div>
 
         <div class="col-sm-12 white-word form-group" style="margin-top:20px">
-            <p style="font-size:16px;">2. How often would you like to water your plants? <a href="@Url.Content("~/PlantInfo/WateringGuide/")" >Learn more...</a></p>
+            <p style="font-size:16px;">2. How often would you like to water your plants? <a href="@Url.Content("~/PlantInfo/WateringGuide/")" style="color:#FDB298">Learn more...</a></p>
             <div class="radio">
                 <label>
                     <input type="radio" name="PlantWaterFrq" value="2">Often (2 -3 days)
@@ -86,7 +85,7 @@
         </div>
 
         <div class="col-sm-12 white-word form-group" style="margin-top:20px">
-            <p style="font-size:16px;">4. How much sunshine is available in your garden? <a href="@Url.Content("~/PlantInfo/Sunshine/")">Learn more...</a></p>
+            <p style="font-size:16px;">4. How much sunshine is available in your garden? <a href="@Url.Content("~/PlantInfo/Sunshine/")" style="color:#FDB298">Learn more...</a></p>
             <div class="radio">
                 <label>
                     <input type="radio" name="PlantSunNeedPath" value="1">All-day Sunny
@@ -101,7 +100,7 @@
         </div>
 
         <div class="col-sm-12 white-word form-group" style="margin-top:20px">
-            <p style="font-size:16px">5. Do you prefer drought tolerant plants? <a href="@Url.Content("~/PlantInfo/Benefits/")" >Learn more...</a></p></p>
+            <p style="font-size:16px">5. Do you prefer drought tolerant plants? <a href="@Url.Content("~/PlantInfo/Benefits/")" style="color:#FDB298">Learn more...</a></p></p>
             <div class="radio">
                 <label>
                     <input type="radio" name="PlantDroughtTol" value="1">Yes
@@ -119,5 +118,6 @@
             <button type="submit" style="color:white; text-align: center;box-shadow:2px 2px 6px 2px #1E2621;background-color:transparent;">Submit</button>
         </div>
     </form>
-</div>
+
+
 

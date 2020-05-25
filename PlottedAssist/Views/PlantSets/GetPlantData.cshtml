@@ -9,11 +9,11 @@
     };
 }
 
-    <div class="row" style="background-color:#4F6657">
+
 
         <!--Header-->
 
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/IndigenousPlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
@@ -22,7 +22,7 @@
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
-            <div class="col-12 col-sm-6 col-md-12 col-lg-12" style="text-align: center; margin-top: 20px; position: relative;">
+            <div class="col-12 col-sm-6 col-md-12 col-lg-12" style="text-align: center; margin-top: 20px; margin-bottom:80px; position: relative;">
                 <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
                     <h4 class="white-word">Plant type</h4>
 
@@ -65,12 +65,12 @@
             </div>
         }
 
-    <div class="col-xs-12 col-sm-8 col-sm-offset-1 col-md-9 col-lg-10 col-lg-offset-1">
+    <div class="col-md-10 col-md-offset-1">
         @foreach (var item in Model)
         {
             <!--Plant display-->
-            <div class="col-xs-8 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-3" style="margin-bottom:75px">
-                <div class="card" style="padding:25px;width:280px;margin-top:20px;border-radius:15px;">
+            <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:75px">
+                <div class="card" style="padding:25px;width:280px;margin:0 auto;border-radius:15px;">
                     <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
                         <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
                         <div style="position:relative;margin-top:-75px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
@@ -79,8 +79,7 @@
                         </div>
                     </a>
                 </div>
-
             </div>
         }
     </div>
-</div>        
+       

@@ -3,15 +3,18 @@
     ViewBag.Title = "Nurseries";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/header_picture3.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+    <!--Header-->
+    <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
         <div>
             <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
         </div>
     </div>
-    <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
-        <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>back</a>
+    <!--Button-->
+    <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
+        <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
     </div>    
-    <div class="col-md-8 col-md-offset-2 white-word" style="margin-top:50px;padding-bottom:30px;text-align:center">
+    <!--Text part-->
+    <div class="col-md-8 col-md-offset-2 white-word col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="margin-top:50px;padding-bottom:30px;text-align:center">
         <h1>Where can I get the plant?</h1>
         <div style="text-align:justify">
             <br><br>
@@ -23,11 +26,10 @@
             </ul>
             <p>Looking forward to shop from a nursery or a garden centre near you? Here are the location of local garden centres and nurseries.</p>
             <br>
-        </div>
-        
-                   
+        </div>                           
     </div>
-    <div class="col-md-8 col-md-offset-2" style="padding-bottom:80px;">
+    <!--Map-->
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12" style="padding-bottom:80px;">
         <p class="col-md-12 white-word" style="text-align:right">
             Get lost in the map?
             <a style="color:#FDB298;" onclick="location.reload();">Click here</a> to back to city of yarra.

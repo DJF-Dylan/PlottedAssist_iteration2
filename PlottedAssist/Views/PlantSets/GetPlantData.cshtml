@@ -13,16 +13,17 @@
 
         <!--Header-->
 
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/IndigenousPlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+        <div class="col-md-12" style="padding:0;background-image:url(../../Picture/Banner/IndigenousPlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
 
+        
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
-            <div class="col-12 col-sm-6 col-md-12 col-lg-12" style="text-align: center; margin-top: 20px; margin-bottom:80px; position: relative;">
+            <div class="col-md-12" style="text-align: center; margin-top: 20px; margin-bottom:80px; position: relative;">
                 <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
                     <h4 class="white-word">Plant type</h4>
 
@@ -64,7 +65,9 @@
                 </div>
             </div>
         }
-
+        <div class="white-word" style="margin-bottom:20px;text-align:center">
+            <h2>This is the "@ViewBag.filter" plant you want.</h2>
+        </div>
     <div class="col-md-10 col-md-offset-1">
         @foreach (var item in Model)
         {

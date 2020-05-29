@@ -92,7 +92,8 @@ namespace PlottedAssist.Controllers
             IEnumerable<PlantSet> result = Spring.Union(Summer).Union(Autumn).Union(Winter);
             ViewBag.result = Tree + Shrub + Crepper + Grass + plantWaterFrq + plantSeason + plantSunNeedPath + plantDroughtTol;
             ViewBag.noResult = "0";
-            if (result.ToList() == null) {
+            if (result != null && result.Count() > 0)
+                {
                 ViewBag.noResult = "1";
             }
             return View(result);
@@ -130,6 +131,7 @@ namespace PlottedAssist.Controllers
             {
                 data = db.PlantSet.Where(p => p.PlantType == selected).ToList();
             }
+            ViewBag.filter = selected;
             return PartialView(data);
         }
 

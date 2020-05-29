@@ -7,7 +7,7 @@
 
         <!--Header-->
 
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/InvasivePlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+        <div class="col-md-12" style="padding:0;background-image:url(../../Picture/Banner/InvasivePlantBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
             <div>
                 <img src="~/Picture/Banner/InvTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
@@ -65,7 +65,10 @@
                 </dt>
 
                 <dd>
-                    <p><a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)" style="color:#FDB298;text-decoration:underline"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a></p>
+                    <p>
+                    <a href="@Url.Content("~/PlantSets/Details/" + Model.PlantSet.Id)" style="color:#FDB298;text-decoration:underline"> @Html.DisplayFor(model => model.PlantSet.PlantCommonName)</a>
+                    <a href="@Url.Content("~/PlantInfo/Nurseries/")" style="color:#FDB298;margin-left:30px">Get plant from nurseries</a>
+                    </p>
                 </dd>
 
             </dl>

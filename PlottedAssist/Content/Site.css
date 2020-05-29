@@ -62,6 +62,37 @@ textarea {
     box-shadow: 2px 2px 6px 2px #1E2621;
 }
 
+.home-btn {
+    margin-top: 15px;
+    margin-bottom: 0;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 11px;
+    background: rgba(0,0,0,0.5);
+    border: 1px #E5E7EA solid;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0px 0px 15px 8px #000;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .home-btn:hover {
+        color: #2DC24D;
+        text-decoration: none;
+    }
 /* Set hover for a*/
 a:hover {
     color: #FFFFFF;

@@ -239,6 +239,7 @@
     <Content Include="Picture\logo_tab.png" />
     <Content Include="Picture\MyGardenCard.jpg" />
     <Content Include="Picture\Plantinfo\compost.jpg" />
+    <Content Include="Picture\Plantinfo\coro_text_1.jpg" />
     <Content Include="Picture\Plantinfo\Nurseries.jpg" />
     <Content Include="Picture\Plantinfo\planting_tech.jpg" />
     <Content Include="Picture\Plantinfo\pruning.jpg" />

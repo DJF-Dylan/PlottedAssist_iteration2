@@ -91,6 +91,10 @@ namespace PlottedAssist.Controllers
             }
             IEnumerable<PlantSet> result = Spring.Union(Summer).Union(Autumn).Union(Winter);
             ViewBag.result = Tree + Shrub + Crepper + Grass + plantWaterFrq + plantSeason + plantSunNeedPath + plantDroughtTol;
+            ViewBag.noResult = "0";
+            if (result.ToList() == null) {
+                ViewBag.noResult = "1";
+            }
             return View(result);
         }
         

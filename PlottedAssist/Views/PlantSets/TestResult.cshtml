@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";  
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
     
@@ -27,6 +27,9 @@
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)" style="margin-top:50px"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
         </div>
         
+        @if (Model.ToList.Length = 0) { 
+        }
+
         <div class="white-word" style="margin-bottom:75px;text-align:center">
             <h2>Based on your preference, here is eligible indigenous plants what we have found.</h2>
         </div>

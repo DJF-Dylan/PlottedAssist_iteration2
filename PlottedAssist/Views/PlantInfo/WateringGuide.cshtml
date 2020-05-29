@@ -4,144 +4,251 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<head>
+    <head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="~/Content/PlantTech.css" rel="stylesheet" type="text/css" />
 
+    </head>
+    <body>
+        <div class="row" style="background-color:#4F6657;">
 
-</head>
-<body>
-    <div class="row" style="background-color:#4F6657;">
-
-        <!--Header-->
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
-            <div>
-                <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+            <!--Header-->
+            <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+                <div>
+                    <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+                </div>
+            </div>
+            <!--Button-->
+            <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
+                <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
+            </div>
+            <!--Text part-->
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="margin-top:20px;padding-bottom:20px;">
+                <h2 class="white-word">Watering to Establish Your New Plants for Healthy Roots and Better Drought Tolerance!</h2>
+                <p class="white-word">
+                    How you water your new plants can make all the difference. Deeper, less frequent watering will grow plants whose roots are deeper and healthier, so they are more resilient to drier conditions and stress.<br><br>
+                </p>
+                <img src="~/Picture/remember.png" style="width:640px;height:520px;max-width:100%;">
+                <p class="white-word">
+                    The following are general guidelines. How often and how long you water will depend on your soil and other factors.
+                </p>
             </div>
         </div>
-        <!--Button-->
-        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
-            <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
-        </div>
-        <!--Text part-->
-        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1" style="margin-top:20px;padding-bottom:20px;">
-            <h2 class="white-word">Watering to Establish Your New Plants for Healthy Roots and Better Drought Tolerance!</h2>
-            <p class="white-word">
-                How you water your new plants can make all the difference. Deeper, less frequent watering will grow plants whose roots are deeper and healthier, so they are more resilient to drier conditions and stress.<br><br>
+        <div class="row" style="background-color:#4F6657;">
+            <div class="panel-group" id="accordion" style="width:70%; margin:auto;margin-bottom:5%;background-color:#4F6657;">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="background-color:#344239">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseDNF">
+                                Year One
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDNF" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            When Planting Water plants as soon as you get them in the ground. Allow the water to soak in and drain, and water again, until the soil is thoroughly moistened. Spring through Fall, When Weather is Dry For the first week or so after planting… Water just-planted plants frequently - daily or every other day - as the roots will not be able to access soil moisture from a very large area until they begin to grow. After the first week or so... Unless the weather is extremely hot and dry, you may be able to decrease the watering frequency, perhaps to two or three times per week, for the next month or so.
+                        </div>
+                    </div>
+                </div>
 
-                Use water wisely. Water plants when they need it, not by the clock or calendar. Even though we recommend the watering days, water according to your soil type and the weather. Do not apply water faster than the soil can absorb it. Check the soil moisture first. Choose the right method. A soaker hose applies water directly to the soil and reduces evaporation. If you are planting a few plants in an existing planting bed, hand watering can be an effective way to get the new plants the water they need, while not overwatering the rest of the bed. <br><br>
-
-
-            </p>
-            <img src="~/Picture/remember.png" style="width:640px;height:520px;max-width:100%;">
-            <p class="white-word">
-                The following are general guidelines. How often and how long you water will depend on your soil and other factors.
-            </p>
-        </div>
-    </div>
-
-    <div class="panel-group" id="accordion" style="width:70%; margin:auto;margin-bottom:5%;">
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseDNF">
-                        Year One
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseDNF" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    When Planting Water plants as soon as you get them in the ground. Allow the water to soak in and drain, and water again, until the soil is thoroughly moistened. Spring through Fall, When Weather is Dry For the first week or so after planting… Water just-planted plants frequently - daily or every other day - as the roots will not be able to access soil moisture from a very large area until they begin to grow. After the first week or so... Unless the weather is extremely hot and dry, you may be able to decrease the watering frequency, perhaps to two or three times per week, for the next month or so.
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="background-color:#344239">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseITF">
+                                Years Two to Three
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseITF" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            You should need to water deeply only once or twice per week in dry weather if you have selected the right plant for the right place, prepared the soil and planted correctly, and mulched your plants. Exactly how often and how long you water will depend on your soil and other conditions.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="background-color:#344239">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF">
+                                After Year Three
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseKF" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Properly planted and watered, plants should be fairly well established by now, and can thrive with less watering than you may expect. Plants selected for drought tolerance in your conditions may need no supplemental water, whereas shallow-rooted plants or plants with greater water needs may need water weekly. Many plants, when selected for the conditions in your yard and watered according to the above guidelines, may need watering only a couple of times per month in dry weather. Remember that all plants will benefit from deeper and less frequent watering as a general rule.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="background-color:#344239">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF1">
+                                Container Plants
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseKF1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Check them daily during the summer, as containers tend to dry out quickly. On a hot day in full sun, you may need to water twice. To determine whether a container needs water, stick your finger into the soil. If it’s dry down to the first knuckle on your index finger, add water. If the soil is damp, don’t water. Always apply enough water so that some drips out the bottom drain hole. If your plant is wilting or the soil is dry and pulling away from the edge of the pot, your plant needs immediate watering. Place the pot in a bucket or saucer of water, so that it can soak water right up into the soil rather than running around the root ball. The type of potting soil used will affect watering as will the type of container used. Unglazed clay pots typically dry out faster than plastic pots.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading" style="background-color:#344239">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF2">
+                                Watering plants at night
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseKF2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            Preferably don’t water at night. Watering cycles have to be adjusted during the 'night-time' period because plants don’t use as much water as they do during the 'day time'. Don’t forget that the dark cycle is critical to plant development. This holds true for cloudy days or high humidity periods. But do be sure to adjust the irrigation cycle to water in the last or first half-hour of light.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="row" style="background-color:#4F6657;">
+            <div class="container" style="width:70%; margin:auto;">
+                <div class="page-header">
+                    <h1 id="timeline" class="white-word">Helpful Tips</h1>
+                </div>
+                <ul class="timeline">
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Use water wisely. Water plants when they need it, not by the clock or calendar. Even though we recommend the watering days, water according to your soil type and the weather. Do not apply water faster than the soil can absorb it. Check the soil moisture first. Choose the right method. A soaker hose applies water directly to the soil and reduces evaporation.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">If you are planting a few plants in an existing planting bed, hand watering can be an effective way to get the new plants the water they need, while not overwatering the rest of the bed.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Know your soil type, as this greatly affects watering frequency and duration.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Allow the top inch or two of soil to dry between waterings to encourage deep roots.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Group plants with similar water needs together.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Consider using soaker hoses, as you can get water where you need it and lose less to evaporation.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
 
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseITF">
-                        Years Two to Three
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseITF" class="panel-collapse collapse">
-                <div class="panel-body">
-                    You should need to water deeply only once or twice per week in dry weather if you have selected the right plant for the right place, prepared the soil and planted correctly, and mulched your plants. Exactly how often and how long you water will depend on your soil and other conditions.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF">
-                        After Year Three
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseKF" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Properly planted and watered, plants should be fairly well established by now, and can thrive with less watering than you may expect. Plants selected for drought tolerance in your conditions may need no supplemental water, whereas shallow-rooted plants or plants with greater water needs may need water weekly. Many plants, when selected for the conditions in your yard and watered according to the above guidelines, may need watering only a couple of times per month in dry weather. Remember that all plants will benefit from deeper and less frequent watering as a general rule.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF1">
-                        Container Plants
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseKF1" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Check them daily during the summer, as containers tend to dry out quickly. On a hot day in full sun, you may need to water twice. To determine whether a container needs water, stick your finger into the soil. If it’s dry down to the first knuckle on your index finger, add water. If the soil is damp, don’t water. Always apply enough water so that some drips out the bottom drain hole. If your plant is wilting or the soil is dry and pulling away from the edge of the pot, your plant needs immediate watering. Place the pot in a bucket or saucer of water, so that it can soak water right up into the soil rather than running around the root ball. The type of potting soil used will affect watering as will the type of container used. Unglazed clay pots typically dry out faster than plastic pots.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF2">
-                        Watering plants at night
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseKF2" class="panel-collapse collapse">
-                <div class="panel-body">
-                    Preferably don’t water at night. Watering cycles have to be adjusted during the 'night-time' period because plants don’t use as much water as they do during the 'day time'. Don’t forget that the dark cycle is critical to plant development. This holds true for cloudy days or high humidity periods. But do be sure to adjust the irrigation cycle to water in the last or first half-hour of light.
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="background-color:#344239">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF3">
-                        Helpful Tips
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseKF3" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li>Know your soil type, as this greatly affects watering frequency and duration. </li>
-                        <li>Allow the top inch or two of soil to dry between waterings to encourage deep roots.</li>
-                        <li>Group plants with similar water needs together. </li>
-                        <li>Consider using soaker hoses, as you can get water where you need it and lose less to evaporation. </li>
-                        <li>Young trees will need deep regular watering during their growing periods. During periods of little or no rain, water deeply once a week until they become established. Water established trees during heat waves and drought conditions. </li>
-                        <li>Spot-water plants with different needs than the rest of the planting bed. </li>
-                        <li>Remember that shallow-rooted plants such as rhododendrons, azaleas, heathers and bedding plants may continue to need more frequent watering than most other plants.</li>
-                        <li>Mulch for moisture. Mulch reduces water loss and adds humus to your soil to retain more moisture. </li>
-                        <li>Check for soil moisture before – and after - you water:<br>Before you water: Generally, you want the soil to be dry an inch or two below the surface before you water, so probe with a spade or trowel to check. </li>
-                    </ul>
-                    <p>
-                        At least one hour after you water (or longer with clay soil): Probe into the soil again to see how deeply the water penetrated. Did it penetrate all the way to the root zone? If not, you may need to increase your watering time. But if the area looks well-saturated, you may want to cut back the next time.
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Young trees will need deep regular watering during their growing periods. During periods of little or no rain, water deeply once a week until they become established. Water established trees during heat waves and drought conditions.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Spot-water plants with different needs than the rest of the planting bed.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
 
-                    </p>
-                </div>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Remember that shallow-rooted plants such as rhododendrons, azaleas, heathers and bedding plants may continue to need more frequent watering than most other plants.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Mulch for moisture. Mulch reduces water loss and adds humus to your soil to retain more moisture.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Check for soil moisture before – and after - you water:<br>Before you water: Generally, you want the soil to be dry an inch or two below the surface before you water, so probe with a spade or trowel to check.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">At least one hour after you water (or longer with clay soil): Probe into the soil again to see how deeply the water penetrated. Did it penetrate all the way to the root zone? If not, you may need to increase your watering time. But if the area looks well-saturated, you may want to cut back the next time.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10" style="margin-bottom:10px;">
-        <a href="@Url.Content("~/PlantInfo/SoilTypes")" class="btn btn-success">Next: Soil Info</a>
-    </div>
-</body>
+        <div class="row" style="background-color:#4F6657;">
+            <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10" style="margin-bottom:10px;">
+                <a href="@Url.Content("~/PlantInfo/SoilTypes")" class="btn btn-success">Next: Soil Info</a>
+            </div>
+        </div>
+    </body>
 
 

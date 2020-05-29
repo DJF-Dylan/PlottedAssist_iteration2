@@ -4,117 +4,121 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<head>
-    <link href="~/Content/flipcard.css" rel="stylesheet" type="text/css" />
+    <head>
+        <link href="~/Content/flipcard.css" rel="stylesheet" type="text/css" />
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="~/Content/PlantTech.css" rel="stylesheet" type="text/css" />
 
-</head>
-<body>
-    <div class="row" style="background-color:#4F6657;">
+    </head>
+    <body>
+        <div class="row" style="background-color:#4F6657;">
 
-        <!--Header-->
-        <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
-            <div>
-                <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+            <!--Header-->
+            <div class="col-12 col-md-12" style="padding:0;background-image:url(../../Picture/Banner/PlantingInfoBanner.jpg);width:100%;margin:0;padding-bottom:10%;background-repeat:no-repeat;background-size:100%">
+                <div>
+                    <img src="~/Picture/Banner/otherinfoTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+                </div>
+            </div>
+            <!--Button-->
+            <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
+                <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
+            </div>
+
+            <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
+                <h1 class="white-word">Attracting Native Birds to Your garden</h1>
+
+                <h2 class="white-word">Check what each type of plant provides:</h2>
             </div>
         </div>
-        <!--Button-->
-        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:10%;margin-top:5%">
-            <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
-        </div>
-
-        <div class="col-md-8 col-md-offset-2" style="margin-top:50px;padding-bottom:80px;">
-            <h1 class="white-word">Attracting Native Birds to Your garden</h1>
-
-            <h2 class="white-word">Check what each type of plant provides:</h2>
-        </div>
-    </div>
-    <div class="row" style="background-color:#4F6657;">
-        <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:5%">
+        <div class="row" style="background-color:#4F6657;">
+            <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:5%">
 
 
-            <!--Row 1-->
+                <!--Row 1-->
 
-            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="~/Picture/grass.jpg" style="width:300px;height:300px;" />
-                        </div>
-                        <div class="flip-card-back">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="~/Picture/grass.jpg" style="width:300px;height:300px;" />
+                            </div>
+                            <div class="flip-card-back">
 
-                            <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
-                                <h3 style="font-size:16px;padding-left:10%;padding-right:10%">Grasses</h3>
-                                <p class="white-word">
-                                    Provide seeds, shelter and nesting material for birds. Protection for insects.
-                                </p>
+                                <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
+                                    <h3 style="font-size:16px;padding-left:10%;padding-right:10%">Grasses</h3>
+                                    <p class="white-word">
+                                        Provide seeds, shelter and nesting material for birds. Protection for insects.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="~/Picture/groundcovers.jpg" style="width:300px;height:300px;" />
-                        </div>
-                        <div class="flip-card-back">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="~/Picture/groundcovers.jpg" style="width:300px;height:300px;" />
+                            </div>
+                            <div class="flip-card-back">
 
-                            <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
-                                <h3 style="font-size:16px;padding-left:10%;padding-right:10%">Groundcovers and Wildflowers</h3>
-                                <p class="white-word">
-                                    Provide nectar for bees, seed, shelter for birds and host insects.
-                                </p>
+                                <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
+                                    <h3 style="font-size:16px;padding-left:10%;padding-right:10%">Groundcovers and Wildflowers</h3>
+                                    <p class="white-word">
+                                        Provide nectar for bees, seed, shelter for birds and host insects.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
-
-
         </div>
-        </div>
-        
-    <div class="row" style="background-color:#4F6657;">
-        <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:5%">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="~/Picture/shrub.jpg" style="width:300px;height:300px;" />
-                        </div>
-                        <div class="flip-card-back">
 
-                            <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
-                                <h3 style="font-size:16px;padding-left:10%;padding-right:10%;">Shrubs</h3>
-                                <p class="white-word">
-                                    Provide nectar for bees, seed, shelter for birds and host insects, butterflies.
-                                </p>
+        <div class="row" style="background-color:#4F6657;">
+            <div class="col-md-10 col-md-offset-1 col-xs-12" style="margin-top:0px;margin-bottom:5%">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="~/Picture/shrub.jpg" style="width:300px;height:300px;" />
+                            </div>
+                            <div class="flip-card-back">
+
+                                <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
+                                    <h3 style="font-size:16px;padding-left:10%;padding-right:10%;">Shrubs</h3>
+                                    <p class="white-word">
+                                        Provide nectar for bees, seed, shelter for birds and host insects, butterflies.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="~/Picture/trees.jpg" style="width:300px;height:300px;" />
-                        </div>
-                        <div class="flip-card-back">
+                <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-md-3 col-md-offset-1" style="border:0px;margin-top:0%;position:relative; margin-bottom:0px;">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="~/Picture/trees.jpg" style="width:300px;height:300px;" />
+                            </div>
+                            <div class="flip-card-back">
 
-                            <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
-                                <h3 style="font-size:16px;padding-left:10%;padding-right:10%;">Trees</h3>
-                                <p class="white-word">
-                                    Provide nectar for bees, seed, shelter, nesting sites for birds, and host insects , butterflies.
-                                </p>
+                                <div style="text-align:center;margin-top:10%;margin-left:5%;margin-right:5%;margin-bottom:5%;">
+                                    <h3 style="font-size:16px;padding-left:10%;padding-right:10%;">Trees</h3>
+                                    <p class="white-word">
+                                        Provide nectar for bees, seed, shelter, nesting sites for birds, and host insects , butterflies.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-            
-        </div>
         </div>
         <div class="row" style="background-color:#4F6657;">
             <div class="col-md-8 col-md-offset-2" style="margin-top:5px;padding-bottom:20px;">
@@ -167,153 +171,103 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF1">
-                                Tip 4
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF1" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Plants that flower in winter are great for birds because birds are active throughout the year. Insects depend on warm weather for activity. So when the weather is cold, insects aren’t active to take advantage of winter flowers!
-                        </div>
-                    </div>
                 </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF2">
-                                Tip 5
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Butterflies only lay their eggs on specific plants that will nourish their caterpillars. But adult butterflies will take nectar from lots of different flowers, native or exotic.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF3">
-                                Tip 6
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF3" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Spotted pardalotes are small birds that nest in tunnels, dig in embankments, and feed on insects taken from the leaves of eucalypt trees. Listen for their simple yet distinctive calls around the city during the breeding season in spring.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF4">
-                                Tip 7
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF4" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Insectivorous bats naturally roost in the crevices of trees or under bark, but in urban areas, they sometimes shelter under dead palm fronds, and in ceilings or walls.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF5">
-                                Tip 8
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF5" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            There are 16 species of insectivorous bats in Victoria but only one can be heard by the human ear – the white-striped freetail bat.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF6">
-                                Tip 9
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF6" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Australia is home to over 1500 species of native bees. All Melburnian species are solitary, meaning they don’t form hives or produce honey.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF7">
-                                Tip 10
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF7" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Solitary native bees lay their eggs in tunnels in the ground, brick walls or holes in timber. They lay their eggs in the tunnels with a ball of ‘bee bread’ made from a mixture of nectar and pollen that feeds the larvae in sealed chambers until they emerge as adult bees.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF8">
-                                Tip 11
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF8" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Native groundcover plants like nodding saltbush and ruby saltbush produce fruit loved by blue-tongue lizards. If you’re lucky enough to have them in your yard, they’ll also snack on garden snails.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF9">
-                                Tip 12
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF9" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            It’s easy to attract large nectar-eating birds like rainbow lorikeets or red wattlebirds by planting banksias and grevilleas. If you want to attract smaller birds like eastern spinebills, try planting some thick shrubs for them to escape from the bigger birds, as well as from cats and dogs.
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-primary">
-                    <div class="panel-heading" style="background-color:#344239">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseKF10">
-                                Tip 13
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapseKF10" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Many small birds build their nests using spider webs, fur, fibers, and grass collected from various places. Keep an eye out for birds collecting nesting material and secure any plastics in which they can become entangled.
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <div class="row" style="background-color:#4F6657;">
+            <div class="container" style="width:70%; margin:auto;">
+                <div class="page-header">
+                    <h1 id="timeline" class="white-word">Other Tips</h1>
+                </div>
+                <ul class="timeline">
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Plants that flower in winter are great for birds because birds are active throughout the year. Insects depend on warm weather for activity. So when the weather is cold, insects aren’t active to take advantage of winter flowers!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Butterflies only lay their eggs on specific plants that will nourish their caterpillars. But adult butterflies will take nectar from lots of different flowers, native or exotic.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Spotted pardalotes are small birds that nest in tunnels, dig in embankments, and feed on insects taken from the leaves of eucalypt trees. Listen for their simple yet distinctive calls around the city during the breeding season in spring.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Insectivorous bats naturally roost in the crevices of trees or under bark, but in urban areas, they sometimes shelter under dead palm fronds, and in ceilings or walls.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Australia is home to over 1500 species of native bees. All Melburnian species are solitary, meaning they don’t form hives or produce honey.Solitary native bees lay their eggs in tunnels in the ground, brick walls or holes in timber. They lay their eggs in the tunnels with a ball of ‘bee bread’ made from a mixture of nectar and pollen that feeds the larvae in sealed chambers until they emerge as adult bees.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Native groundcover plants like nodding saltbush and ruby saltbush produce fruit loved by blue-tongue lizards. If you’re lucky enough to have them in your yard, they’ll also snack on garden snails.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">It’s easy to attract large nectar-eating birds like rainbow lorikeets or red wattlebirds by planting banksias and grevilleas. If you want to attract smaller birds like eastern spinebills, try planting some thick shrubs for them to escape from the bigger birds, as well as from cats and dogs.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                        <div class="timeline-panel" style="background-color:#344239;">
+                            <div class="timeline-heading">
+                            </div>
+                            <div class="timeline-body">
+                                <p class="white-word">Many small birds build their nests using spider webs, fur, fibers, and grass collected from various places. Keep an eye out for birds collecting nesting material and secure any plastics in which they can become entangled.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        
 
 
         <div class="white-word col-xs-4 col-md-2 col-lg-2 col-xs-offset-8 col-md-offset-10 col-lg-offset-10" style="margin-bottom:10px;">
             <a href="@Url.Content("~/PlantInfo/PlantTech")" class="btn btn-success">Next: Planting Techniques</a>
         </div>
-
-</body>
+        </div>
+    </body>
 

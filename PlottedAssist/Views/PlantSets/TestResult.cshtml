@@ -23,7 +23,7 @@
         
         @if (ViewBag.noResult == "0") {
             <div class="white-word" style="margin-bottom:75px;text-align:center">
-                <h2>sorry, did not find the result you want.</h2>
+                <h2>Sorry, we can't find plant available for your preferences.</h2>
         </div>
         }
         else { 
@@ -40,9 +40,9 @@
                     <div class="card" style="padding:25px;width:280px;margin:0 auto;border-radius:15px;">
                         <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
                             <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
-                            <div style="position:relative;margin-top:-75px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
-                                <p class="white-word" style="font-size:16px;padding-top:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
-                                <p class="white-word" style="font-size:16px;margin-bottom:0px;padding-bottom:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantSciName)</p>
+                            <div style="position:relative;margin-top:-72px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
+                                <p class="white-word" style="font-size:14px;padding-top:10px;margin-left:15px;">Common Name:</p>
+                                <p class="white-word" style="font-size:16px;margin-bottom:0px;padding-bottom:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
                             </div>
                         </a>
                     </div>

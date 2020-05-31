@@ -23,9 +23,9 @@
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
-            <div class="col-md-12" style="text-align: center; margin-top: 20px; margin-bottom:80px; position: relative;">
+            <div class="col-md-12" style="text-align: center;  margin-bottom:50px; position: relative;">
                 <div class="btn-group-lg" role="group" aria-label="..." style="margin-top:20px;position:relative">
-                    <h4 class="white-word">Plant type</h4>
+                    <h3 class="white-word">Plant type</h3>
 
                     @Ajax.ActionLink("Trees", "GetPlantData", new { selected = "Trees" },
                     new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
@@ -45,7 +45,7 @@
                 </div>
                 <br>
                 <div class="btn-group-lg" role="group" aria-label="...">
-                    <h4 class="white-word">Plant season</h4>
+                    <h3 class="white-word">Plant season</h3>
 
                     @Ajax.ActionLink("Spring", "GetPlantData", new { selected = "Spring" },
                     new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" });
@@ -66,7 +66,7 @@
             </div>
         }
         <div class="white-word" style="margin-bottom:20px;text-align:center">
-            <h2>This is the "@ViewBag.filter" plant you want.</h2>
+            <h3>@ViewBag.setence "@ViewBag.filter"</h3>
         </div>
     <div class="col-md-10 col-md-offset-1">
         @foreach (var item in Model)
@@ -76,8 +76,8 @@
                 <div class="card" style="padding:25px;width:280px;margin:0 auto;border-radius:15px;">
                     <a href="@Url.Content("~/PlantSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;padding:0px;margin:0px">
                         <img src="@Url.Content("~/Picture/PlantSet/"+item.PlantPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;margin:0px">
-                        <div style="position:relative;margin-top:-75px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
-                            <p class="white-word" style="font-size:16px;padding-top:10px;margin-left:15px;">Common Name:</p>
+                        <div style="position:relative;margin-top:-72px;background-color:rgba(0,0,0,0.5);border-radius:15px;">
+                            <p class="white-word" style="font-size:14px;padding-top:10px;margin-left:15px;">Common Name:</p>
                             <p class="white-word" style="font-size:16px;margin-bottom:0px;padding-bottom:10px;margin-left:15px;">@Html.DisplayFor(modelItem => item.PlantCommonName)</p>
                         </div>
                     </a>

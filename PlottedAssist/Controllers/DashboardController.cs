@@ -160,54 +160,11 @@ namespace PlottedAssist.Controllers
                     plantDateList[plantDateList.Length - 1] = (plantPruningFrq - pastday).ToString() + " Days";
                 }
 
-                /*if (plantFertilizerFrq != 0 && plantFertilizerFrq <= (pastday + 1))
-                    {
-                        if (pastday % plantFertilizerFrq == 0 || plantFertilizerFrq == 1)
-                        {
-                            Array.Resize(ref today, today.Length + 2);
-                            today[today.Length - 2] = "Fertilize.png";
-                            today[today.Length - 1] = i.plantNickName;
-                        }
-                        if (pastday % plantFertilizerFrq == 1 || plantFertilizerFrq == 1)
-                        {
-                            Array.Resize(ref tomorrow, tomorrow.Length + 2);
-                            tomorrow[tomorrow.Length - 2] = "Fertilize.png";
-                            tomorrow[tomorrow.Length - 1] = i.plantNickName;
-                        }
-                    }
-
-                    if (plantMistFrq != 0 && plantMistFrq <= (pastday + 1))
-                    {
-                        if (pastday % plantMistFrq == 0 || plantMistFrq == 1)
-                        {
-                            Array.Resize(ref today, today.Length + 2);
-                            today[today.Length - 2] = "Mist.png";
-                            today[today.Length - 1] = i.plantNickName;
-                        }
-                        if (pastday % plantMistFrq == 1 || plantMistFrq == 1)
-                        {
-                            Array.Resize(ref tomorrow, tomorrow.Length + 2);
-                            tomorrow[tomorrow.Length - 2] = "Mist.png";
-                            tomorrow[tomorrow.Length - 1] = i.plantNickName;
-                        }
-                    }
-
-                    if (plantPruningFrq != 0 && plantPruningFrq <= (pastday + 1))
-                    {
-                        if (pastday % plantPruningFrq == 0 || plantPruningFrq == 1)
-                        {
-                            Array.Resize(ref today, today.Length + 2);
-                            today[today.Length - 2] = "Prune.png";
-                            today[today.Length - 1] = i.plantNickName;
-                        }
-                        if (pastday % plantPruningFrq == 1 || plantPruningFrq == 1)
-                        {
-                            Array.Resize(ref tomorrow, tomorrow.Length + 2);
-                            tomorrow[tomorrow.Length - 2] = "Prune.png";
-                            tomorrow[tomorrow.Length - 1] = i.plantNickName;
-                        }
-                    }
-                */
+            }
+            ViewBag.noResult = "0";
+            if (userPlantSet != null && userPlantSet.Count() > 0)
+            {
+                ViewBag.noResult = "1";
             }
             ViewBag.today = today;
             ViewBag.DaysList = plantDateList;

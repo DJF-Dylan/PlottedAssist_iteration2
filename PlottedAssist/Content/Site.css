@@ -90,7 +90,8 @@ textarea {
 }
 
     .home-btn:hover {
-        color: #2DC24D;
+        background-color: #000000;
+        border: 1px #000000 solid;
         text-decoration: none;
     }
 /* Set hover for a*/

@@ -103,9 +103,11 @@ namespace PlottedAssist.Controllers
         public PartialViewResult GetPlantData(string selected = "All Plant")
         {
             IEnumerable<PlantSet> data = db.PlantSet.ToList();
+            ViewBag.setence = "Following is the list of indigenous plants which plant season is ";
             if (selected == "All Plant")
             {
                 data = db.PlantSet.ToList();
+                ViewBag.setence = "Following is the list of indigenous plants which plant type is ";
             }
             else if (selected == "Spring")
             {
@@ -130,6 +132,7 @@ namespace PlottedAssist.Controllers
             else if (selected == "Trees" || selected == "Small Plants" || selected == "Shrubs" || selected == "Creepers")
             {
                 data = db.PlantSet.Where(p => p.PlantType == selected).ToList();
+                ViewBag.setence = "Following is the list of indigenous plants which plant type is ";
             }
             ViewBag.filter = selected;
             return PartialView(data);

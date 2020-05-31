@@ -23,11 +23,11 @@
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
         {
-            <div class="col-md-12" style="text-align:center;">
+            <div class="col-xs-12 col-md-8 col-md-offset-2" style="text-align:center;">
         
-                <div class="btn-group-lg col-xs-12 col-lg-offset-0 col-sm-12 col-md-12 col-md-offset-0 col-lg-12" role="group" aria-label="Flower color">
+                <div class="btn-group-lg col-md-12" role="group" aria-label="Flower color">
                     <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:30px;">Have You Ever Seen These Plant in Your Garden?</h1>
-                    <h4 class="white-word" style="text-align:center">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species, and detract from the natural growths of our garden. Recognize, remove and replace them with the help of us!</h4>
+                    <h4 class="white-word" style="text-align:center">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species, and detract from the natural growths of our garden.Recognize, remove and replace them with the help of us!</h4>
                     <h4 class="white-word" style="margin-bottom:20px">If you have specific color in mind, check if the plant in your garden is invasive plant by using the color filter. </h4>
 
                     @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
@@ -49,6 +49,7 @@
 
             </div>
         }
+        
 
         <div class="col-md-10 col-md-offset-1" style="margin-top:50px">
             @foreach (var item in Model)

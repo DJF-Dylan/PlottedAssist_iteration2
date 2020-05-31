@@ -32,7 +32,7 @@ namespace PlottedAssist.Controllers
             {
                 data = db.WeedSet.Where(p => p.WeedFlowerColor == selected).ToList();
             }
-           
+            ViewBag.select = selected;  
             return PartialView(data);
         }
 

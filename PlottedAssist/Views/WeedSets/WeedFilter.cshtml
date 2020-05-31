@@ -10,52 +10,57 @@
 }
 
 
-    <!--Header-->>
+<!--Header-->>
 
 
-    <div class="col-md-12" style="padding: 0;background-image: url(../../Picture/Banner/InvasivePlantBanner.jpg);width: 100%;margin: 0;padding-bottom: 10%;background-repeat: no-repeat;background-size: 100%">
-        <div>
-            <img src="~/Picture/Banner/InvTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+<div class="col-md-12" style="padding: 0;background-image: url(../../Picture/Banner/InvasivePlantBanner.jpg);width: 100%;margin: 0;padding-bottom: 10%;background-repeat: no-repeat;background-size: 100%">
+    <div>
+        <img src="~/Picture/Banner/InvTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
+    </div>
+</div>
+
+@using (Ajax.BeginForm("GetPlantData", ajaxOpts))
+{
+    <div class="col-xs-12 col-md-8 col-md-offset-2" style="text-align:center;">
+
+        <div class="btn-group-lg col-md-12" role="group" aria-label="Flower color" style="margin-bottom:50px;">
+            <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:30px;">Have You Ever Seen These Plant in Your Garden?</h1>
+            <h4 class="white-word" style="text-align:center">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species, and detract from the natural growths of our garden.Recognize, remove and replace them with the help of us!</h4>
+            <h4 class="white-word" style="margin-bottom:20px">If you have specific color in mind, check if the plant in your garden is invasive plant by using the color filter. </h4>
+
+            @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+
+            @Ajax.ActionLink("Yellow", "WeedFilter", new { selected = "Yellow" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+
+            @Ajax.ActionLink("Purple", "WeedFilter", new { selected = "Purple" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+
+            @Ajax.ActionLink("No flower", "WeedFilter", new { selected = "No" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+
+            @Ajax.ActionLink("All", "WeedFilter", new { selected = "All" },
+            new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
+
+        </div>
+        <div class="white-word" style="text-align:center">
+        <h3>Following is the list of invasive plants which flower color is "@ViewBag.select"</h3>
         </div>
     </div>
-
-    @using (Ajax.BeginForm("GetPlantData", ajaxOpts))
+    
+}
+<div class="col-md-10 col-md-offset-1" style="margin-top:50px">
+    @foreach (var item in Model)
     {
-        <div style="text-align:center;">
-            <div class="btn-group-lg col-12 col-xs-12 col-lg-offset-0 col-sm-12 col-md-12 col-md-offset-0 col-lg-12" role="group" aria-label="Flower color">
-                <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:30px;">Have You Ever Seen These Plant in Your Garden?</h1>
-                <h4 class="white-word" style="text-align:center">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species, and detract from the natural values of our garden.</h4>
-                <h4 class="white-word" style="margin-bottom:20px">Check whether the one in your garden is invasive plant by using the filter. </h4>
-
-                @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
-
-                @Ajax.ActionLink("Yellow", "WeedFilter", new { selected = "Yellow" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
-
-                @Ajax.ActionLink("Purple", "WeedFilter", new { selected = "Purple" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
-
-                @Ajax.ActionLink("No flower", "WeedFilter", new { selected = "No" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
-
-                @Ajax.ActionLink("All", "WeedFilter", new { selected = "All" },
-                new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
-
+        <!--Weed display-->
+        <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:75px;">
+            <div class="card" style="padding:15px;width:280px;margin:0 auto;border-radius:15px;">
+                <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;padding:0px;">
+                    <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
+                </a>
             </div>
         </div>
-    }
-    <div class="col-md-10 col-md-offset-1" style="margin-top:50px">
-        @foreach (var item in Model)
-    {
-            <!--Weed display-->
-            <div class="col-xs-12 col-sm-6 col-md-4" style="margin-bottom:75px;">
-                <div class="card" style="padding:15px;width:280px;margin:0 auto;border-radius:15px;">
-                    <a href="@Url.Content("~/WeedSets/Details/"+ item.Id)" class="thumbnail" style="border-radius:15px;box-shadow:2px 2px 6px 2px #1E2621;padding:0px;">
-                        <img src="@Url.Content("~/Picture/Weed/"+item.WeedPhotoPath)" alt="Show detail" style="border-radius:15px;box-shadow:0px 0px 8px 5px #1E2621;">
-                    </a>
-                </div>
-            </div>
 
     }
-    </div>
+</div>

@@ -18,7 +18,9 @@
                 <img src="~/Picture/Banner/IndTitleWeb.png" style="width:35%;margin-top:15%;margin-left:33%">
             </div>
         </div>
-
+        <div class="col-sm-3 col-xs-2" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-top:5%">
+            <a class="btn btn-success" name="Submit" href="@Url.Content("~/PlantSets/Index")"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
+        </div>
         
         <!--Filter-->
         @using (Ajax.BeginForm("GetPlantData", ajaxOpts))

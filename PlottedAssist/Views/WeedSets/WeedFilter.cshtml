@@ -25,8 +25,8 @@
 
         <div class="btn-group-lg col-md-12" role="group" aria-label="Flower color" style="margin-bottom:50px;">
             <h1 class="white-word" style="text-align:center;font-family:'Arial';margin-top:30px;">Have You Ever Seen These Plant in Your Garden?</h1>
-            <h4 class="white-word" style="text-align:center">Invasive plant can create a lot of damage to your garden, they prevent the growth of desirable species, and detract from the natural growths of our garden.Recognize, remove and replace them with the help of us!</h4>
-            <h4 class="white-word" style="margin-bottom:20px">If you have specific color in mind, check if the plant in your garden is invasive plant by using the color filter. </h4>
+            <h4 class="white-word" style="text-align:center">Invasive plants can damage your garden by hindering the growth of your garden plants. Recognize, remove, and replace them with our help!</h4>
+            <h4 class="white-word" style="margin-bottom:20px">You can use our color filter tool to differentiate between various invasive plants available in our database.</h4>
 
             @Ajax.ActionLink("White", "WeedFilter", new { selected = "White" },
             new AjaxOptions { UpdateTargetId = "tableBody" }, new { @class = "btn btn-success", @type = "button" })
@@ -45,7 +45,7 @@
 
         </div>
         <div class="white-word" style="text-align:center">
-        <h3>Following is the list of invasive plants which flower color is "@ViewBag.select"</h3>
+            <h3>Following is the list of invasive plants with "@ViewBag.select" flower color.</h3>
         </div>
     </div>
     

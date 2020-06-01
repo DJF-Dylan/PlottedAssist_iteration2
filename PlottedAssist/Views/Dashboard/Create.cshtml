@@ -18,84 +18,87 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal col-md-8 col-md-offset-2 white-word" style="margin-top:50px">
-        <h2>Add to My Garden List</h2>
-        <p>When you successfully add the plant to your list, your frequency timer will start.</p>
-        <p>Set 0 for the frequency which you do not want to use.</p>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            <div class="control-label col-sm-2">Plant name</div>
-            <div class="col-md-10">
-                @Html.DropDownList("PlantId", null, htmlAttributes: new { @disabled = "disabled", @class = "form-control" })
-                @Html.HiddenFor(model => model.PlantId, new { htmlAttributes = new { @class = "form-control" }, Value = ViewBag.SelectId })
-                @Html.ValidationMessageFor(model => model.PlantId, "", new { @class = "text-danger" })
-            </div>
+<div class="form-horizontal col-md-8 col-md-offset-2 white-word" style="margin-top:50px">
+    <h2>Add to My Garden List</h2>
+    <p>When you successfully add the plant to your list, your frequency timer will start.</p>
+    <p>Set 0 for the frequency which you do not want to use.</p>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <div class="control-label col-sm-2">Plant name</div>
+        <div class="col-md-4">
+            @Html.DropDownList("PlantId", null, htmlAttributes: new { @disabled = "disabled", @class = "form-control" })
+            @Html.HiddenFor(model => model.PlantId, new { htmlAttributes = new { @class = "form-control" }, Value = ViewBag.SelectId })
         </div>
-
-        <div class="form-group">
-            <div class="control-label col-sm-2">Nick Name</div>
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.plantNickName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.plantNickName, "", new { @class = "text-white" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="control-label col-sm-2">Water Frquency</div>
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.PlantWaterFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantWaterFrq } })
-                Recommended frequency: @ViewBag.PlantWaterFrq Days
-
-            </div>
-            <div class="col-md-4" style="margin-left:-10%">
-                @Html.ValidationMessageFor(model => model.PlantWaterFrq, "", new { @type = "number", @class = "text-white" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="control-label col-sm-2">Prune Frquency</div>
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.PlantPruningFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantPruningFrq } })
-                Recommended frequency: @ViewBag.PlantPruningFrq Days
-
-            </div>
-            <div class="col-md-4" style="margin-left:-10%">
-                @Html.ValidationMessageFor(model => model.PlantPruningFrq, "", new { @type = "number", @class = "text-white" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="control-label col-sm-2">Fertilize Frquency</div>
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.PlantFertilizerFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantFertilizerFrq } })
-                Recommended frequency: @ViewBag.PlantFertilizerFrq Days
-
-            </div>
-            <div class="col-md-4" style="margin-left:-10%">
-                @Html.ValidationMessageFor(model => model.PlantFertilizerFrq, "", new { @type = "number", @class = "text-white" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="control-label col-sm-2">Mist Frquency</div>
-            <div class="col-md-4">
-                @Html.EditorFor(model => model.PlantMistFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantMistFrq } })
-                Recommended frequency: @ViewBag.PlantMistFrq Days
-
-            </div>
-            <div class="col-md-4" style="margin-left:-10%">
-                @Html.ValidationMessageFor(model => model.PlantMistFrq, "", new { @type = "number", @class = "text-white" })
-            </div>
+        <div class="col-md-6" >    @Html.ValidationMessageFor(model => model.PlantId, "", new { @class = "text-danger" })
         </div>
     </div>
-    <div class="col-xs-12" style="color:black;font-family:'Arial';font-size:16PX;padding-left:20%;margin-bottom:70px;">    
-        <div class="form-group">
+
+    <div class="form-group">
+        <div class="control-label col-sm-2">Nick Name</div>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.plantNickName, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-6" >
+            @Html.ValidationMessageFor(model => model.plantNickName, "", new { @class = "text-white" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-sm-2">Water Frquency</div>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.PlantWaterFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantWaterFrq } })
+            Recommended frequency: @ViewBag.PlantWaterFrq Days
+        </div>
+        <div class="col-md-6" >
+            @Html.ValidationMessageFor(model => model.PlantWaterFrq, "", new { @type = "number", @class = "text-white" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-sm-2">Prune Frquency</div>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.PlantPruningFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantPruningFrq } })
+            Recommended frequency: @ViewBag.PlantPruningFrq Days
+        </div>
+        <div class="col-md-6" >
+            @Html.ValidationMessageFor(model => model.PlantPruningFrq, "", new { @type = "number", @class = "text-white" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-sm-2">Fertilize Frquency</div>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.PlantFertilizerFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantFertilizerFrq } })
+            Recommended frequency: @ViewBag.PlantFertilizerFrq Days
+        </div>
+        <div class="col-md-6">
+            @Html.ValidationMessageFor(model => model.PlantFertilizerFrq, "", new { @type = "number", @class = "text-white" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-sm-2">Mist Frquency</div>
+        <div class="col-md-4">
+            @Html.EditorFor(model => model.PlantMistFrq, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.PlantMistFrq } })
+            Recommended frequency: @ViewBag.PlantMistFrq Days
+
+        </div>
+        <div class="col-md-6">
+            @Html.ValidationMessageFor(model => model.PlantMistFrq, "", new { @type = "number", @class = "text-white" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-sm-2">
             <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
-                <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+        <div class="col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
         </div>
     </div>
-
+</div>
     
 }
 

@@ -40,11 +40,15 @@
         {
             @Html.AntiForgeryToken()
 
-            <div class="form-actions no-color">
-                
-                <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
-                <input type="submit" value="Delete" class="btn btn-default" />
-            </div>
+    <div class="form-actions no-color">
+        <div class="col-sm-2">
+            <a class="btn btn-success" name="Submit" onclick="javascript:history.back(1)"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>Back</a>
+        </div>
+        <div class="col-md-10">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+        
+    </div>
         }
     </div>
 

@@ -1,4 +1,5 @@
-﻿const TOKEN = "pk.eyJ1IjoiZHlsYW4xMjAxIiwiYSI6ImNrYWdidW5sMjAya3EycW9laTZ0b3VlN3UifQ.GAPLpZajWbgf9PxReUBjqw";
+﻿//Change the token here
+const TOKEN = "pk.eyJ1IjoiZHlsYW4xMjAxIiwiYSI6ImNrYWdidW5sMjAya3EycW9laTZ0b3VlN3UifQ.GAPLpZajWbgf9PxReUBjqw";
 var locations = [{
         "latitude": -37.79204520,
         "longitude": 145.00720370,

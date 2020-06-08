@@ -20,7 +20,7 @@ namespace PlottedAssist.Controllers
             return View(db.PlantSet.ToList());
         }
 
-        public ActionResult Instrction()
+        public ActionResult Instruction()
         {
             return View();
         }
